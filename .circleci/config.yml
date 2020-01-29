@@ -1,0 +1,40 @@
+version: 2.1
+
+jobs:
+
+  build:
+    shell: /bin/bash --login
+
+    docker:
+
+      - image: circleci/node:10.12.0-stretch
+        environment:
+          SW_INSTALL_PATH: /root/.local/bin/
+
+    parameters:
+      local:
+        type: boolean
+        default: false
+
+    steps:
+      - checkout
+
+      - run: sudo apt update
+      - run: sudo apt install python3-pip
+
+      - run: sudo pip3 install awscli --upgrade --user
+
+      - run: sudo ${SW_INSTALL_PATH}aws configure set region ${AWS_DEFAULT_REGION}
+      - run: sudo ${SW_INSTALL_PATH}aws configure set aws_access_key_id ${AWS_ACCESS_KEY_ID}
+      - run: sudo ${SW_INSTALL_PATH}aws configure set aws_secret_access_key ${AWS_SECRET_ACCESS_KEY}
+
+      - run: echo "deploy"
+      - run: cd /home/circleci/project && make DN_HOME_DIR:=/home/circleci/project deploy
+
+workflows:
+  version: 2.1
+  build-and-deploy:
+    jobs:
+      - build:
+          name: Deploy
+          local: false

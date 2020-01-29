@@ -1,0 +1,72 @@
+id="navbar-log-in-out-item-id">Login</a>
+id="navbar-login-link-id">Login</a>
+id="navbar-register-item-id">Register</a>
+id="navbar-preferences-item-id">Preferences</a>
+id="display_random_nugget_button-id">The Nuggets</a>
+id="notd">
+id="notd-display-area-id_1">
+id="notd-display-area-id_2">
+id="projects" "projects-section bg-light">
+id="topic-display-area-1-id">Peace</h4>
+id="nugget-display-area-1-id">Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!</p>
+id="topic-display-area-2-id">Peace</h4>
+id="nugget-display-area-2-id">An example of where you can put an image of a project, or anything else, along with a description.</p>
+id="topic-display-area-3-id">Peace</h4>
+id="nugget-display-area-3-id">Another example of a project with its respective description. These sections work well responsively as well, try this theme on a small screen!</p>
+id="signup" "signup-section">
+id="subscribe-user-id">
+id="user-email-id" placeholder="Enter email address...">
+id="subscribe-user-button-id">Subscribe</button>
+id="join-button-id">Join</button>
+id="join-button-id">Join</a>
+id="footer-unsubscribe-link-id"
+id="footer-delete-account-link-id"
+id="logoff-success-modal-id" tabindex="-1" role="dialog">
+id="modal-logoff-success-status-bar-id"></p>
+id="login-success-modal-id" tabindex="-1" role="dialog">
+id="modal-login-success-status-bar-id"></p>
+id="reset-password-modal-id" tabindex="-1" role="dialog">
+id="modal-reset-password-email-input-id" "form-control form-control-sm validate">
+id="modal-reset-password-status-bar-id"></p>
+id="modal-reset-password-submit-button-id">Submit</button>
+id="confirm-reset-password-modal-id" tabindex="-1" role="dialog">
+id="modal-confirm-reset-password-pin-input-id" "form-control form-control-sm validate">
+id="modal-confirm-reset-password-password-input-id" "form-control form-control-sm validate">
+id="modal-confirm-reset-password-status-bar-id"></p>
+id="modal-confirm-reset-password-submit-button-id">Submit</button>
+id="password-reset-success-modal-id" tabindex="-1" role="dialog">
+id="modal-password-reset-success-status-bar-id"></p>
+id="verify-subscribe-modal-id" tabindex="-1" role="dialog">
+id="modal-vs-status-bar-id"></p>
+id="verify-registration-modal-id" tabindex="-1" role="dialog">
+id="modal-vr-pin-input-id" "form-control form-control-sm validate">
+id="modal-vr-status-bar-id"></p>
+id="verify-registration-submit-button-id">Submit</button>
+id="resend-pin-button-id">Resend PIN</button>
+id="delete-account-modal-id" tabindex="-1" role="dialog">
+id="modal-delete-account-status-bar-id"></p>
+id="modal-delete-account-confirm-link-id">Confirm</button>
+id="delete-account-success-modal-id" tabindex="-1" role="dialog">
+id="modal-delete-account-status-bar-id"></p>
+id="lr-modal-id">
+id="lr-modal-nav-tabs-id">
+id="nav-item-link-1">
+id="panel7" role="tabpanel">
+id="modal-lr-pan7-email-input-id" "form-control form-control-sm validate">
+id="modal-lr-pan7-password-input-id" "form-control form-control-sm validate">
+id="modal-lr-pan7-login-button-id">Log in <i "fas fa-sign-in ml-1"></i></button>
+id="modal-lr-pan7-signup-link-id">Sign Up</a></p>
+id="modal-lr-pan7-password-link-id">Password?</a></p>
+id="modal-lr-pan7-status-bar-id"></p>
+id="modal-lr-pan7-close-button-id">Close</button>
+id="panel8" role="tabpanel">
+id="status-bar-id">Heavenly Message Bar</p></div> -->
+id="modal-lr-pan8-email-input-id" "form-control form-control-sm validate">
+id="modal-lr-pan8-phone-input-id" "form-control form-control-sm validate">
+id="modal-lr-pan8-password-input-id" "form-control form-control-sm validate">
+id="modal-lr-pan8-repeatpassword-input-id" "form-control form-control-sm validate">
+id="modal-lr-pan8-signup-button-id">Sign up <i "fas fa-sign-in ml-1"></i></button>
+id="modal-lr-pan8-login-link-id">Log In</a></p>
+id="modal-lr-pan8-status-bar-id"></p>
+id="modal-lr-pan8-close-button-id">Close</button>
+id="tabs" "nav-tabs" data-tabs="tabs">

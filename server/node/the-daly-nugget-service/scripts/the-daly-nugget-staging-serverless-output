@@ -1,0 +1,543 @@
+Serverless: Packaging service...
+Serverless: Excluding development dependencies...
+Serverless: Uploading CloudFormation file to S3...
+Serverless: Uploading artifacts...
+Serverless: Uploading service .zip file to S3 (33.05 MB)...
+Serverless: Validating template...
+Serverless: Updating Stack...
+Serverless: Checking Stack update progress...
+CloudFormation - UPDATE_IN_PROGRESS - AWS::CloudFormation::Stack - the-daily-nugget-service-prod
+CloudFormation - CREATE_IN_PROGRESS - AWS::DynamoDB::Table - NuggeteerDynamoDbTable
+CloudFormation - CREATE_IN_PROGRESS - AWS::DynamoDB::Table - NuggetBaseDynamoDbTable
+CloudFormation - CREATE_IN_PROGRESS - AWS::S3::Bucket - AttachmentsBucket
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - RecordNuggetOfTheDayLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - GetNuggeteerDelivPrefsLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::S3::Bucket - TheDailyNuggetStackOutputsBucket
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - UpdateNuggeteerPhoneLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - CreateSubscriberLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - GetRandomNuggetLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - UpdateNuggeteerDelivPrefsLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - GetServerlessOutputsLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Cognito::UserPool - CognitoUserPool
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - SendNuggetsTwiceDailyLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::RestApi - ApiGatewayRestApi
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - DeleteSubscriberLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - EmailNuggetOfTheDayLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - DeleteNuggeteerLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - SyncSubscriberVerificationsLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::DynamoDB::Table - NuggetSubscriberDynamoDbTable
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - GetNuggeteerLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - DeleteCognitoUserLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - GetNuggetOfTheDayLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - SyncSubscriberTblAndSESLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::DynamoDB::Table - NuggetHistoryDynamoDbTable
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - SendNuggetsTwiceWeeklyLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - CreateNuggeteerLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - GetNuggeteerDelivPrefsLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - SendNuggetsDailyLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::DynamoDB::Table - NuggetBaseDynamoDbTable
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - RecordNuggetOfTheDayLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - UpdateNuggeteerPhoneLogGroup
+CloudFormation - CREATE_COMPLETE - AWS::Logs::LogGroup - DeleteCognitoUserLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::S3::Bucket - AttachmentsBucket
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - SendNuggetsWeeklyLogGroup
+CloudFormation - CREATE_COMPLETE - AWS::Logs::LogGroup - SyncSubscriberTblAndSESLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - UpdateNuggeteerDelivPrefsLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - GetServerlessOutputsLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - CreateSubscriberLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::DynamoDB::Table - NuggeteerDynamoDbTable
+CloudFormation - CREATE_IN_PROGRESS - AWS::DynamoDB::Table - NuggetOfTheDayDynamoDbTable
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - GetRandomNuggetLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - DeleteNuggeteerLogGroup
+CloudFormation - CREATE_COMPLETE - AWS::Logs::LogGroup - GetNuggeteerDelivPrefsLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - EmailNuggetOfTheDayLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - SyncSubscriberVerificationsLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::RestApi - ApiGatewayRestApi
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - SendNuggetsTwiceDailyLogGroup
+CloudFormation - CREATE_COMPLETE - AWS::Logs::LogGroup - CreateNuggeteerLogGroup
+CloudFormation - CREATE_COMPLETE - AWS::Logs::LogGroup - UpdateNuggeteerPhoneLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - DeleteSubscriberLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - GetNuggeteerLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::S3::Bucket - TheDailyNuggetStackOutputsBucket
+CloudFormation - CREATE_IN_PROGRESS - AWS::DynamoDB::Table - NuggetSubscriberDynamoDbTable
+CloudFormation - CREATE_COMPLETE - AWS::Logs::LogGroup - UpdateNuggeteerDelivPrefsLogGroup
+CloudFormation - CREATE_COMPLETE - AWS::Logs::LogGroup - RecordNuggetOfTheDayLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - GetNuggetOfTheDayLogGroup
+CloudFormation - CREATE_COMPLETE - AWS::Logs::LogGroup - GetServerlessOutputsLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::DynamoDB::Table - NuggetHistoryDynamoDbTable
+CloudFormation - CREATE_COMPLETE - AWS::Logs::LogGroup - GetRandomNuggetLogGroup
+CloudFormation - CREATE_COMPLETE - AWS::Logs::LogGroup - SyncSubscriberVerificationsLogGroup
+CloudFormation - CREATE_COMPLETE - AWS::Logs::LogGroup - DeleteNuggeteerLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - SendNuggetsDailyLogGroup
+CloudFormation - CREATE_COMPLETE - AWS::Logs::LogGroup - CreateSubscriberLogGroup
+CloudFormation - CREATE_COMPLETE - AWS::Logs::LogGroup - SendNuggetsTwiceDailyLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - SendNuggetsWeeklyLogGroup
+CloudFormation - CREATE_COMPLETE - AWS::Logs::LogGroup - EmailNuggetOfTheDayLogGroup
+CloudFormation - CREATE_COMPLETE - AWS::Logs::LogGroup - GetNuggeteerLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Logs::LogGroup - SendNuggetsTwiceWeeklyLogGroup
+CloudFormation - CREATE_COMPLETE - AWS::Logs::LogGroup - DeleteSubscriberLogGroup
+CloudFormation - CREATE_COMPLETE - AWS::Logs::LogGroup - GetNuggetOfTheDayLogGroup
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::RestApi - ApiGatewayRestApi
+CloudFormation - CREATE_IN_PROGRESS - AWS::DynamoDB::Table - NuggetOfTheDayDynamoDbTable
+CloudFormation - CREATE_COMPLETE - AWS::Logs::LogGroup - SendNuggetsDailyLogGroup
+CloudFormation - CREATE_COMPLETE - AWS::Logs::LogGroup - SendNuggetsWeeklyLogGroup
+CloudFormation - CREATE_COMPLETE - AWS::Logs::LogGroup - SendNuggetsTwiceWeeklyLogGroup
+CloudFormation - CREATE_IN_PROGRESS - AWS::Cognito::UserPool - CognitoUserPool
+CloudFormation - CREATE_COMPLETE - AWS::Cognito::UserPool - CognitoUserPool
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceDeleteDashsubscriber
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceRandomDashnugget
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceAddDashsubscriber
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceRegisterDashnuggeteer
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceDeleteDashcognitoDashuser
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceGetDashserverlessDashoutputs
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceRandomDashnugget
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceAddDashsubscriber
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceNuggetDashofDashday
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceRegisterDashnuggeteer
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceDeleteDashsubscriber
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceDeleteDashcognitoDashuser
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Resource - ApiGatewayResourceRandomDashnugget
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceGetDashserverlessDashoutputs
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Resource - ApiGatewayResourceAddDashsubscriber
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceDeleteDashnuggeteer
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Resource - ApiGatewayResourceRegisterDashnuggeteer
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Resource - ApiGatewayResourceDeleteDashsubscriber
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceNuggetDashofDashday
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Resource - ApiGatewayResourceDeleteDashcognitoDashuser
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Resource - ApiGatewayResourceGetDashserverlessDashoutputs
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Resource - ApiGatewayResourceNuggetDashofDashday
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceDeleteDashnuggeteer
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Resource - ApiGatewayResourceDeleteDashnuggeteer
+CloudFormation - CREATE_IN_PROGRESS - AWS::Cognito::UserPoolClient - CognitoUserPoolClient
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceChangeDashnuggeteerDashphone
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceChangeDashnuggeteerDashphone
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodRandomDashnuggetOptions
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Resource - ApiGatewayResourceChangeDashnuggeteerDashphone
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodRandomDashnuggetOptions
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodNuggetDashofDashdayOptions
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodGetDashserverlessDashoutputsOptions
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodAddDashsubscriberOptions
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodNuggetDashofDashdayOptions
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodRegisterDashnuggeteerOptions
+CloudFormation - CREATE_IN_PROGRESS - AWS::Cognito::UserPoolClient - CognitoUserPoolClient
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodDeleteDashcognitoDashuserOptions
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodGetDashserverlessDashoutputsOptions
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodAddDashsubscriberOptions
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodRegisterDashnuggeteerOptions
+CloudFormation - CREATE_COMPLETE - AWS::Cognito::UserPoolClient - CognitoUserPoolClient
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodDeleteDashcognitoDashuserOptions
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodDeleteDashnuggeteerOptions
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodRandomDashnuggetOptions
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodDeleteDashsubscriberOptions
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodNuggetDashofDashdayOptions
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodDeleteDashnuggeteerOptions
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodDeleteDashsubscriberOptions
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodGetDashserverlessDashoutputsOptions
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodRegisterDashnuggeteerOptions
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodDeleteDashcognitoDashuserOptions
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodAddDashsubscriberOptions
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodDeleteDashsubscriberOptions
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodDeleteDashnuggeteerOptions
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodChangeDashnuggeteerDashphoneOptions
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodChangeDashnuggeteerDashphoneOptions
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceSetDashnuggeteerDashdeliveryDashpreferences
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceSetDashnuggeteerDashdeliveryDashpreferences
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodChangeDashnuggeteerDashphoneOptions
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Resource - ApiGatewayResourceSetDashnuggeteerDashdeliveryDashpreferences
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceGetDashnuggeteer
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceGetDashnuggeteer
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Resource - ApiGatewayResourceGetDashnuggeteer
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceGetDashnuggeteerDashdeliveryDashpreferences
+CloudFormation - CREATE_IN_PROGRESS - AWS::Cognito::IdentityPool - CognitoIdentityPool
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Resource - ApiGatewayResourceGetDashnuggeteerDashdeliveryDashpreferences
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Resource - ApiGatewayResourceGetDashnuggeteerDashdeliveryDashpreferences
+CloudFormation - CREATE_IN_PROGRESS - AWS::Cognito::IdentityPool - CognitoIdentityPool
+CloudFormation - CREATE_COMPLETE - AWS::Cognito::IdentityPool - CognitoIdentityPool
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodSetDashnuggeteerDashdeliveryDashpreferencesOptions
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodSetDashnuggeteerDashdeliveryDashpreferencesOptions
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodGetDashnuggeteerOptions
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodGetDashnuggeteerOptions
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodSetDashnuggeteerDashdeliveryDashpreferencesOptions
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodGetDashnuggeteerDashdeliveryDashpreferencesOptions
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodGetDashnuggeteerDashdeliveryDashpreferencesOptions
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodGetDashnuggeteerOptions
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodGetDashnuggeteerDashdeliveryDashpreferencesOptions
+CloudFormation - CREATE_IN_PROGRESS - AWS::IAM::Role - CognitoUnAuthRole
+CloudFormation - CREATE_IN_PROGRESS - AWS::IAM::Role - CognitoUnAuthRole
+CloudFormation - CREATE_COMPLETE - AWS::S3::Bucket - AttachmentsBucket
+CloudFormation - CREATE_COMPLETE - AWS::S3::Bucket - TheDailyNuggetStackOutputsBucket
+CloudFormation - CREATE_IN_PROGRESS - AWS::IAM::Role - CognitoAuthRole
+CloudFormation - CREATE_IN_PROGRESS - AWS::IAM::Role - CognitoAuthRole
+CloudFormation - CREATE_COMPLETE - AWS::DynamoDB::Table - NuggetBaseDynamoDbTable
+CloudFormation - CREATE_COMPLETE - AWS::DynamoDB::Table - NuggetHistoryDynamoDbTable
+CloudFormation - CREATE_COMPLETE - AWS::DynamoDB::Table - NuggeteerDynamoDbTable
+CloudFormation - CREATE_COMPLETE - AWS::DynamoDB::Table - NuggetSubscriberDynamoDbTable
+CloudFormation - CREATE_COMPLETE - AWS::DynamoDB::Table - NuggetOfTheDayDynamoDbTable
+CloudFormation - CREATE_COMPLETE - AWS::IAM::Role - CognitoUnAuthRole
+CloudFormation - CREATE_IN_PROGRESS - AWS::IAM::Role - IamRoleLambdaExecution
+CloudFormation - CREATE_IN_PROGRESS - AWS::IAM::Role - IamRoleLambdaExecution
+CloudFormation - CREATE_COMPLETE - AWS::IAM::Role - CognitoAuthRole
+CloudFormation - CREATE_IN_PROGRESS - AWS::Cognito::IdentityPoolRoleAttachment - CognitoIdentityPoolRoles
+CloudFormation - CREATE_IN_PROGRESS - AWS::Cognito::IdentityPoolRoleAttachment - CognitoIdentityPoolRoles
+CloudFormation - CREATE_COMPLETE - AWS::Cognito::IdentityPoolRoleAttachment - CognitoIdentityPoolRoles
+CloudFormation - CREATE_COMPLETE - AWS::IAM::Role - IamRoleLambdaExecution
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - GetNuggeteerLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - DeleteCognitoUserLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - UpdateNuggeteerPhoneLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - SendNuggetsTwiceWeeklyLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - GetServerlessOutputsLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - SyncSubscriberVerificationsLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - GetNuggetOfTheDayLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - CreateNuggeteerLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - GetNuggeteerDelivPrefsLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - EmailNuggetOfTheDayLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - SendNuggetsDailyLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - UpdateNuggeteerDelivPrefsLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - SyncSubscriberTblAndSESLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - CreateSubscriberLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - RecordNuggetOfTheDayLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - SendNuggetsTwiceDailyLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - GetRandomNuggetLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - DeleteSubscriberLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - SendNuggetsWeeklyLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - DeleteNuggeteerLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - SyncSubscriberVerificationsLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - GetServerlessOutputsLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - GetNuggeteerLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - SyncSubscriberTblAndSESLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - UpdateNuggeteerPhoneLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - RecordNuggetOfTheDayLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - SendNuggetsDailyLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - SendNuggetsTwiceWeeklyLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - CreateSubscriberLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - CreateNuggeteerLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - SendNuggetsTwiceDailyLambdaFunction
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Function - GetServerlessOutputsLambdaFunction
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Function - SyncSubscriberVerificationsLambdaFunction
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Function - GetNuggeteerLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - GetNuggetOfTheDayLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - GetRandomNuggetLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - GetNuggeteerDelivPrefsLambdaFunction
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Function - SyncSubscriberTblAndSESLambdaFunction
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Function - UpdateNuggeteerPhoneLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - UpdateNuggeteerDelivPrefsLambdaFunction
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Function - SendNuggetsDailyLambdaFunction
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Function - SendNuggetsTwiceWeeklyLambdaFunction
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Function - CreateNuggeteerLambdaFunction
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Function - SendNuggetsTwiceDailyLambdaFunction
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Function - CreateSubscriberLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - DeleteCognitoUserLambdaFunction
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Function - GetNuggeteerDelivPrefsLambdaFunction
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Function - GetNuggetOfTheDayLambdaFunction
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Function - GetRandomNuggetLambdaFunction
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Function - RecordNuggetOfTheDayLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - DeleteSubscriberLambdaFunction
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Function - UpdateNuggeteerDelivPrefsLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - DeleteNuggeteerLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - SendNuggetsWeeklyLambdaFunction
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Function - DeleteSubscriberLambdaFunction
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Function - DeleteNuggeteerLambdaFunction
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Function - SendNuggetsWeeklyLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Function - EmailNuggetOfTheDayLambdaFunction
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Function - EmailNuggetOfTheDayLambdaFunction
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Function - DeleteCognitoUserLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GetServerlessOutputsLambdaVersionJt9CqSIeVBNCo75zvK9yEZbCZARuMrIK6pOH0iPSY
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - GetServerlessOutputsLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GetNuggeteerDelivPrefsLambdaVersionAisZpdJm3g5JDM7nWfr3mrYEM05FsLEzMSOci4rlI
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodGetDashserverlessDashoutputsGet
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodDeleteDashsubscriberPost
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - GetNuggeteerLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - UpdateNuggeteerPhoneLambdaVersionmQzElucu8XBD7p9oIzUUDlnGa2Mf4EOgBx8HQqRMQ
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - GetServerlessOutputsLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::EventSourceMapping - SyncSubscriberTblAndSESEventSourceMappingDynamodbNuggetSubscriberDynamoDbTable
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodChangeDashnuggeteerDashphonePost
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodGetDashserverlessDashoutputsGet
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodRegisterDashnuggeteerPost
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - GetNuggeteerLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - SyncSubscriberTblAndSESLambdaVersione2w164VmGpGlnmlTdRSwLppGhASKz4fdlCKKJt3Op4
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GetRandomNuggetLambdaVersionC23dnp21RvUkeiS8C8kH4obgfi900JOeoMpqJhgDRg
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodDeleteDashsubscriberPost
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - CreateNuggeteerLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - UpdateNuggeteerPhoneLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - UpdateNuggeteerDelivPrefsLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Events::Rule - SendNuggetsTwiceWeeklyEventsRuleSchedule1
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::EventSourceMapping - SyncSubscriberTblAndSESEventSourceMappingDynamodbNuggetSubscriberDynamoDbTable
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodRegisterDashnuggeteerPost
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - CreateSubscriberLambdaVersion8UIuct9mgdsOU5W0XyVS9AIebZPERzldTVPxmLXMg
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GetNuggeteerLambdaVersionQ1Oa7dNyUKkRTig0V7dzGSvF3NHDdUBdjjSVd6LnRs
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - CreateNuggeteerLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - SendNuggetsTwiceDailyLambdaVersion8XeA3gPrOcCVWEZOtknDMM1QuvwmdG0RZE9inL6zyY
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GetServerlessOutputsLambdaVersionJt9CqSIeVBNCo75zvK9yEZbCZARuMrIK6pOH0iPSY
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - GetNuggetOfTheDayLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Events::Rule - SendNuggetsDailyEventsRuleSchedule1
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - GetRandomNuggetLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Events::Rule - SendNuggetsTwiceWeeklyEventsRuleSchedule1
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - DeleteNuggeteerLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - UpdateNuggeteerDelivPrefsLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - UpdateNuggeteerPhoneLambdaPermissionApiGateway
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::EventSourceMapping - SyncSubscriberTblAndSESEventSourceMappingDynamodbNuggetSubscriberDynamoDbTable
+CloudFormation - CREATE_IN_PROGRESS - AWS::Events::Rule - SendNuggetsTwiceDailyEventsRuleSchedule1
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - GetServerlessOutputsLambdaVersionJt9CqSIeVBNCo75zvK9yEZbCZARuMrIK6pOH0iPSY
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - GetNuggetOfTheDayLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodSetDashnuggeteerDashdeliveryDashpreferencesPost
+CloudFormation - CREATE_IN_PROGRESS - AWS::Events::Rule - SyncSubscriberVerificationsEventsRuleSchedule1
+CloudFormation - CREATE_IN_PROGRESS - AWS::Events::Rule - SendNuggetsDailyEventsRuleSchedule1
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - DeleteNuggeteerLambdaVersionvWp0AzaqYwrLnYf5Ui0YpDa6Hebv0XZzb06Zk7Epkg
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodRandomDashnuggetPost
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - DeleteSubscriberLambdaVersionMwBHhq159UWUMaFWtRCHD0LeqvDQt4nhzvPJuYnO2g
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - GetRandomNuggetLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - DeleteSubscriberLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodAddDashsubscriberPost
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - GetNuggeteerDelivPrefsLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodNuggetDashofDashdayGet
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - RecordNuggetOfTheDayLambdaPermissionThedailynuggetprodemailsS3
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - DeleteNuggeteerLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - CreateSubscriberLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodGetDashnuggeteerDashdeliveryDashpreferencesPost
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodDeleteDashnuggeteerPost
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - SendNuggetsDailyLambdaVersionUP2n5duLi9IrK1pbI9GnomZkl8S6x11aGBQlU7NGo
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GetNuggeteerDelivPrefsLambdaVersionAisZpdJm3g5JDM7nWfr3mrYEM05FsLEzMSOci4rlI
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodSetDashnuggeteerDashdeliveryDashpreferencesPost
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodGetDashnuggeteerPost
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - UpdateNuggeteerDelivPrefsLambdaVersiongm8I8gTJiB82nbl5WMW4iK4TnNvlIjd8ysO5bhuGonc
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodRandomDashnuggetPost
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - DeleteSubscriberLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - DeleteCognitoUserLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - RecordNuggetOfTheDayLambdaPermissionThedailynuggetprodemailsS3
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodNuggetDashofDashdayGet
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - GetNuggeteerDelivPrefsLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - EmailNuggetOfTheDayLambdaVersionmMDFSk9pcRd61WEaPVpjcn7gesTS8TKn3SN6j4IlWx8
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - CreateSubscriberLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Events::Rule - SendNuggetsWeeklyEventsRuleSchedule1
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - GetNuggeteerDelivPrefsLambdaVersionAisZpdJm3g5JDM7nWfr3mrYEM05FsLEzMSOci4rlI
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodGetDashnuggeteerPost
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodGetDashnuggeteerDashdeliveryDashpreferencesPost
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodAddDashsubscriberPost
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - RecordNuggetOfTheDayLambdaVersionFgndlh9TWgqFy7FxpOBLkfMLYFqHTP86GqM1lsFGeD4
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodDeleteDashnuggeteerPost
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - DeleteCognitoUserLambdaPermissionApiGateway
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - SendNuggetsTwiceWeeklyLambdaVersion6DO3ZccRS5w1sgCG60wkglT0AAgEZ2HeJBh4sfxQRUc
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - SyncSubscriberVerificationsLambdaVersiondEpvQJR8u125HHsJTcMZoMFrpOtplw3TQpJ3rS1c
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - UpdateNuggeteerPhoneLambdaVersionmQzElucu8XBD7p9oIzUUDlnGa2Mf4EOgBx8HQqRMQ
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - CreateNuggeteerLambdaVersionXf0w6l2hSoMPMACa6MrKZkSlorNgKXe3URByXUPuZSE
+CloudFormation - CREATE_IN_PROGRESS - AWS::Events::Rule - SendNuggetsWeeklyEventsRuleSchedule1
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GetNuggetOfTheDayLambdaVersionV4cBRusdLhEaG78da5iuwlROszzsc2Qu2QuFmBw
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::EventSourceMapping - EmailNuggetOfTheDayEventSourceMappingDynamodbNuggetOfTheDayDynamoDbTable
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - SyncSubscriberTblAndSESLambdaVersione2w164VmGpGlnmlTdRSwLppGhASKz4fdlCKKJt3Op4
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - SendNuggetsTwiceWeeklyLambdaVersion6DO3ZccRS5w1sgCG60wkglT0AAgEZ2HeJBh4sfxQRUc
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - SyncSubscriberVerificationsLambdaVersiondEpvQJR8u125HHsJTcMZoMFrpOtplw3TQpJ3rS1c
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GetNuggeteerLambdaVersionQ1Oa7dNyUKkRTig0V7dzGSvF3NHDdUBdjjSVd6LnRs
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - CreateSubscriberLambdaVersion8UIuct9mgdsOU5W0XyVS9AIebZPERzldTVPxmLXMg
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - UpdateNuggeteerPhoneLambdaVersionmQzElucu8XBD7p9oIzUUDlnGa2Mf4EOgBx8HQqRMQ
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - SendNuggetsTwiceDailyLambdaVersion8XeA3gPrOcCVWEZOtknDMM1QuvwmdG0RZE9inL6zyY
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - CreateNuggeteerLambdaVersionXf0w6l2hSoMPMACa6MrKZkSlorNgKXe3URByXUPuZSE
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - GetNuggetOfTheDayLambdaVersionV4cBRusdLhEaG78da5iuwlROszzsc2Qu2QuFmBw
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - SendNuggetsWeeklyLambdaVersionFzAmCpBVZ01dVd1co7dBu3C5C274PccJyuR2SWY
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - CreateSubscriberLambdaVersion8UIuct9mgdsOU5W0XyVS9AIebZPERzldTVPxmLXMg
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - SendNuggetsTwiceDailyLambdaVersion8XeA3gPrOcCVWEZOtknDMM1QuvwmdG0RZE9inL6zyY
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - GetNuggeteerLambdaVersionQ1Oa7dNyUKkRTig0V7dzGSvF3NHDdUBdjjSVd6LnRs
+CloudFormation - CREATE_IN_PROGRESS - AWS::Events::Rule - SendNuggetsTwiceDailyEventsRuleSchedule1
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - SyncSubscriberTblAndSESLambdaVersione2w164VmGpGlnmlTdRSwLppGhASKz4fdlCKKJt3Op4
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::EventSourceMapping - EmailNuggetOfTheDayEventSourceMappingDynamodbNuggetOfTheDayDynamoDbTable
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - DeleteNuggeteerLambdaVersionvWp0AzaqYwrLnYf5Ui0YpDa6Hebv0XZzb06Zk7Epkg
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodDeleteDashcognitoDashuserPost
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - DeleteSubscriberLambdaVersionMwBHhq159UWUMaFWtRCHD0LeqvDQt4nhzvPJuYnO2g
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - DeleteCognitoUserLambdaVersionKYNAVVzkRAV307tfTCMcWJo8R9eJ1rqM8QvHNgAn9IM
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - DeleteNuggeteerLambdaVersionvWp0AzaqYwrLnYf5Ui0YpDa6Hebv0XZzb06Zk7Epkg
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - SendNuggetsDailyLambdaVersionUP2n5duLi9IrK1pbI9GnomZkl8S6x11aGBQlU7NGo
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - UpdateNuggeteerDelivPrefsLambdaVersiongm8I8gTJiB82nbl5WMW4iK4TnNvlIjd8ysO5bhuGonc
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::EventSourceMapping - EmailNuggetOfTheDayEventSourceMappingDynamodbNuggetOfTheDayDynamoDbTable
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - EmailNuggetOfTheDayLambdaVersionmMDFSk9pcRd61WEaPVpjcn7gesTS8TKn3SN6j4IlWx8
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - DeleteSubscriberLambdaVersionMwBHhq159UWUMaFWtRCHD0LeqvDQt4nhzvPJuYnO2g
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodDeleteDashcognitoDashuserPost
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - SendNuggetsDailyLambdaVersionUP2n5duLi9IrK1pbI9GnomZkl8S6x11aGBQlU7NGo
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - UpdateNuggeteerDelivPrefsLambdaVersiongm8I8gTJiB82nbl5WMW4iK4TnNvlIjd8ysO5bhuGonc
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - EmailNuggetOfTheDayLambdaVersionmMDFSk9pcRd61WEaPVpjcn7gesTS8TKn3SN6j4IlWx8
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - RecordNuggetOfTheDayLambdaVersionFgndlh9TWgqFy7FxpOBLkfMLYFqHTP86GqM1lsFGeD4
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - RecordNuggetOfTheDayLambdaVersionFgndlh9TWgqFy7FxpOBLkfMLYFqHTP86GqM1lsFGeD4
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - SendNuggetsWeeklyLambdaVersionFzAmCpBVZ01dVd1co7dBu3C5C274PccJyuR2SWY
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - DeleteCognitoUserLambdaVersionKYNAVVzkRAV307tfTCMcWJo8R9eJ1rqM8QvHNgAn9IM
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - SendNuggetsWeeklyLambdaVersionFzAmCpBVZ01dVd1co7dBu3C5C274PccJyuR2SWY
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - DeleteCognitoUserLambdaVersionKYNAVVzkRAV307tfTCMcWJo8R9eJ1rqM8QvHNgAn9IM
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GetRandomNuggetLambdaVersionC23dnp21RvUkeiS8C8kH4obgfi900JOeoMpqJhgDRg
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - GetRandomNuggetLambdaVersionC23dnp21RvUkeiS8C8kH4obgfi900JOeoMpqJhgDRg
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodGetDashserverlessDashoutputsGet
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Permission - GetServerlessOutputsLambdaPermissionApiGateway
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Permission - GetNuggeteerLambdaPermissionApiGateway
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Permission - CreateNuggeteerLambdaPermissionApiGateway
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Permission - UpdateNuggeteerDelivPrefsLambdaPermissionApiGateway
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Permission - UpdateNuggeteerPhoneLambdaPermissionApiGateway
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Permission - GetNuggetOfTheDayLambdaPermissionApiGateway
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Permission - GetRandomNuggetLambdaPermissionApiGateway
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Permission - DeleteNuggeteerLambdaPermissionApiGateway
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Permission - GetNuggeteerDelivPrefsLambdaPermissionApiGateway
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Permission - DeleteSubscriberLambdaPermissionApiGateway
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Permission - RecordNuggetOfTheDayLambdaPermissionThedailynuggetprodemailsS3
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Permission - CreateSubscriberLambdaPermissionApiGateway
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Permission - DeleteCognitoUserLambdaPermissionApiGateway
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodDeleteDashnuggeteerPost
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodDeleteDashsubscriberPost
+CloudFormation - CREATE_IN_PROGRESS - AWS::S3::Bucket - S3BucketThedailynuggetprodemails
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodAddDashsubscriberPost
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodRegisterDashnuggeteerPost
+CloudFormation - CREATE_IN_PROGRESS - AWS::S3::Bucket - S3BucketThedailynuggetprodemails
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodRandomDashnuggetPost
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodSetDashnuggeteerDashdeliveryDashpreferencesPost
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodGetDashnuggeteerPost
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodChangeDashnuggeteerDashphonePost
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodNuggetDashofDashdayGet
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodGetDashnuggeteerDashdeliveryDashpreferencesPost
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodDeleteDashcognitoDashuserPost
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Deployment - ApiGatewayDeployment1570852535359
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Deployment - ApiGatewayDeployment1570852535359
+CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Deployment - ApiGatewayDeployment1570852535359
+CloudFormation - CREATE_COMPLETE - AWS::S3::Bucket - S3BucketThedailynuggetprodemails
+CloudFormation - CREATE_IN_PROGRESS - AWS::S3::BucketPolicy - S3EMailBucketPermissions
+CloudFormation - CREATE_IN_PROGRESS - AWS::S3::BucketPolicy - S3EMailBucketPermissions
+CloudFormation - CREATE_IN_PROGRESS - AWS::SES::ReceiptRule - EmailReceivedRule
+CloudFormation - CREATE_COMPLETE - AWS::S3::BucketPolicy - S3EMailBucketPermissions
+CloudFormation - CREATE_IN_PROGRESS - AWS::SES::ReceiptRule - EmailReceivedRule
+CloudFormation - CREATE_COMPLETE - AWS::SES::ReceiptRule - EmailReceivedRule
+CloudFormation - CREATE_COMPLETE - AWS::Events::Rule - SendNuggetsTwiceWeeklyEventsRuleSchedule1
+CloudFormation - CREATE_COMPLETE - AWS::Events::Rule - SyncSubscriberVerificationsEventsRuleSchedule1
+CloudFormation - CREATE_COMPLETE - AWS::Events::Rule - SendNuggetsDailyEventsRuleSchedule1
+CloudFormation - CREATE_COMPLETE - AWS::Events::Rule - SendNuggetsWeeklyEventsRuleSchedule1
+CloudFormation - CREATE_COMPLETE - AWS::Events::Rule - SendNuggetsTwiceDailyEventsRuleSchedule1
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - SendNuggetsTwiceWeeklyLambdaPermissionEventsRuleSchedule1
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - SyncSubscriberVerificationsLambdaPermissionEventsRuleSchedule1
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - SendNuggetsTwiceWeeklyLambdaPermissionEventsRuleSchedule1
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - SyncSubscriberVerificationsLambdaPermissionEventsRuleSchedule1
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - SendNuggetsDailyLambdaPermissionEventsRuleSchedule1
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - SendNuggetsDailyLambdaPermissionEventsRuleSchedule1
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - SendNuggetsTwiceDailyLambdaPermissionEventsRuleSchedule1
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - SendNuggetsWeeklyLambdaPermissionEventsRuleSchedule1
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - SendNuggetsTwiceDailyLambdaPermissionEventsRuleSchedule1
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Permission - SendNuggetsWeeklyLambdaPermissionEventsRuleSchedule1
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Permission - SendNuggetsTwiceWeeklyLambdaPermissionEventsRuleSchedule1
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Permission - SyncSubscriberVerificationsLambdaPermissionEventsRuleSchedule1
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Permission - SendNuggetsDailyLambdaPermissionEventsRuleSchedule1
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Permission - SendNuggetsTwiceDailyLambdaPermissionEventsRuleSchedule1
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Permission - SendNuggetsWeeklyLambdaPermissionEventsRuleSchedule1
+CloudFormation - UPDATE_COMPLETE_CLEANUP_IN_PROGRESS - AWS::CloudFormation::Stack - the-daily-nugget-service-prod
+CloudFormation - UPDATE_COMPLETE - AWS::CloudFormation::Stack - the-daily-nugget-service-prod
+Serverless: Stack update finished...
+Service Information
+service: the-daily-nugget-service
+stage: prod
+region: us-east-1
+stack: the-daily-nugget-service-prod
+api keys:
+  None
+endpoints:
+  GET - https://i4bjtigw87.execute-api.us-east-1.amazonaws.com/prod/nugget-of-day
+  POST - https://i4bjtigw87.execute-api.us-east-1.amazonaws.com/prod/random-nugget
+  POST - https://i4bjtigw87.execute-api.us-east-1.amazonaws.com/prod/add-subscriber
+  POST - https://i4bjtigw87.execute-api.us-east-1.amazonaws.com/prod/register-nuggeteer
+  POST - https://i4bjtigw87.execute-api.us-east-1.amazonaws.com/prod/delete-subscriber
+  POST - https://i4bjtigw87.execute-api.us-east-1.amazonaws.com/prod/delete-nuggeteer
+  POST - https://i4bjtigw87.execute-api.us-east-1.amazonaws.com/prod/set-nuggeteer-delivery-preferences
+  POST - https://i4bjtigw87.execute-api.us-east-1.amazonaws.com/prod/get-nuggeteer-delivery-preferences
+  POST - https://i4bjtigw87.execute-api.us-east-1.amazonaws.com/prod/change-nuggeteer-phone
+  POST - https://i4bjtigw87.execute-api.us-east-1.amazonaws.com/prod/get-nuggeteer
+  GET - https://i4bjtigw87.execute-api.us-east-1.amazonaws.com/prod/get-serverless-outputs
+  POST - https://i4bjtigw87.execute-api.us-east-1.amazonaws.com/prod/delete-cognito-user
+functions:
+  getNuggetOfTheDay: the-daily-nugget-service-prod-getNuggetOfTheDay
+  getRandomNugget: the-daily-nugget-service-prod-getRandomNugget
+  createSubscriber: the-daily-nugget-service-prod-createSubscriber
+  createNuggeteer: the-daily-nugget-service-prod-createNuggeteer
+  deleteSubscriber: the-daily-nugget-service-prod-deleteSubscriber
+  deleteNuggeteer: the-daily-nugget-service-prod-deleteNuggeteer
+  updateNuggeteerDelivPrefs: the-daily-nugget-service-prod-updateNuggeteerDelivPrefs
+  getNuggeteerDelivPrefs: the-daily-nugget-service-prod-getNuggeteerDelivPrefs
+  updateNuggeteerPhone: the-daily-nugget-service-prod-updateNuggeteerPhone
+  getNuggeteer: the-daily-nugget-service-prod-getNuggeteer
+  getServerlessOutputs: the-daily-nugget-service-prod-getServerlessOutputs
+  deleteCognitoUser: the-daily-nugget-service-prod-deleteCognitoUser
+  syncSubscriberTblAndSES: the-daily-nugget-service-prod-syncSubscriberTblAndSES
+  emailNuggetOfTheDay: the-daily-nugget-service-prod-emailNuggetOfTheDay
+  recordNuggetOfTheDay: the-daily-nugget-service-prod-recordNuggetOfTheDay
+  syncSubscriberVerifications: the-daily-nugget-service-prod-syncSubscriberVerifications
+  sendNuggetsWeekly: the-daily-nugget-service-prod-sendNuggetsWeekly
+  sendNuggetsTwiceWeekly: the-daily-nugget-service-prod-sendNuggetsTwiceWeekly
+  sendNuggetsDaily: the-daily-nugget-service-prod-sendNuggetsDaily
+  sendNuggetsTwiceDaily: the-daily-nugget-service-prod-sendNuggetsTwiceDaily
+layers:
+  None
+
+Stack Outputs
+GetNuggetOfTheDayLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-getNuggetOfTheDay:22
+SendNuggetsDailyLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-sendNuggetsDaily:22
+RecordNuggetOfTheDayLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-recordNuggetOfTheDay:24
+ServerlessDeploymentBucketName: the-daily-nugget-service-serverlessdeploymentbuck-1tt8u8b0lhffr
+GetRandomNuggetLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-getRandomNugget:24
+EmailNuggetOfTheDayLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-emailNuggetOfTheDay:21
+DeleteCognitoUserLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-deleteCognitoUser:22
+UpdateNuggeteerDelivPrefsLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-updateNuggeteerDelivPrefs:23
+GetServerlessOutputsLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-getServerlessOutputs:22
+IdentityPoolId: us-east-1:70caea8c-52d4-4cb7-affd-1161c56dfe00
+GetNuggeteerLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-getNuggeteer:22
+SyncSubscriberVerificationsLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-syncSubscriberVerifications:23
+SyncSubscriberTblAndSESLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-syncSubscriberTblAndSES:21
+DeleteNuggeteerLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-deleteNuggeteer:23
+CreateNuggeteerLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-createNuggeteer:21
+SendNuggetsTwiceDailyLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-sendNuggetsTwiceDaily:24
+UpdateNuggeteerPhoneLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-updateNuggeteerPhone:22
+SendNuggetsWeeklyLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-sendNuggetsWeekly:23
+UserPoolClientId: 4jccebu07blfs85rk1agkeng13
+CreateSubscriberLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-createSubscriber:22
+GetNuggeteerDelivPrefsLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-getNuggeteerDelivPrefs:23
+UserPoolId: us-east-1_Vf8no9oZU
+SendNuggetsTwiceWeeklyLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-sendNuggetsTwiceWeekly:23
+DeleteSubscriberLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-deleteSubscriber:22
+ServiceEndpoint: https://i4bjtigw87.execute-api.us-east-1.amazonaws.com/prod
+
+Received Stack Output { GetNuggetOfTheDayLambdaFunctionQualifiedArn:
+   'arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-getNuggetOfTheDay:22',
+  SendNuggetsDailyLambdaFunctionQualifiedArn:
+   'arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-sendNuggetsDaily:22',
+  RecordNuggetOfTheDayLambdaFunctionQualifiedArn:
+   'arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-recordNuggetOfTheDay:24',
+  ServerlessDeploymentBucketName:
+   'the-daily-nugget-service-serverlessdeploymentbuck-1tt8u8b0lhffr',
+  GetRandomNuggetLambdaFunctionQualifiedArn:
+   'arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-getRandomNugget:24',
+  EmailNuggetOfTheDayLambdaFunctionQualifiedArn:
+   'arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-emailNuggetOfTheDay:21',
+  DeleteCognitoUserLambdaFunctionQualifiedArn:
+   'arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-deleteCognitoUser:22',
+  UpdateNuggeteerDelivPrefsLambdaFunctionQualifiedArn:
+   'arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-updateNuggeteerDelivPrefs:23',
+  GetServerlessOutputsLambdaFunctionQualifiedArn:
+   'arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-getServerlessOutputs:22',
+  IdentityPoolId: 'us-east-1:70caea8c-52d4-4cb7-affd-1161c56dfe00',
+  GetNuggeteerLambdaFunctionQualifiedArn:
+   'arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-getNuggeteer:22',
+  SyncSubscriberVerificationsLambdaFunctionQualifiedArn:
+   'arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-syncSubscriberVerifications:23',
+  SyncSubscriberTblAndSESLambdaFunctionQualifiedArn:
+   'arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-syncSubscriberTblAndSES:21',
+  DeleteNuggeteerLambdaFunctionQualifiedArn:
+   'arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-deleteNuggeteer:23',
+  CreateNuggeteerLambdaFunctionQualifiedArn:
+   'arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-createNuggeteer:21',
+  SendNuggetsTwiceDailyLambdaFunctionQualifiedArn:
+   'arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-sendNuggetsTwiceDaily:24',
+  UpdateNuggeteerPhoneLambdaFunctionQualifiedArn:
+   'arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-updateNuggeteerPhone:22',
+  SendNuggetsWeeklyLambdaFunctionQualifiedArn:
+   'arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-sendNuggetsWeekly:23',
+  UserPoolClientId: '4jccebu07blfs85rk1agkeng13',
+  CreateSubscriberLambdaFunctionQualifiedArn:
+   'arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-createSubscriber:22',
+  GetNuggeteerDelivPrefsLambdaFunctionQualifiedArn:
+   'arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-getNuggeteerDelivPrefs:23',
+  UserPoolId: 'us-east-1_Vf8no9oZU',
+  SendNuggetsTwiceWeeklyLambdaFunctionQualifiedArn:
+   'arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-sendNuggetsTwiceWeekly:23',
+  DeleteSubscriberLambdaFunctionQualifiedArn:
+   'arn:aws:lambda:us-east-1:562860900886:function:the-daily-nugget-service-prod-deleteSubscriber:22',
+  ServiceEndpoint:
+   'https://i4bjtigw87.execute-api.us-east-1.amazonaws.com/prod' }
+Serverless: Stack Output processed with handler: scripts/output.handler
+Serverless: Stack Output saved to file: scripts/the-daily-nugget-prod-stack-output.toml

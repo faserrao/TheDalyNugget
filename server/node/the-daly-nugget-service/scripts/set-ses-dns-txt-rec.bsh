@@ -1,0 +1,3 @@
+#!/bin/bash
+
+export	DN_SES_DNS_TXT_REC=$(cat dns-ses-text-rec-val.txt)

@@ -1,0 +1,906 @@
+<!DOCTYPE html> <html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>The Daily Nugget</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+<!-- <link href="css/grayscale.min.css" rel="stylesheet"> -->
+
+  <link href="css/grayscale.css" rel="stylesheet">
+
+  <script src="./assets/jsbn.js"></script>
+  <script src="./assets/jsbn2.js"></script>
+  <script src="./assets/sjcl.js"></script>
+  <script src="./assets/moment.min.js"></script>
+  <script src="./assets/aws-cognito-sdk.min.js"></script>
+  <script src="./assets/amazon-cognito-identity.min.js"></script>
+  <script src="./assets/aws-sdk.min.js"></script>
+  <script src="./assets/gateway/lib/apiGatewayCore/apiGatewayClient.js"></script>
+  <script src="./assets/gateway/lib/apiGatewayCore/sigV4Client.js"></script>
+  <script src="./assets/gateway/lib/apiGatewayCore/simpleHttpClient.js"></script>
+  <script src="./assets/gateway/lib/apiGatewayCore/utils.js"></script>
+  <script src="./assets/gateway/lib/axios/dist/axios.standalone.js"></script>
+  <script src="./assets/gateway/lib/CryptoJS/rollups/hmac-sha256.js"></script>
+  <script src="./assets/gateway/lib/CryptoJS/rollups/sha256.js"></script>
+  <script src="./assets/gateway/lib/CryptoJS/components/enc-base64.js"></script>
+  <script src="./assets/gateway/lib/CryptoJS/components/hmac.js"></script>
+  <script src="./assets/gateway/lib/url-template/url-template.js"></script>
+  <script src="./assets/gateway/apigClient.js"></script>
+
+<!--
+  <style>
+  .modal-header, h4, .close {
+      background-color: #5cb85c;
+      color:white !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-footer {
+      background-color: #f9f9f9;
+  }
+  </style>
+-->
+
+  <style>
+		.modal-body {
+   		background-image: url("img/demo-image-01.jpg");
+		}
+  </style>
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger text-primary font-weight-bold" href="#page-top">Home</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger text-primary font-weight-bold" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger text-primary font-weight-bold" href="#nugget-of-day-section-id" id="navbar-nugget-of-day-preferences-item-id">Nugget of the Day</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger text-primary font-weight-bold" href="#" id="navbar-preferences-item-id">Preferences</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" data-toggle="modal" data-target="#lr-modal-id" class="nav-link js-scroll-trigger text-primary font-weight-bold" id="navbar-log-in-out-item-id">Login</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" data-toggle="modal" data-target="#lr-modal-id" class="nav-link js-scroll-trigger text-primary font-weight-bold" id="navbar-registration-item-id">Register</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+      <div class="mx-auto text-center">
+        <p class="pt-1" id="modal-header-status-bar-id"></p>
+        <h1 class="mx-auto my-0 text-uppercase">The Daily Nugget</h1>
+        <h2 class="text-white-50 mx-auto mt-2 mb-5">All we have to decide is what to do with the time that is given to us.<br>J. R. R. Tolkien</h2>
+        <a href="#nuggets-section-id" class="btn btn-primary js-scroll-trigger" id="display_random_nugget_button-id">The Nuggets</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="nugget-of-day-section-id">
+  <div class="row">
+    <div class="col-md-12">
+      <img src="img/misty_mountains-wallpaper-2560x1600_4.jpg" class="img-fluid" alt="">
+      <div class="carousel-caption">
+
+<div class="d-none d-md-block">
+
+        <h1 class="text-primary font-weight-bold pb-5">
+          Nugget of the Day
+        </h1>
+        <h2 class="text-primary font-weight-bold font-italic pb-5" id="nugget-of-day-display-area-1-id">
+          Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!
+        </h2>
+        <br> <br> <br>
+</div>
+
+<div class="d-md-none d-lg-none d-xl-none">
+
+        <p class="text-primary font-weight-bold pb-5">
+          Nugget of the Day
+        <br>
+        <span class="text-primary font-weight-bold font-italic pb-5" id="nugget-of-day-display-area-2-id">
+          Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!
+        </span>
+        </p>
+
+</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+  <!-- Projects Section -->
+  <section id="nuggets-section-id" class="projects-section bg-light">
+    <div class="container"> <!-- Featured Project Row --> <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+        <div class="col-xl-8 col-lg-7">
+          <img class="img-fluid mb-3 mb-lg-0" src="img/bg-masthead.jpg" alt="">
+        </div>
+        <div class="col-xl-4 col-lg-5">
+          <div class="featured-text font-weight-bold font-italic text-center text-lg-left">
+            <h4 id="topic-display-area-1-id">Courage</h4>
+            <p class="text-primary mb-0" id="nuggets-display-area-1-id">The most courageous act is still to think for yourself. Aloud.  Coco Chanel</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project One Row -->
+      <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+        <div class="col-lg-6">
+          <img class="img-fluid" src="img/demo-image-01.jpg" alt="">
+        </div>
+        <div class="col-lg-6">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-left">
+                <h4 class="text-white" id="topic-display-area-2-id">Strength</h4>
+                <p class="mb-0 text-white-50 font-weight-bold font-italic" id="nuggets-display-area-2-id">The weak can never forgive. Forgiveness is the attribute of the strong. Mahatma Gandhi</p>
+                <hr class="d-none d-lg-block mb-0 ml-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Two Row -->
+      <div class="row justify-content-center no-gutters">
+        <div class="col-lg-6">
+          <img class="img-fluid" src="img/demo-image-02.jpg" alt="">
+        </div>
+        <div class="col-lg-6 order-lg-first">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-right">
+                <h4 class="text-white" id="topic-display-area-3-id">Perseverence</h4>
+                <p class="mb-0 text-white-50" id="nuggets-display-area-3-id">Winners never quit, and quitters never win. Vince Lombardi</p>
+                <hr class="d-none d-lg-block mb-0 mr-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Signup Section -->
+  <section id="subscribe-section-id" class="signup-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-lg-8 mx-auto text-center">
+
+          <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+          <h2 class="text-white mb-5" id="subscribe-heading-id">Subscribe to receive the Daily Nugget!</h2>
+
+          <form class="form-inline d-flex" id="subscribe-user-email-form-id">
+            <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="subscribe-user-email-input-id" placeholder="name@example.com">
+            <button class="btn btn-primary mx-auto" id="subscribe-button-id">Subscribe</button>
+          </form>
+
+          <p class="pt-1" id="subscribe-status-bar-id"></p>
+
+        </div>
+      </div>
+
+      <div class="row pt-3">
+        <div class="col-md-10 col-lg-8 mx-auto text-center">
+
+          <i class="far fa-2x mb-2 text-white"></i>
+          <h2 class="text-white mb-5" id="join-heading-text-id">Join to enjoy a personalized Nuggeteer experience!</h2>
+
+          <button class="btn btn-primary mx-auto" id="join-button-id">Join</button>
+
+<!--
+          <a class="btn btn-primary js-scroll-trigger" id="join-button-id">Join</a>
+-->
+
+          <p class="text-white text-left mt-5" id="join-description-text-id">
+            By joining you will realize the benefits of a Nuggeteer First Class, which include specifying your Nugget preferences (when, where, and how often)...
+            as well as being able to contribute your own Nuggets - making you eligible for awards and prizes!
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section bg-black">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">The Rev's Qualifications</h4>
+              <hr class="my-4">
+              <a href="pdf/CertificateOfOrdination.pdf">Certificate of Ordination</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-envelope text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Email</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">
+                <a href="#">thenuggrev@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-mobile-alt text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Audio Nuggets</h4>
+              <hr class="my-4">
+                <a href="#">Coming Soon!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="social d-flex justify-content-center">
+        <a href="#" class="mx-2">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="mx-2">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="mx-2">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black small text-center text-white-50">
+    <div class="container">
+      Copyright &copy; The Daily Nugget 2019
+      <p><a href="#" class="blue-text" id="footer-unsubscribe-link-id">unsubscribe</a></p>
+      <p><a href="#" class="blue-text" id="footer-delete-account-link-id">delete account</a></p>
+    </div>
+  </footer>
+
+
+<!-- Modals -->
+
+<div class="modal" id="change-phone-modal-id" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Change Phone</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-primary font-weight-bold">
+        <p>In order to change your phone number please enter your new phone number - then click on submit.</p>
+        <div class="md-form form-sm mb-5">
+          <i class="fas fa-phone prefix"></i>
+          <input type="cellphone" id="modal-change-phone-new-phone-input-id" class="form-control form-control-sm validate"placeholder="##########">
+          <label data-error="wrong" data-success="right" for="modal-change-phone-new-phone-input-id" class="text-primary font-weight-bold">New phone number</label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p class="pt-1" id="modal-change-phone-status-bar-id"></p>
+<!--
+        <button type="button" class="btn btn-info" data-dismiss="modal" id="modal-change-phone-submit-button-id">Submit</button>
+-->
+        <button type="button" class="btn btn-info" id="modal-change-phone-submit-button-id">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal" id="change-phone-success-modal-id" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Phone Number Updated Successfully!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="change-password-modal-id" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Change Password</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-primary font-weight-bold">
+        <p>In order to change your password please enter your current password and new passwordn - then click on submit.</p>
+        <div class="md-form form-sm mb-5">
+          <i class="fas fa-lock prefix"></i>
+          <input type="password" id="modal-change-password-current-password-input-id" class="form-control form-control-sm validate">
+          <label data-error="wrong" data-success="right" for="modal-change-password-current_password-input-id" class="text-primary font-weight-bold">Current password</label>
+        </div>
+        <div class="md-form form-sm mb-5">
+          <i class="fas fa-lock prefix"></i>
+          <input type="password" id="modal-change-password-new-password-input-id" class="form-control form-control-sm validate">
+          <label data-error="wrong" data-success="right" for="modal-change-password-new-password-input-id" class="text-primary font-weight-bold">New password</label>
+        </div>
+        <div class="md-form form-sm mb-4">
+          <i class="fas fa-lock prefix"></i>
+          <input type="password" id="modal-change-password-repeatpassword-input-id" class="form-control form-control-sm validate">
+          <label data-error="wrong" data-success="right" for="modal-change-password-repeatpassword-input-id" class="text-primary font-weight-bold">Repeat password</label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p class="pt-1" id="modal-change-password-status-bar-id"></p>
+        <button type="button" class="btn btn-secondary" id="modal-change-password-submit-button-id">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="change-password-success-modal-id" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Password Updated Successfully!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="preferences-modal-id" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Daily Nugget Preferences</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-info font-weight-bold">
+        <p>Want to change your <a href="#" class="blue-text" id="modal-preferences-password-link-id">Password?</a></p>
+        <p>Want to update your <a href="#" class="blue-text" id="modal-preferences-phone-link-id">Phone Number?</a></p>
+				<p>How would you like your nuggets delivered?:</p>
+				<div class="form-check form-check-inline">
+  				<input class="form-check-input" type="checkbox" id="modal-preferences-email-checkbox-id" value="email">
+  				<label class="form-check-label" for="modal-preferences-email-checkbox-id">email</label>
+				</div>
+				<div class="form-check form-check-inline">
+  				<input class="form-check-input" type="checkbox" id="modal-preferences-sms-checkbox-id" value="sms">
+  				<label class="form-check-label" for="modal-preferences-sms-checkbox-id">sms</label>
+				</div>
+				<p></p>
+				<p>How often do you want your nuggets delivered?:</p>
+				<div class="form-check form-check-inline">
+  				<input class="form-check-input" type="radio" name="modal-preferences-radio" id="modal-preferences-daily-radio-id" value="daily">
+  				<label class="form-check-label font-weight-bold" for="modal-preferences-daily-radio-id">Daily</label>
+				</div>
+				<div class="form-check form-check-inline">
+  				<input class="form-check-input" type="radio" name="modal-preferences-radio" id="modal-preferences-twice-daily-radio-id" value="twice-daily">
+  				<label class="form-check-label font-weight-bold" for="modal-preferences-twice-daily-radio-id">Twice a Day</label>
+				</div>
+				<div class="form-check form-check-inline">
+  				<input class="form-check-input" type="radio" name="modal-preferences-radio" id="modal-preferences-weekly-radio-id" value="weekly">
+  				<label class="form-check-label font-weight-bold" for="modal-preferences-weekly-radio-id">Weekly</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="modal-preferences-radio" id="modal-preferences-twice-weekly-radio-id" value="twice-weekly">
+  				<label class="form-check-label font-weight-bold" for="modal-preferences-twice-weekly-radio-id">Twice a Week</label>
+				</div>
+      </div>
+      <div class="modal-footer">
+        <p class="pt-1" id="modal-preferences-status-bar-id"></p>
+        <button type="button" class="btn btn-info" data-dismiss="modal" id="modal-preferences-submit-button-id">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="preferences-success-modal-id" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Preferences Updated Successfully!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal" id="logoff-success-modal-id" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">You have been logged off.</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-primary font-weight-bold">
+        <p>We hope you come back soon.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="login-success-modal-id" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Login Successful!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-primary font-weight-bold">
+        <p>We hope you enjoy your time at The Daily Nugget.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="reset-password-modal-id" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Reset Password</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-primary font-weight-bold">
+        <p>In order to begin resetting your password please enter your email address and click on submit.</p>
+        <div class="md-form form-sm mb-5">
+          <input type="email" id="modal-reset-password-email-input-id" class="form-control form-control-sm validate">
+          <label data-error="wrong" data-success="right" for="modal-reset-password-email-input-id" class="text-primary font-weight-bold">Email</label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p class="pt-1" id="modal-reset-password-status-bar-id"></p>
+        <button type="button" class="btn btn-info" data-dismiss="modal" id="modal-reset-password-submit-button-id">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="confirm-reset-password-modal-id" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Reset Password</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-primary font-weight-bold">
+        <p>A PIN has been set to your email.  Please complete resetting your password by entering the PIN and new password below, and clicking on Submit."</p>
+        <div class="md-form form-sm mb-5">
+          <input type="PIN" id="modal-confirm-reset-password-pin-input-id" class="form-control form-control-sm validate">
+          <label data-error="wrong" data-success="right" for="modal-confirm-reset-password-pin-input-id" class="text-primary font-weight-bold">PIN</label>
+        </div>
+        <div class="md-form form-sm mb-5">
+          <input type="password" id="modal-confirm-reset-password-password-input-id" class="form-control form-control-sm validate">
+          <label data-error="wrong" data-success="right" for="modal-confirm-reset-password-password-input-id" class="text-primary font-weight-bold">Password</label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p class="pt-1" id="modal-confirm-reset-password-status-bar-id"></p>
+        <button type="button" class="btn btn-info" data-dismiss="modal" id="modal-confirm-reset-password-submit-button-id">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="password-reset-success-modal-id" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Password reset successfully.</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="subscribe-success-modal-id" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Almost Done Subscribing!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-primary font-weight-bold">
+        <p>Please clink on the link in the email we just sent you, in order to verify your subscription.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="request-registration-pin-modal-id" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Complete Verification</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-primary font-weight-bold">
+        <p>Please activate your subscription by clicking on the verification link we sent to your email..</p>
+      </div>
+      <div class="modal-footer">
+        <p class="pt-1" id="modal-request-registration-pin-status-bar-id"></p>
+        <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="verify-registration-modal-id" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Complete Registration</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="modal-verify-registration-close-button-id">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-primary font-weight-bold">
+        <p>A PIN has been set to your email.  Please complete registration by entering the PIN below, and clicking on Submit."</p>
+        <div class="md-form form-sm mb-5">
+          <input type="PIN" id="modal-verify-registration-pin-input-id" class="form-control form-control-sm validate">
+          <label data-error="wrong" data-success="right" for="modal-verify-registration-pin-input-id" class="text-primary font-weight-bold">PIN</label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p class="pt-1" id="modal-verify-registration-status-bar-id"></p>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="modal-verify-registration-resend-pin-button-id">Resend PIN</button>
+        <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal" id="modal-verify-registration-submit-button-id">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="registration-success-modal-id" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Registration Successful!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-primary font-weight-bold">
+        <p>Congratulations!  You are now a full fledged Nuggeteer!.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="delete-account-modal-id" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Confirm account deletion.</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-primary font-weight-bold">
+        <p>Are you sure you really want to leave?.</p>
+      </div>
+      <div class="modal-footer">
+        <p class="pt-1" id="modal-delete-account-status-bar-id"></p>
+        <button type="button" class="btn btn-danger" data-dismiss="modal" id="modal-delete-account-confirm-button-id">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="delete-account-success-modal-id" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Account successfully deleted.</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-primary font-weight-bold">
+        <p>Sorry to see you go.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="unsubscribe-modal-id" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Unsubscribe</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-primary font-weight-bold">
+        <p>In order to unsubscribe please enter your email address and click on submit.</p>
+        <div class="md-form form-sm mb-5">
+          <input type="email" id="modal-unsubscribe-email-input-id" class="form-control form-control-sm validate">
+          <label data-error="wrong" data-success="right" for="modal-unsubscribe-email-input-id" class="text-primary font-weight-bold">Email</label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p class="pt-1" id="modal-unsubscribe-status-bar-id"></p>
+        <button type="button" class="btn btn-info" data-dismiss="modal" id="modal-unsubscribe-submit-button-id">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="unsubscribe-success-modal-id" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Subscription successfully cancelled.</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-primary font-weight-bold">
+        <p>Sorry to see you go.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--Modal: Login / Register Form-->
+
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" id="lr-modal-id">
+  <div class="modal-dialog cascading-modal" role="document">
+
+    <!--Content-->
+    <div class="modal-content">
+
+      <!--Modal cascading tabs-->
+      <div class="modal-c-tabs">
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist" id="lr-modal-nav-tabs-id">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fas fa-user mr-1"></i>
+              Login</a>
+          </li>
+          <li class="nav-item" id="nav-item-link-1">
+            <a class="nav-link" data-toggle="tab" href="#panel8" role="tab"><i class="fas fa-user-plus mr-1"></i>
+              Register</a>
+          </li>
+        </ul>
+
+        <!-- Tab panels -->
+        <div class="tab-content">
+          <!--Panel 7-->
+          <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+
+            <!--Body-->
+            <div class="modal-body mb-1">
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-envelope prefix"></i>
+                <input type="email" id="modal-lr-pan7-email-input-id" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modal-lr-pan7-email-input-id" class="text-primary font-weight-bold">Your email</label>
+              </div>
+
+              <div class="md-form form-sm mb-4">
+                <i class="fas fa-lock prefix"></i>
+                <input type="password" id="modal-lr-pan7-password-input-id" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modal-lr-pan7-password-input-id" class="text-primary font-weight-bold">Your password</label>
+              </div>
+
+              <div class="text-center mt-2">
+                <button class="btn btn-info" id="modal-lr-pan7-login-button-id">Log in <i class="fas fa-sign-in ml-1"></i></button>
+              </div>
+            </div>
+
+            <!--Footer-->
+            <div class="modal-footer">
+              <div class="options text-left mt-1">
+                <p>Not a member? <a href="#nav-item-link-1" class="blue-text" id="modal-lr-pan7-signup-link-id">Sign Up</a></p>
+                <p>Forgot <a href="#" class="blue-text" id="modal-lr-pan7-password-link-id">Password?</a></p>
+                <p class="pt-1" id="modal-lr-pan7-status-bar-id"></p>
+              </div>
+              <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal" id="modal-lr-pan7-close-button-id">Close</button>
+            </div>
+
+          </div>
+          <!--/.Panel 7-->
+
+          <!--Panel 8-->
+          <div class="tab-pane fade" id="panel8" role="tabpanel">
+
+            <!--Body-->
+            <div class="modal-body">
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-envelope prefix"></i>
+                <input type="email" id="modal-lr-pan8-email-input-id" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modal-lr-pan8-email-input-id" class="text-primary font-weight-bold">Your email</label>
+              </div>
+
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-phone prefix"></i>
+                <input type="cellphone" id="modal-lr-pan8-phone-input-id" class="form-control form-control-sm validate" placeholder="##########">
+                <label data-error="wrong" data-success="right" for="modal-lr-pan8-phone-input-id" class="text-primary font-weight-bold">Your cell phone number</label>
+              </div>
+
+              <div class="md-form form-sm mb-5">
+                <i class="fas fa-lock prefix"></i>
+                <input type="password" id="modal-lr-pan8-password-input-id" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modal-lr-pan8-password-input-id" class="text-primary font-weight-bold">Your password</label>
+              </div>
+
+              <div class="md-form form-sm mb-4">
+                <i class="fas fa-lock prefix"></i>
+                <input type="password" id="modal-lr-pan8-repeatpassword-input-id" class="form-control form-control-sm validate">
+                <label data-error="wrong" data-success="right" for="modal-lr-pan8-repeatpassword-input-id" class="text-primary font-weight-bold">Repeat password</label>
+              </div>
+
+              <div class="text-center form-sm mt-2">
+                <button class="btn btn-info" id="modal-lr-pan8-signup-button-id">Sign up <i class="fas fa-sign-in ml-1"></i></button>
+              </div>
+            </div>
+
+            <!--Footer-->
+            <div class="modal-footer">
+              <div class="options text-right">
+                <p class="pt-1">Already have an account? <a href="#" class="blue-text" id="modal-lr-pan8-login-link-id">Log In</a></p>
+                <p class="pt-1" id="modal-lr-pan8-status-bar-id"></p>
+              </div>
+              <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal" id="modal-lr-pan8-close-button-id">Close</button>
+            </div>
+          </div>
+          <!--/.Panel 8-->
+        </div>
+
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/grayscale.min.js"></script>
+
+  <script src="./assets/app.js"></script>
+
+</body>
+
+</html>
+
+
+
+<!--
+<div id="content">
+    <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+        <li class="active"><a href="#red" data-toggle="tab">Red</a></li>
+        <li><a href="#orange" data-toggle="tab">Orange</a></li>
+        <li><a href="#yellow" data-toggle="tab">Yellow</a></li>
+        <li><a href="#green" data-toggle="tab">Green</a></li>
+        <li><a href="#blue" data-toggle="tab">Blue</a></li>
+    </ul>
+    <div id="my-tab-content" class="tab-content">
+        <div class="tab-pane active" id="red">
+            <h1>Red</h1>
+            <p>red red red red red red</p>
+            <button>Blue</button>
+        </div>
+        <div class="tab-pane" id="orange">
+            <h1>Orange</h1>
+            <p>orange orange orange orange orange</p>
+            <button>Blue</button>
+        </div>
+        <div class="tab-pane" id="yellow">
+            <h1>Yellow</h1>
+            <p>yellow yellow yellow yellow yellow</p>
+            <button>Blue</button>
+        </div>
+-->

@@ -1,0 +1,820 @@
+# TODO: Can service be makefile variable.
+
+service: the-daly-nugget-service
+
+frameworkVersion: ">=1.1.0 <2.0.0"
+
+custom:
+
+  serverless-offline:
+    printOutput: true
+  client:
+    bucketName: "${self:provider.environment.DN_S3_STATIC_WEBSITE_BUCKET_NAME}"
+  dynamodb:
+    stages:
+      - dev
+      - prod
+      - test
+      - staging
+    start:
+      host: "${env:DN_LOCAL_HOST_NAME}"
+      port: "${env:DN_LOCAL_DYNAMO_PORT}"
+      migrate: true
+  dynamodbStream:
+    host: "${env:DN_LOCAL_HOST_NAME}"
+    port: "${env:DN_LOCAL_DYNAMO_PORT}"
+    streams:
+      - table: "${self:provider.environment.NUGGET_SUBSCRIBER_TABLE}"
+        functions:
+          - syncSubscriberTblAndSES
+      - table: "${self:provider.environment.NUGGET_OF_THE_DAY_TABLE}"
+        functions:
+          - emailNuggetOfTheDay
+
+# TODO: VARS stack.toml and output.handler environment variables.
+
+  output:
+    handler: scripts/output.handler
+    file: scripts/${env:DN_SERVERLESS_OUTPUT_FILE}
+
+plugins:
+  - serverless-offline
+  - serverless-dynamodb-local
+  - serverless-plugin-offline-dynamodb-stream
+  - serverless-finch
+  - serverless-stack-output
+  - serverless-sam
+
+functions:
+ getNuggetOfTheDay:
+  handler: api/getNuggetOfTheDay.handler
+  memorySize: 128
+  description: Get the daily nugget.
+  events:
+   - http:
+      path: nugget-of-day
+      method: get
+      cors: true
+      integration: lambda
+
+ getRandomNugget:
+  handler: api/getRandomNugget.handler
+  memorySize: 128
+  description: Get a nugget from the nugget-base table.
+  events:
+   - http:
+      path: random-nugget
+      method: post
+      cors: true
+      integration: lambda
+
+ createSubscriber:
+  handler: api/createSubscriber.handler
+  memorySize: 128
+  description: Add a user's email to the User table.
+  events:
+   - http:
+      path: add-subscriber
+      method: post
+      cors: true
+      integration: lambda
+
+ createNuggeteer:
+  handler: api/createNuggeteer.handler
+  memorySize: 128
+  description: Add a user's info to the nuggeteer table.
+  events:
+   - http:
+      path: register-nuggeteer
+      method: post
+      cors: true
+      integration: lambda
+
+ deleteSubscriber:
+  handler: api/deleteSubscriber.handler
+  memorySize: 128
+  description: Delete a subscriber.
+  events:
+   - http:
+      path: delete-subscriber
+      method: post
+      cors: true
+      integration: lambda
+
+ deleteNuggeteer:
+  handler: api/deleteNuggeteer.handler
+  memorySize: 128
+  description: Delete an entry in the nuggeteer table.
+  events:
+   - http:
+      path: delete-nuggeteer
+      method: post
+      cors: true
+      integration: lambda
+
+ updateNuggeteerDelivPrefs:
+  handler: api/updateNuggeteerDelivPrefs.handler
+  memorySize: 128
+  description: Set the nugget delivery method and frequency.
+  events:
+   - http:
+      path: set-nuggeteer-delivery-preferences
+      method: post
+      cors: true
+      integration: lambda
+
+ getNuggeteerDelivPrefs:
+  handler: api/getNuggeteerDelivPrefs.handler
+  memorySize: 128
+  description: Get the nugget delivery method and frequency.
+  events:
+   - http:
+      path: get-nuggeteer-delivery-preferences
+      method: post
+      cors: true
+      integration: lambda
+
+ updateNuggeteerPhone:
+  handler: api/updateNuggeteerPhone.handler
+  memorySize: 128
+  description: Update user's cell phone.
+  events:
+   - http:
+      path: change-nuggeteer-phone
+      method: post
+      cors: true
+      integration: lambda
+
+ getNuggeteer:
+  handler: api/getNuggeteer.handler
+  memorySize: 128
+  description: Retrieve a Nuggeteer record by email.
+  events:
+   - http:
+      path: get-nuggeteer
+      method: post
+      cors: true
+      integration: lambda
+
+ getServerlessOutputs:
+  handler: api/getServerlessOutputs.handler
+  memorySize: 128
+  description:
+  events:
+   - http:
+      path: get-serverless-outputs
+      method: get
+      cors: true
+      integration: lambda
+
+ deleteCognitoUser:
+  handler: api/deleteCognitoUser.handler
+  memorySize: 128
+  description:
+  events:
+   - http:
+      path: delete-cognito-user
+      method: post
+      cors: true
+      integration: lambda
+
+ syncSubscriberTblAndSES:
+  handler: api/syncSubscriberTblAndSES.handler
+  memorySize: 128
+  description: Event driven by changes in subscriberTbl.  On INSERT adds user to SES and sends verification email.  On Delete, removes user form SES.
+  events:
+    - stream:
+        type: dynamodb
+        batchSize: 20
+        startingPosition: TRIM_HORIZON
+        arn:
+          Fn::GetAtt:
+            - NuggetSubscriberDynamoDbTable
+            - StreamArn
+
+ emailNuggetOfTheDay:
+  handler: api/emailNuggetOfTheDay.handler
+  memorySize: 128
+  description: Event driven by MODIFY on the Nugget Of The Day Table.
+  events:
+    - stream:
+        type: dynamodb
+        batchSize: 20
+        startingPosition: TRIM_HORIZON
+        arn:
+          Fn::GetAtt:
+            - NuggetOfTheDayDynamoDbTable
+            - StreamArn
+
+ recordNuggetOfTheDay:
+  handler: api/recordNuggetOfTheDay.handler
+  memorySize: 128
+  events:
+    - s3:
+        bucket: ${self:provider.environment.DN_S3_NOD_BUCKET}
+        event: s3:ObjectCreated:*
+
+ syncSubscriberVerifications:
+  handler: api/syncSubscriberVerifications.handler
+  memorySize: 128
+  description: 
+  events:
+    - schedule: cron(0 8,12,17,23 * * ? *)
+
+ sendNuggetsWeekly:
+  handler: api/sendNuggetsWeekly.handler
+  memorySize: 128
+  description: 
+  events:
+    - schedule: cron(0 8 ? * MON *)
+
+ sendNuggetsTwiceWeekly:
+  handler: api/sendNuggetsTwiceWeekly.handler
+  memorySize: 128
+  description: 
+  events:
+    - schedule: cron(0 8 ? * MON,FRI *)
+
+ sendNuggetsDaily:
+  handler: api/sendNuggetsDaily.handler
+  memorySize: 128
+  description: 
+  events:
+    - schedule: cron(0 8 * * ? *)
+
+ sendNuggetsTwiceDaily:
+  handler: api/sendNuggetsTwiceDaily.handler
+  memorySize: 128
+  description: 
+  events:
+    - schedule: cron(0 8,17 * * ? *)
+
+provider:
+ name: aws
+ runtime: nodejs10.x
+ stage: "${env:DN_PROJECT_STAGE}"
+ region: "${env:DN_AWS_REGION}"
+#profile: ${env:DN_AWS_PROFILE}
+ environment:
+
+    DN_AWS_REGION: "${self:provider.region}"
+
+    DN_DOMAIN: ${env:DN_DOMAIN}
+    DN_SUBDOMAIN: ${env:DN_SUBDOMAIN}
+
+    DN_HOSTED_ZONE_NAME: "${self:provider.environment.DN_DOMAIN}."
+
+    DN_URL: "http://${self:provider.environment.DN_DOMAIN}"
+
+    NUGGET_OF_THE_DAY_TABLE: "${env:NUGGET_OF_THE_DAY_TABLE}-${opt:stage, self:provider.stage}"
+    NUGGET_BASE_TABLE: "${env:NUGGET_BASE_TABLE}-${opt:stage, self:provider.stage}"
+    NUGGET_SUBSCRIBER_TABLE: "${env:NUGGET_SUBSCRIBER_TABLE}-${opt:stage, self:provider.stage}"
+    NUGGETEER_TABLE: "${env:NUGGETEER_TABLE}-${opt:stage, self:provider.stage}"
+    NUGGET_HISTORY_TABLE: "${env:NUGGET_HISTORY_TABLE}-${opt:stage, self:provider.stage}"
+
+    DN_BLESSED_EMAIL_ADDRESS: "thenuggrev.${self:provider.stage}@gmail.com"
+    DN_REVS_EMAIL_ADDRESS: "${env:DN_REVS_EMAIL_ADDRESS}"
+    DN_NUGGET_EMAIL_SUBJECT: "Your Daily Nugget From The Rev"
+
+    IS_LOCAL: ${env:IS_LOCAL}
+
+# AWS_ACCOUNT_ID: Ref: AWS::AccountId
+# SES_WRITABLE_ROLE_NAME: ${self:service}-${self:provider.stage}-ses-writable-role
+# SES_WRITABLE_POLICY_NAME: ${self:service}-${self:provider.stage}-ses-writable-policy
+# EMAIL_RECEIVED_TABLE_NAME: ${self:service}-${self:provider.stage}-table
+# EMAIL_RECEIVED_BUCKET_NAME: ${self:service}-${self:provider.stage}-bucket
+
+    DN_S3_BUCKET_PREFIX: "${env:DN_S3_BUCKET_PREFIX}"
+
+    DN_S3_NOD_BUCKET: "${self:provider.environment.DN_S3_BUCKET_PREFIX}-emails"
+    DN_S3_NOD_BUCKET_REF: "S3Bucket${env:DN_SERVICE_PREFIX_NO_DASHES_UPPER_T}emails"
+
+#    DN_SES_DNS_TXT_REC: '${file(./scripts/serverlessVariables.js):serverlessVariables.sesTextRecVal}'
+#    DN_SES_DNS_TXT_REC: !Select [0, !Split ["|", '${file(./scripts/serverlessVariables.js):serverlessVariables.sesTextRecVal}']]
+#                        !Select [0, !Split ["|", '${file(./scripts/serverlessVariables.js):serverlessVariables.sesTextRecVal}']]
+
+# The rule set name is referenced via an external environment variable because
+# Cloudformation does not support the activation of the receipt rule set.    So,
+# we have to activate it via the aws cli in the Makefile.
+
+    DN_SES_EMAIL_RECEIPT_RULE_SET_NAME: "${env:DN_SES_EMAIL_RECEIPT_RULE_SET_NAME}"
+    DN_SES_EMAIL_RECEIPT_RULE_NAME: "${env:DN_SERVICE_PREFIX_DASHES}-receipt-rule"
+    DN_SES_EMAIL_RECEIPT_RULE_EMAIL_ADDRESS: "faserrao@${env:DN_DOMAIN}" 
+
+    DN_SES_CUSTOM_VERIFICATION_EMAIL_TEMPLATE_NAME: "${env:DN_SES_CUSTOM_VERIFICATION_EMAIL_TEMPLATE_NAME}"
+
+    DN_SERVERLESS_OUTPUT_FILE: "${env:DN_SERVERLESS_OUTPUT_FILE}"
+
+    DN_S3_STACK_OUTPUT_BUCKET: "${env:DN_S3_STACK_OUTPUT_BUCKET}"
+    DN_S3_STACK_OUTPUT_FILE_NAME:  "${env:DN_S3_STACK_OUTPUT_FILE}"
+
+    DN_S3_STATIC_WEBSITE_BUCKET_NAME: "${self:provider.environment.DN_SUBDOMAIN}"
+    DN_S3_URL_REDIRECT_BUCKET_NAME: "${self:provider.environment.DN_DOMAIN}"
+
+    DN_LOCAL_REGION: "${env:DN_LOCAL_REGION}"
+    DN_LOCAL_DDB_ENDPOINT: "${env:DN_LOCAL_DDB_ENDPOINT}"
+
+
+ iamRoleStatements:
+  - Effect: Allow
+    Action:
+      - "ses:*"
+    Resource: "*"
+
+  - Effect: Allow
+    Action:
+      - dynamodb:Query
+      - dynamodb:Scan
+      - dynamodb:GetItem
+      - dynamodb:PutItem
+      - dynamodb:UpdateItem
+      - dynamodb:DeleteItem
+      - dynamodb:GetRecords
+      - dynamodb:GetShardIterator
+      - dynamodb:DescribeStream
+      - dynamodb:ListStreams
+      - dynamodb:DeleteItem
+    Resource: "*"
+
+  - Effect: Allow
+    Action:
+      - logs:CreateLogGroup
+      - logs:CreateLogStream
+      - logs:PutLogEvents
+    Resource: "*"
+
+  - Effect: Allow
+    Action:
+      - s3:CreateBucket
+      - s3:DeleteBucket
+      - s3:DeleteObject
+      - s3:GetObject
+      - s3:PutObject
+      - s3:ListBucket
+      - s3:PutBucketPolicy
+    Resource: "*"
+
+  - Effect: Allow
+    Action:
+      - cognito-identity:*
+      - cognito-idp:*
+      - cognito-sync:*
+      - iam:ListRoles
+      - iam:ListOpenIdConnectProviders
+      - sns:ListPlatformApplications
+    Resource: "*"
+
+  - Effect: Allow
+    Action:
+      - "sns:*"
+    Resource: "*"
+
+resources:
+  Resources:
+
+    NuggetOfTheDayDynamoDbTable:
+      Type: 'AWS::DynamoDB::Table'
+      DeletionPolicy: Delete
+      Properties:
+
+        AttributeDefinitions:
+        - AttributeName: "nodKey"
+          AttributeType: "S"
+
+        KeySchema:
+        - AttributeName: "nodKey"
+          KeyType: "HASH"
+
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+
+        StreamSpecification:
+          StreamViewType: "NEW_AND_OLD_IMAGES"
+
+        TableName: "${self:provider.environment.NUGGET_OF_THE_DAY_TABLE}"
+
+    NuggetHistoryDynamoDbTable:
+      Type: 'AWS::DynamoDB::Table'
+      DeletionPolicy: Delete
+      Properties:
+
+        AttributeDefinitions:
+        - AttributeName: "nhKey"
+          AttributeType: "S"
+
+        KeySchema:
+        - AttributeName: "nhKey"
+          KeyType: "HASH"
+
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+
+        StreamSpecification:
+          StreamViewType: "NEW_AND_OLD_IMAGES"
+
+        TableName: "${self:provider.environment.NUGGET_HISTORY_TABLE}"
+
+    NuggetBaseDynamoDbTable:
+      Type: 'AWS::DynamoDB::Table'
+      DeletionPolicy: Delete
+      Properties:
+
+        AttributeDefinitions:
+        - AttributeName: "id"
+          AttributeType: "S"
+        - AttributeName: "topic"
+          AttributeType: "S"
+
+        KeySchema:
+        - AttributeName: "id"
+          KeyType: "HASH"
+        - AttributeName: "topic"
+          KeyType: "RANGE"
+
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+
+        StreamSpecification:
+          StreamViewType: "NEW_AND_OLD_IMAGES"
+
+        TableName: "${self:provider.environment.NUGGET_BASE_TABLE}"
+
+    NuggetSubscriberDynamoDbTable:
+      Type: 'AWS::DynamoDB::Table'
+      DeletionPolicy: Delete
+      Properties:
+
+        AttributeDefinitions:
+        - AttributeName: "email"
+          AttributeType: "S"
+
+        - AttributeName: "verificationStatus"
+          AttributeType: "S"
+
+        KeySchema:
+        - AttributeName: "email"
+          KeyType: "HASH"
+
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+
+        StreamSpecification:
+          StreamViewType: "NEW_AND_OLD_IMAGES"
+
+        TableName: "${self:provider.environment.NUGGET_SUBSCRIBER_TABLE}"
+
+        GlobalSecondaryIndexes:
+
+        - IndexName: nuggetSubscriberGSI
+
+          KeySchema:
+            -
+              AttributeName: verificationStatus
+              KeyType: HASH
+
+          Projection:
+            NonKeyAttributes:
+            -
+              email
+
+            ProjectionType: INCLUDE
+
+          ProvisionedThroughput:
+            ReadCapacityUnits: '1'
+            WriteCapacityUnits: '1'
+
+    NuggeteerDynamoDbTable:
+      Type: 'AWS::DynamoDB::Table'
+      DeletionPolicy: Delete
+      Properties:
+
+        AttributeDefinitions:
+          -
+            AttributeName: "email"
+            AttributeType: "S"
+          -
+            AttributeName: "nuggetDeliveryFrequency"
+            AttributeType: "S"
+
+        KeySchema:
+          -
+            AttributeName: "email"
+            KeyType: "HASH"
+
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+
+        StreamSpecification:
+          StreamViewType: "NEW_AND_OLD_IMAGES"
+
+        TableName: "${self:provider.environment.NUGGETEER_TABLE}"
+
+        GlobalSecondaryIndexes:
+
+        - IndexName: nuggetDeliveryGSI
+
+          KeySchema:
+            -
+              AttributeName: nuggetDeliveryFrequency
+              KeyType: HASH
+            -
+              AttributeName: email
+              KeyType: RANGE
+
+          Projection:
+            NonKeyAttributes:
+            -
+              nuggetDeliveryMethod
+            -
+              phone
+
+            ProjectionType: INCLUDE
+
+          ProvisionedThroughput:
+            ReadCapacityUnits: '1'
+            WriteCapacityUnits: '1'
+
+    AttachmentsBucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        # Set the CORS policy
+        CorsConfiguration:
+          CorsRules:
+            -
+              AllowedOrigins:
+                - '*'
+              AllowedHeaders:
+                - '*'
+              AllowedMethods:
+                - GET
+                - PUT
+                - POST
+                - DELETE
+                - HEAD
+              MaxAge: 3000
+
+    TheDailyNuggetStackOutputsBucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: "${self:provider.environment.DN_S3_STACK_OUTPUT_BUCKET}"
+        CorsConfiguration:
+          CorsRules:
+            -
+              AllowedOrigins:
+                - '*'
+              AllowedHeaders:
+                - '*'
+              AllowedMethods:
+                - GET
+                - PUT
+                - POST
+                - DELETE
+                - HEAD
+              MaxAge: 3000
+
+    S3EMailBucketPermissions:
+      Type: AWS::S3::BucketPolicy
+      Properties:
+        Bucket: 
+          Ref: "${self:provider.environment.DN_S3_NOD_BUCKET_REF}"
+        PolicyDocument:
+          Statement:
+            - Principal: 
+                Service: "ses.amazonaws.com"
+              Action:
+                - s3:PutObject
+              Effect: Allow
+              Sid: "AllowSESPuts"
+              Resource: 
+                Fn::Join: ['', ['arn:aws:s3:::', Ref: "${self:provider.environment.DN_S3_NOD_BUCKET_REF}", '/*'] ]
+              Condition:
+                StringEquals:
+                  "aws:Referer": { Ref: AWS::AccountId }
+
+
+    zonethedailynuggetnet:
+      Type: AWS::Route53::HostedZone
+      Properties:
+        Name: "${self:provider.environment.DN_HOSTED_ZONE_NAME}"
+
+    dnsthedailynuggetnet:
+      Type: AWS::Route53::RecordSetGroup
+      Properties:
+        HostedZoneId: !Ref 'zonethedailynuggetnet'
+        RecordSets:
+          - Name: "${self:provider.environment.DN_HOSTED_ZONE_NAME}"
+            Type: MX
+            TTL: '300'
+            ResourceRecords:
+              - 10 inbound-smtp.us-east-1.amazonaws.com
+
+    dnsdevthedailynuggetnet:
+      Type: AWS::Route53::RecordSetGroup
+      Properties:
+        HostedZoneId: !Ref 'zonethedailynuggetnet'
+        RecordSets:
+          - Name: "${self:provider.environment.DN_SUBDOMAIN}."
+            Type: A
+            AliasTarget:
+              HostedZoneId: Z3AQBSTGFYJSTF
+              DNSName: s3-website-us-east-1.amazonaws.com
+
+    dnsamazonsesthedailynuggetnet:
+      Type: AWS::Route53::RecordSetGroup
+      Properties:
+        HostedZoneId: !Ref 'zonethedailynuggetnet'
+        RecordSets:
+          - Name: _amazonses.thedailynugget.net.
+            Type: TXT
+            TTL: '1800'
+            ResourceRecords:
+              - '"FXIfmiNiJNB6gSxYndUkXiWMcSHwP48B5saXOn+Mw2M="'
+
+
+# The following gets the SES domain TXT record value from a file generated by the create SES
+# domain command in the Makefile.
+#!Select [0, !Split ["|", '${file(./scripts/serverlessVariables.js):serverlessVariables.sesTextRecVal}']]
+
+#    There can only be one email receive rule set per AWS account so if the same account is used for
+#    all development phases (dev, prod, etc.), we will only define it once and only delete it when we
+#    want to do a complete cleanup of all cloudformation stacks (prod, dev. etc.).              
+#    To Do: Actually need to check if it exists and if does not then create it.
+
+    EmailReceivedRuleSet:
+      Type: AWS::SES::ReceiptRuleSet
+      Properties:
+        RuleSetName: "${self:provider.environment.DN_SES_EMAIL_RECEIPT_RULE_SET_NAME}"
+
+    EmailReceivedRule:
+      Type: AWS::SES::ReceiptRule
+      Properties:
+        RuleSetName: "${self:provider.environment.DN_SES_EMAIL_RECEIPT_RULE_SET_NAME}"
+        Rule:
+          Name: "${self:provider.environment.DN_SES_EMAIL_RECEIPT_RULE_NAME}"
+          Enabled: true
+          Recipients:
+            - "${self:provider.environment.DN_SES_EMAIL_RECEIPT_RULE_EMAIL_ADDRESS}"
+          Actions:
+            -
+              S3Action:
+                BucketName:
+                  Ref: "${self:provider.environment.DN_S3_NOD_BUCKET_REF}"
+
+    CognitoUserPool:
+      Type: "AWS::Cognito::UserPool"
+      Properties:
+        UserPoolName: "${self:provider.stage}-nuggeteer-user-pool"
+        UsernameAttributes:
+          - email
+        AutoVerifiedAttributes:
+          - email
+        Schema:
+          - Name: phone_number
+            AttributeDataType: String
+            Mutable: true
+            Required: false
+        Policies:
+          PasswordPolicy:
+            MinimumLength: 8
+            RequireLowercase: false
+            RequireNumbers:	false
+            RequireSymbols: false
+            RequireUppercase: false
+
+    CognitoUserPoolClient:
+      Type: AWS::Cognito::UserPoolClient
+      Properties:
+        ClientName: "${self:provider.stage}-nuggeteer-user-pool-client"
+        UserPoolId:
+          Ref: CognitoUserPool
+        ExplicitAuthFlows:
+          - ADMIN_NO_SRP_AUTH
+        GenerateSecret: false
+
+    CognitoIdentityPool:
+      Type: AWS::Cognito::IdentityPool
+      Properties:
+        IdentityPoolName: "${self:provider.stage}_nuggeteer_identity_pool"
+        AllowUnauthenticatedIdentities: true
+        CognitoIdentityProviders:
+          - ClientId:
+              Ref: CognitoUserPoolClient
+            ProviderName:
+              Fn::GetAtt: [ "CognitoUserPool", "ProviderName" ]
+
+
+    CognitoIdentityPoolRoles:
+      Type: AWS::Cognito::IdentityPoolRoleAttachment
+      Properties:
+        IdentityPoolId:
+          Ref: CognitoIdentityPool
+        Roles:
+          authenticated:
+            Fn::GetAtt: [CognitoAuthRole, Arn]
+          unauthenticated:
+            Fn::GetAtt: [CognitoUnAuthRole, Arn]
+
+
+    CognitoAuthRole:
+      Type: AWS::IAM::Role
+      Properties:
+        Path: /
+        AssumeRolePolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+            - Effect: 'Allow'
+              Principal:
+                Federated: 'cognito-identity.amazonaws.com'
+              Action:
+                - 'sts:AssumeRoleWithWebIdentity'
+              Condition:
+                StringEquals:
+                  'cognito-identity.amazonaws.com:aud':
+                    Ref: CognitoIdentityPool
+                'ForAnyValue:StringLike':
+                  'cognito-identity.amazonaws.com:amr': authenticated
+
+        Policies:
+          - PolicyName: 'CognitoAuthorizedPolicy'
+            PolicyDocument:
+              Version: '2012-10-17'
+              Statement:
+                - Effect: 'Allow'
+                  Action:
+                    - 'mobileanalytics:PutEvents'
+                    - 'cognito-sync:*'
+                    - 'cognito-identity:*'
+                  Resource: '*'
+
+                - Effect: 'Allow'
+                  Action:
+                    - 's3:*'
+                  Resource:
+                    - Fn::Join:
+                      - ''
+                      -
+                        - Fn::GetAtt: [AttachmentsBucket, Arn]
+                        - '/private/'
+                        - '$'
+                        - '{cognito-identity.amazonaws.com:sub}/*'
+
+                - Effect: 'Allow'
+                  Action:
+                    - 'execute-api:Invoke'
+                  Resource:
+                    Fn::Join:
+                      - ''
+                      -
+                        - 'arn:aws:execute-api:'
+                        - Ref: AWS::Region
+                        - ':'
+                        - Ref: AWS::AccountId
+                        - ':'
+                        - Ref: ApiGatewayRestApi
+                        - '/*'
+
+    CognitoUnAuthRole:
+      Type: AWS::IAM::Role
+      Properties:
+        Path: /
+        AssumeRolePolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+            - Effect: 'Allow'
+              Principal:
+                Federated: 'cognito-identity.amazonaws.com'
+              Action:
+                - 'sts:AssumeRoleWithWebIdentity'
+              Condition:
+                StringEquals:
+                  'cognito-identity.amazonaws.com:aud':
+                    Ref: CognitoIdentityPool
+                'ForAnyValue:StringLike':
+                  'cognito-identity.amazonaws.com:amr': unauthenticated
+
+        Policies:
+          - PolicyName: 'CognitoUnAuthorizedPolicy'
+            PolicyDocument:
+              Version: '2012-10-17'
+              Statement:
+                - Effect: 'Allow'
+                  Action:
+                    - 'mobileanalytics:PutEvents'
+                    - 'cognito-sync:*'
+                  Resource: '*'
+
+  Outputs:
+    UserPoolId:
+      Value:
+        Ref: CognitoUserPool
+    UserPoolClientId:
+      Value:
+        Ref: CognitoUserPoolClient
+    IdentityPoolId:
+      Value: 
+        Ref: CognitoIdentityPool

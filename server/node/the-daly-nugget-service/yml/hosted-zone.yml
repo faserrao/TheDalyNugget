@@ -1,0 +1,40 @@
+
+#    zonethedailynuggetnet:
+#      Type: AWS::Route53::HostedZone
+#      Properties:
+#        Name: "${self:provider.environment.DN_HOSTED_ZONE_NAME}"
+#
+#    dnsthedailynuggetnet:
+#      Type: AWS::Route53::RecordSetGroup
+#      Properties:
+#        HostedZoneId: !Ref 'zonethedailynuggetnet'
+#        RecordSets:
+#          - Name: "${self:provider.environment.DN_HOSTED_ZONE_NAME}"
+#            Type: MX
+#            TTL: '300'
+#            ResourceRecords:
+#              - 10 inbound-smtp.us-east-1.amazonaws.com
+#
+#    dnsdevthedailynuggetnet:
+#      Type: AWS::Route53::RecordSetGroup
+#      Properties:
+#        HostedZoneId: !Ref 'zonethedailynuggetnet'
+#        RecordSets:
+#          - Name: "${self:provider.environment.DN_SUBDOMAIN}."
+#            Type: A
+#            AliasTarget:
+#              HostedZoneId: Z3AQBSTGFYJSTF
+#              DNSName: s3-website-us-east-1.amazonaws.com
+#
+#    dnsamazonsesthedailynuggetnet:
+#      Type: AWS::Route53::RecordSetGroup
+#      Properties:
+#        HostedZoneId: !Ref 'zonethedailynuggetnet'
+#        RecordSets:
+#          - Name: _amazonses.thedailynugget.net.
+#            Type: TXT
+#            TTL: '1800'
+#            ResourceRecords:
+#              - '"FXIfmiNiJNB6gSxYndUkXiWMcSHwP48B5saXOn+Mw2M="'
+
+#!Select [0, !Split ["|", '${file(./scripts/serverlessVariables.js):serverlessVariables.sesTextRecVal}']]

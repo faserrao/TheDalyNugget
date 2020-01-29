@@ -1,0 +1,26 @@
+ 
+#    There can only be one email receive rule set per AWS account so if the same account is used for
+#    all development phases (dev, prod, etc.), we will only define it once and only delete it when we
+#    want to do a complete cleanup of all cloudformation stacks (prod, dev. etc.).              
+#    To Do: Actually need to check if it exists and if does not then create it.
+#
+#    EmailReceivedRuleSet:
+#      Type: AWS::SES::ReceiptRuleSet
+#      Properties:
+#        RuleSetName: "${self:provider.environment.DN_SES_EMAIL_RECEIPT_RULE_SET_NAME}"
+
+    EmailReceivedRule:
+      Type: AWS::SES::ReceiptRule
+      Properties:
+        RuleSetName: "${self:provider.environment.DN_SES_EMAIL_RECEIPT_RULE_SET_NAME}"
+        Rule:
+          Name: "${self:provider.environment.DN_SES_EMAIL_RECEIPT_RULE_NAME}"
+          Enabled: true
+          Recipients:
+            - "${self:provider.environment.DN_SES_EMAIL_RECEIPT_RULE_EMAIL_ADDRESS}"
+          Actions:
+            -
+              S3Action:
+                BucketName:
+                  Ref: "${self:provider.environment.DN_S3_NOD_BUCKET_REF}"
+

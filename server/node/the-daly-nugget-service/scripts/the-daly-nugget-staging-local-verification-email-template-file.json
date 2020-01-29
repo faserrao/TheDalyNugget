@@ -1,0 +1,8 @@
+{
+  "TemplateName": "the-daly-nugget-verification-template",
+  "FromEmailAddress": "thenuggrev@gmail.com",
+  "TemplateSubject": "Please confirm your email address",
+  "TemplateContent": "<html> <head></head> <body style='font-family:sans-serif;'> <h1 style='text-align:center'>A friend of yours has invited you to join The Daily Nugget!</h1> <p>The Daily Nugget is an inspirational website that provides wisdom (Nuggets) via email and text messages.  Just click the following link and you will be take to The Daily Nugget website where you will have the option of registering.</p> </body> </html>",
+  "SuccessRedirectionURL": "file://Users/fas/MyStuff/Business/Projects/CurrentProjects/TheDalyNugget/client/public/es6/verify_success.html",
+  "FailureRedirectionURL": "file://Users/fas/MyStuff/Business/Projects/CurrentProjects/TheDalyNugget/client/public/es6/verify_failure.html"
+}

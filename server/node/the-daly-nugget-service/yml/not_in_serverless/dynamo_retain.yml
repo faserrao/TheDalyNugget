@@ -1,0 +1,98 @@
+
+    NuggetSubscriberDynamoDbTable:
+      Type: 'AWS::DynamoDB::Table'
+      DeletionPolicy: Retain
+      Properties:
+
+        AttributeDefinitions:
+        - AttributeName: "email"
+          AttributeType: "S"
+
+        - AttributeName: "verificationStatus"
+          AttributeType: "S"
+
+        KeySchema:
+        - AttributeName: "email"
+          KeyType: "HASH"
+
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+
+        StreamSpecification:
+          StreamViewType: "NEW_AND_OLD_IMAGES"
+
+        TableName: "${self:provider.environment.NUGGET_SUBSCRIBER_TABLE}"
+
+        GlobalSecondaryIndexes:
+
+        - IndexName: nuggetSubscriberGSI
+
+          KeySchema:
+            -
+              AttributeName: verificationStatus
+              KeyType: HASH
+
+          Projection:
+            NonKeyAttributes:
+            -
+              email
+
+            ProjectionType: INCLUDE
+
+          ProvisionedThroughput:
+            ReadCapacityUnits: '1'
+            WriteCapacityUnits: '1'
+
+    NuggeteerDynamoDbTable:
+      Type: 'AWS::DynamoDB::Table'
+      DeletionPolicy: Retain
+      Properties:
+
+        AttributeDefinitions:
+          -
+            AttributeName: "email"
+            AttributeType: "S"
+          -
+            AttributeName: "nuggetDeliveryFrequency"
+            AttributeType: "S"
+
+        KeySchema:
+          -
+            AttributeName: "email"
+            KeyType: "HASH"
+
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+
+        StreamSpecification:
+          StreamViewType: "NEW_AND_OLD_IMAGES"
+
+        TableName: "${self:provider.environment.NUGGETEER_TABLE}"
+
+        GlobalSecondaryIndexes:
+
+        - IndexName: nuggetDeliveryGSI
+
+          KeySchema:
+            -
+              AttributeName: nuggetDeliveryFrequency
+              KeyType: HASH
+            -
+              AttributeName: email
+              KeyType: RANGE
+
+          Projection:
+            NonKeyAttributes:
+            -
+              nuggetDeliveryMethod
+            -
+              phone
+
+            ProjectionType: INCLUDE
+
+          ProvisionedThroughput:
+            ReadCapacityUnits: '1'
+            WriteCapacityUnits: '1'
+

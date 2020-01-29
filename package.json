@@ -1,0 +1,43 @@
+{
+  "name": "the-daly-nugget",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faserrao/TheDalyNugget.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "8.10",
+    "serverless": "1.35.1"
+  },
+  "bugs": {
+    "url": "https://github.com/faserrao/TheDalyNugget/issues"
+  },
+  "homepage": "https://github.com/faserrao/TheDalyNugget#readme",
+  "devDependencies": {
+    "@anttiviljami/serverless-stack-output": "^0.3.1",
+    "csv-parse": "^4.4.1",
+    "dynamodb-localhost": "0.0.7",
+    "eslint": "^5.15.0",
+    "eslint-plugin-react": "^7.12.4",
+    "jsctags": "git+https://github.com/ramitos/jsctags.git",
+    "serverless-dynamodb-local": "^0.2.37",
+    "serverless-finch": "^2.4.2",
+    "serverless-offline": "^4.8.1",
+    "serverless-plugin-offline-dynamodb-stream": "^1.0.18",
+    "serverless-sam": "^0.2.0"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.517.0",
+    "mailparser": "^2.7.1",
+    "serverless": "^1.35.1",
+    "toml": "^3.0.0",
+    "uuid": "^3.3.2"
+  }
+}
