@@ -132,7 +132,7 @@ clean:
 	rm -f $(DN_DIST_DIR_S_LINK)
 	cd $(DN_SERVICE_DIR) && rm -f node_modules
 	cd $(DN_SERVICE_DIR) && rm -f package.json
-	$(SUDO) npm install serverless@1.35.1 -g
+	$(SUDO) npm install serverless@1.62.0 -g
 	npm install
 	cd $(DN_HOME_DIR) && mv node_modules/@anttiviljami/serverless-stack-output ./node_modules 
 	cd $(DN_SERVICE_DIR) && ln -s -f ../../../package.json package.json
@@ -143,19 +143,19 @@ clean_aws:
 	
 # The rule set is the same for all versions (prod, dev. etc.) so don't delete unless we want to do a complete cleanup.
 # A complete cleanup target has not been implemented yet.
-# node $(DN_SCRIPTS_DIR)/ses_deletereceiptruleset.js 
+	node $(DN_SCRIPTS_DIR)/ses_deletereceiptruleset.js 
 #
 #	@printf "Deleting the SES custom verfication email template.\n"
-#	$(SUDO) $(SW_INSTALL_PATH)aws ses delete-custom-verification-email-template --template-name $(DN_SES_CUSTOM_VERIFICATION_EMAIL_TEMPLATE_NAME)
+	$(SUDO) $(SW_INSTALL_PATH)aws ses delete-custom-verification-email-template --template-name $(DN_SES_CUSTOM_VERIFICATION_EMAIL_TEMPLATE_NAME)
 
 #	@printf "Deleting all the SES email and domain dentities.\n"
-#	$(SUDO) $(SW_INSTALL_PATH)aws ses list-identities --output text | cut -f 2 | xargs -I {} $(SUDO) $(SW_INSTALL_PATH)aws ses delete-identity --identity {}
+	$(SUDO) $(SW_INSTALL_PATH)aws ses list-identities --output text | cut -f 2 | xargs -I {} $(SUDO) $(SW_INSTALL_PATH)aws ses delete-identity --identity {}
 #
 #	@printf "Deleting just the SES email identities.\n"
-#	$(SUDO) $(SW_INSTALL_PATH)aws ses list-identities --identity-type EmailAddress --output text | cut -f 2 | xargs -I {} $(SUDO) $(SW_INSTALL_PATH)aws ses delete-identity --identity {}
+	$(SUDO) $(SW_INSTALL_PATH)aws ses list-identities --identity-type EmailAddress --output text | cut -f 2 | xargs -I {} $(SUDO) $(SW_INSTALL_PATH)aws ses delete-identity --identity {}
 #
 #	@printf "Deleting just the SES domain identities.\n"
-#	$(SUDO) $(SW_INSTALL_PATH)aws ses list-identities --identity-type Domain --output text | cut -f 2 | xargs -I {} $(SUDO) $(SW_INSTALL_PATH)aws ses delete-identity --identity {}
+	$(SUDO) $(SW_INSTALL_PATH)aws ses list-identities --identity-type Domain --output text | cut -f 2 | xargs -I {} $(SUDO) $(SW_INSTALL_PATH)aws ses delete-identity --identity {}
 	
 	$(SUDO) $(SW_INSTALL_PATH)aws cloudformation delete-stack --stack-name $(DN_SERVICE_NAME)-$(DN_PROJECT_STAGE)
 
@@ -167,7 +167,8 @@ print_serverless:
 deploy_ses_identities:
 	@printf "Creating the the SES TheDalyNugget.net domain.\n"
 	$(SUDO) $(SW_INSTALL_PATH)aws ses verify-domain-identity --output=text --domain $(DN_DOMAIN) > $(DN_SCRIPTS_DIR)/dns-ses-text-rec-val.txt
-	source $(DN_SCRIPTS_DIR)/set-ses-dns-txt-rec.bsh
+
+	cd $(DN_SCRIPTS_DIR) && source set-ses-dns-txt-rec.bsh
 
 	@printf "Creating the the SES thenuggrev@gmail.com email identity.\n"
 	$(SUDO) $(SW_INSTALL_PATH)aws ses verify-email-identity --email-address $(DN_REVS_EMAIL_ADDRESS)
@@ -197,7 +198,7 @@ deploy_ses_rules:
 	@printf "Creating the the SES custom verification email template.\n"
 	cd $(DN_SCRIPTS_DIR) && $(SUDO) $(SW_INSTALL_PATH)aws ses create-custom-verification-email-template --cli-input-json file://$(DN_SES_CUSTOM_VERIFICATION_EMAIL_TEMPLATE_FILE)
 	@printf "Cloudformation does not support activating the receipt rule set so need to do it here.\n"
-#	$(SUDO) $(SW_INSTALL_PATH)aws ses set-active-receipt-rule-set --rule-set-name $(DN_SES_EMAIL_RECEIPT_RULE_SET_NAME)
+	$(SUDO) $(SW_INSTALL_PATH)aws ses set-active-receipt-rule-set --rule-set-name $(DN_SES_EMAIL_RECEIPT_RULE_SET_NAME)
 
 deploy_apigateway:
 	@printf "Setting up the Api Gateway SDK.\n"
@@ -221,8 +222,8 @@ port_to_sam:
 	cd $(DN_SERVICE_DIR) && serverless sam export --output ./sam-template.yml
 
 deploy:	IS_LOCAL := false
-deploy: clean deploy_ses_identities deploy_serverless deploy_dynamo deploy_ses_rules deploy_apigateway deploy_client
-#deploy: deploy_ses_identities deploy_serverless deploy_dynamo deploy_ses_rules deploy_apigateway deploy_client
+#deploy: clean deploy_ses_identities deploy_serverless deploy_dynamo deploy_apigateway deploy_client deploy_ses_rules
+deploy: clean deploy_serverless deploy_dynamo deploy_apigateway deploy_client deploy_ses_identities deploy_ses_rules
 #deploy: clean deploy_ses_identities deploy_serverless deploy_dynamo deploy_ses_rules deploy_apigateway
 #deploy: clean deploy_ses_identities deploy_serverless deploy_dynamo deploy_ses_rules
 #deploy: clean deploy_ses_identities deploy_serverless deploy_dynamo
