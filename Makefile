@@ -29,11 +29,15 @@
 DN_PROJECT_STAGE											:= staging
 
 DN_ROOT_PREFIX												:= the-daly-nugget
+DN_ROOT_PREFIX_NO_DASHES						:= thedalynugget
 DN_SERVICE_PREFIX_DASHES							:= $(DN_ROOT_PREFIX)-$(DN_PROJECT_STAGE)
-DN_SERVICE_PREFIX_NO_DASHES						:= thedalynugget$(DN_PROJECT_STAGE)
+DN_SERVICE_PREFIX_NO_DASHES						:= $(DN_ROOT_PREFIX_NO_DASHES)$(DN_PROJECT_STAGE)
 DN_SERVICE_PREFIX_NO_DASHES_UPPER_T		:= Thedalynugget$(DN_PROJECT_STAGE)
 
 DN_SERVICE_NAME												:= $(DN_ROOT_PREFIX)-service
+
+DN_SES_DNS_TXT_REC_NAME		:= _amazonses.${DN_ROOT_PREFIX_NO_DASHES}.com
+# DN_SES_DNS_TXT_REC_NAME		:= _amazonses.thedalynugget.com
 
 DN_DOMAIN															:= thedalynugget.com
 DN_SUBDOMAIN													:= $(DN_PROJECT_STAGE).${DN_DOMAIN}
@@ -84,6 +88,8 @@ DN_SCRIPTS_DIR							:= $(DN_SERVICE_DIR)/scripts
 DN_IMPORT_NUGGETS_DIR				:= $(DN_SCRIPTS_DIR)/NuggetImport
 DN_SEED_NUGGET_BASE_SCRIPT	:= put_requests.js
 DN_NUGGET_OF_THE_DAY_FILE		:= nod-table-item.json
+DN_SES_DNS_TXT_REC_VAL_FILE		:= $(DN_SCRIPTS_DIR)/dns-ses-text-rec-val.txt
+DN_SERVERLESS_VAR_JS_FILE		:= $(DN_SCRIPTS_DIR)/serverlessVariables.js
 
 # The following is used by the Javascript program that prepopulates the
 # nugget base table with quotes.  I add the extension here, because in all
@@ -165,10 +171,8 @@ print_serverless:
 	cd $(DN_SERVICE_DIR) && serverless print
 
 deploy_ses_identities:
-	@printf "Creating the the SES TheDalyNugget.net domain.\n"
+	@printf "Creating the the SES TheDalyNugget.com domain.\n"
 	$(SUDO) $(SW_INSTALL_PATH)aws ses verify-domain-identity --output=text --domain $(DN_DOMAIN) > $(DN_SCRIPTS_DIR)/dns-ses-text-rec-val.txt
-
-	cd $(DN_SCRIPTS_DIR) && source set-ses-dns-txt-rec.bsh
 
 	@printf "Creating the the SES thenuggrev@gmail.com email identity.\n"
 	$(SUDO) $(SW_INSTALL_PATH)aws ses verify-email-identity --email-address $(DN_REVS_EMAIL_ADDRESS)
@@ -176,7 +180,9 @@ deploy_ses_identities:
 # TODO: Bucket name and key need to be variables. Maybe here as well as serverless.yml.
 
 deploy_serverless: IS_LOCAL := false
+deploy_serverless: DN_SES_DNS_TXT_REC_VAL := $(shell cat $(DN_SES_DNS_TXT_REC_VAL_FILE))
 deploy_serverless:
+	@printf "Exported DN_SES_DNS_TXT_REC_VAL = " $(DN_SES_DNS_TXT_REC_VAL)
 	@printf "Running serverless deploy.\n"
 	cd $(DN_SERVICE_DIR) && serverless deploy -v > $(DN_SCRIPTS_DIR)/$(DN_SERVERLESS_OUTPUT_LOG_FILE)
 #	cd $(DN_SERVICE_DIR) && serverless deploy -v
@@ -204,6 +210,7 @@ deploy_apigateway:
 	@printf "Setting up the Api Gateway SDK.\n"
 	$(DN_SCRIPTS_DIR)/setup-apig-sdk.bsh
 
+deploy_client: DN_SES_DNS_TXT_REC_VAL := $(shell cat $(DN_SES_DNS_TXT_REC_VAL_FILE))
 deploy_client:
 	@# The following uses the Finch plugin to deploy the static client files
 	@# to the S3 bucket.  It is directed by the client subsection of the 
@@ -223,7 +230,7 @@ port_to_sam:
 
 deploy:	IS_LOCAL := false
 #deploy: clean deploy_ses_identities deploy_serverless deploy_dynamo deploy_apigateway deploy_client deploy_ses_rules
-deploy: clean deploy_serverless deploy_dynamo deploy_apigateway deploy_client deploy_ses_identities deploy_ses_rules
+deploy: clean deploy_ses_identities deploy_serverless deploy_dynamo deploy_apigateway deploy_client deploy_ses_rules
 #deploy: clean deploy_ses_identities deploy_serverless deploy_dynamo deploy_ses_rules deploy_apigateway
 #deploy: clean deploy_ses_identities deploy_serverless deploy_dynamo deploy_ses_rules
 #deploy: clean deploy_ses_identities deploy_serverless deploy_dynamo

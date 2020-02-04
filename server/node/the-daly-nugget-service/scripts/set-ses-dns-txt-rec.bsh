@@ -1,3 +1,7 @@
 #!/bin/bash
 
-export	DN_SES_DNS_TXT_REC=$(cat dns-ses-text-rec-val.txt)
+echo "DN_SES_DNS_TXT_REC_VAL_FILE = " $DN_SES_DNS_TXT_REC_VAL_FILE
+echo "The contents of " $DN_SES_DNS_TXT_REC_VAL_FILE " is "
+cat $DN_SES_DNS_TXT_REC_VAL_FILE
+export	DN_SES_DNS_TXT_REC_VAL=$(cat $DN_SES_DNS_TXT_REC_VAL_FILE)
+echo "DN_SES_DNS_TXT_REC_VAL = " $DN_SES_DNS_TXT_REC_VAL
