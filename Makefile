@@ -23,10 +23,10 @@
 # development machine.  This # variable is overriden on the make
 # command line (in the config.yml file when deploying # from CircleCi.
 
-#DN_PROJECT_STAGE											:= dev
+DN_PROJECT_STAGE											:= dev
 #DN_PROJECT_STAGE											:= test
 #DN_PROJECT_STAGE											:= prod
-DN_PROJECT_STAGE											:= staging
+#DN_PROJECT_STAGE											:= staging
 
 DN_ROOT_PREFIX												:= the-daly-nugget
 DN_ROOT_PREFIX_NO_DASHES						:= thedalynugget
@@ -225,6 +225,8 @@ deploy_client:
 deploy_function:
 	serverless deploy function -f getRandomNugget
 
+port_to_sam: 	DN_SES_DNS_TXT_REC_VAL := $(shell cat $(DN_SES_DNS_TXT_REC_VAL_FILE))
+port_to_sam:	IS_LOCAL := false
 port_to_sam:
 	cd $(DN_SERVICE_DIR) && serverless sam export --output ./sam-template.yml
 

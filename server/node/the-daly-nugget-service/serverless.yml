@@ -47,6 +47,7 @@ plugins:
   - serverless-finch
   - serverless-stack-output
   - serverless-sam
+  - serverless-pseudo-parameters
 
 functions:
  getNuggetOfTheDay:

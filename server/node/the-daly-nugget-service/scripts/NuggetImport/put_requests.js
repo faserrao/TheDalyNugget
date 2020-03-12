@@ -12,9 +12,9 @@ let projectStage                = process.env.DN_PROJECT_STAGE;
 */
 
 // User following if running from terminal window.
-let projectStage               = "prod";
+let projectStage               = "staging";
 const importNuggetsUtilityDir   = ".";
-const nuggetBaseTable           = "nugget-base-prod";
+const nuggetBaseTable           = "nugget-base-staging";
 
 console.log("nuggetBaseTable = ", nuggetBaseTable);
 
@@ -115,6 +115,16 @@ parser = parse({
         RequestItems:
         {
           "nugget-base-prod": item_data
+        }
+      };
+    }
+    else if (projectStage == "staging")
+    {
+      params =
+      {
+        RequestItems:
+        {
+          "nugget-base-staging": item_data
         }
       };
     }
