@@ -1,0 +1,25 @@
+Define SES Daomain
+	aws ses verify-domain-identity --output=text --domain $(DN_DOMAIN) > $(DN_SES_DNS_TXT_REC_VAL_FILE)
+
+Need to save the output From the domain verifiaton to environment Variable.  It is required when defining the SES TXT record in the Rt 53 hosted zone.
+  DN_SES_DNS_TXT_REC_VAL := $(shell cat $(DN_SES_DNS_TXT_REC_VAL_FILE))
+
+Define SES Identity
+	aws ses verify-email-identity --email-address $(DN_REVS_EMAIL_ADDRESS)
+
+Verify SES Idenity
+  Click email link
+
+Copy Outputs From Serverless Template To S3 Bucket
+  aws s3 cp $(DN_SCRIPTS_DIR)/$(DN_SERVERLESS_OUTPUT_FILE) s3://$(DN_S3_STACK_OUTPUT_BUCKET)/$(DN_S3_STACK_OUTPUT_FILE)
+
+Update Custom Verificaton Email Template
+  aws ses delete-custom-verification-email-template --template-name $(DN_SES_CUSTOM_VERIFICATION_EMAIL_TEMPLATE_NAME)
+  aws ses create-custom-verification-email-template --cli-input-json file://$(DN_SES_CUSTOM_VERIFICATION_EMAIL_TEMPLATE_FILE)
+
+Set Active SES Rule Set
+	aws ses set-active-receipt-rule-set --rule-set-name $(DN_SES_EMAIL_RECEIPT_RULE_SET_NAME)
+
+Copy nameservers in the new Rt 53 hosted zone to the thedalynugget.com domain.
+
+  

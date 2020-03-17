@@ -1,0 +1,29 @@
+ManagedEniStack:
+    Type: AWS::CloudFormation::Stack
+    DependsOn:
+      - VpcStack
+      - InstanceSecurityGroup
+    Properties:
+      NotificationARNs:
+        - !If
+          - UseLogSNS
+          - !Ref LogSNS
+          - !Ref 'AWS::NoValue'
+      Parameters:
+        S3Bucket: !Join [ "", [!FindInMap [Variable,"LambdaPackageBucket","base"], !Ref 'AWS::Region']]
+        S3Directory: !FindInMap [Variable,"S3Directory","base"]
+        NodesPerZone: !Ref NodesPerZone
+        NumberOfZones: !Ref NumberOfZones
+        Subnets: !If
+          - MultiZone
+          - !Join
+            - ','
+            - - !GetAtt [VpcStack, Outputs.PrivateSubnet1Id]
+              - !GetAtt [VpcStack, Outputs.PrivateSubnet2Id]
+              - !GetAtt [VpcStack, Outputs.PrivateSubnet3Id]
+          - !GetAtt [VpcStack, Outputs.PrivateSubnet1Id]
+        ParentStackName: !Ref 'AWS::StackName'
+        ParentStackId: !Ref 'AWS::StackId'
+        SecurityGroup: !Ref InstanceSecurityGroup
+      TemplateURL: !Join ['/', [!FindInMap [Variable,"TemplateUrl","base"],!FindInMap [Variable,"S3Directory","base"],'ml-managedeni.template']]
+      TimeoutInMinutes: 5

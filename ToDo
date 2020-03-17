@@ -1,0 +1,2 @@
+1) Define the thedalynugget.com bucket in template.  This bucket forwards requests to staging.thedalynugget.com.
+2) Get the serverless local run and testing working.

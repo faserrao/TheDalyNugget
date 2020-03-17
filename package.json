@@ -39,6 +39,7 @@
     "mailparser": "^2.7.1",
     "serverless": "^1.35.1",
     "serverless-pseudo-parameters": "^2.5.0",
+    "serverless-stack-output": "^0.2.3",
     "toml": "^3.0.0",
     "uuid": "^3.4.0",
     "uuidv1": "^1.6.14"

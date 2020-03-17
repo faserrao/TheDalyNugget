@@ -4,11 +4,6 @@
 
 ######################################################################################################################
 # TODO: Need to somehow get the api id automatically from the serverless deploy.
-#
-# This retrieves the api gateway dalily nugget api id from the output of serverless deploy
-#export DN_REST_API_ID=awk '$1=="GET"{print $3; exit}' serverless-output | sed -e 's/.*https:\/\/\(.*\)\.execute.*/\1/'
-#awk '$1=="GET"{print $3; exit}' serverless-output | sed -e 's/.*https:\/\/\(.*\)\.execute.*/\1/'
-#export DN_REST_API_ID=eval ./get-apig-id.bsh
 #######################################################################################################################
 
 echo Parsing API ID from serverless output file.
