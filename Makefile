@@ -167,7 +167,7 @@ seed_dynamo:
 deploy_ses_rules:
 	$(SUDO) $(SW_INSTALL_PATH)aws ses delete-custom-verification-email-template --template-name $(DN_SES_CUSTOM_VERIFICATION_EMAIL_TEMPLATE_NAME)
 	cd $(DN_SCRIPTS_DIR) && $(SUDO) $(SW_INSTALL_PATH)aws ses create-custom-verification-email-template --cli-input-json file://$(DN_SES_CUSTOM_VERIFICATION_EMAIL_TEMPLATE_FILE)
-	$(SUDO) $(SW_INSTALL_PATH)aws ses set-active-receipt-rule-set --rule-set-name $(DN_SES_EMAIL_RECEIPT_RULE_SET_NAME)
+#	$(SUDO) $(SW_INSTALL_PATH)aws ses set-active-receipt-rule-set --rule-set-name $(DN_SES_EMAIL_RECEIPT_RULE_SET_NAME)
 
 deploy_apigateway:
 	$(DN_SCRIPTS_DIR)/setup-apig-sdk.bsh

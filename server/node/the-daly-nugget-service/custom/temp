@@ -1,0 +1,9 @@
+## Installation
+To install this custom resource provider, type:
+```sh
+git clone https://github.com/binxio/cfn-ses-provider.git
+cd cfn-ses-provider
+aws cloudformation deploy \
+    --capabilities CAPABILITY_IAM \
+    --stack-name cfn-ses-provider \
+    --template-file ./cloudformation/cfn-resource-provider.yaml 

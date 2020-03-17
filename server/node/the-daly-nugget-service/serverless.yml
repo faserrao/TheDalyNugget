@@ -675,6 +675,13 @@ resources:
                 BucketName:
                   Ref: "${self:provider.environment.DN_S3_NOD_BUCKET_REF}"
 
+    ActiveReceiptRuleSet:
+      Type: Custom::ActiveReceiptRuleSet
+      Properties:
+        RuleSetName: !Ref 'EmailReceivedRuleSet'
+        Region: !Ref 'AWS::Region'
+        ServiceToken: !Sub 'arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:binxio-cfn-ses-provider'
+
     CognitoUserPool:
       Type: "AWS::Cognito::UserPool"
       Properties:
