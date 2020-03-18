@@ -1,0 +1,12 @@
+aws_cfn_ses_domain-0.3.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+aws_cfn_ses_domain-0.3.dist-info/LICENSE,sha256=lWiisVXmasPguh_YC1K4J7lGDmz28jMSXny8qOIG3cM,10174
+aws_cfn_ses_domain-0.3.dist-info/METADATA,sha256=1x7vTZYeoShcSw2jiFvnkEjUY6MMv8OpuW84S87KfN8,24427
+aws_cfn_ses_domain-0.3.dist-info/RECORD,,
+aws_cfn_ses_domain-0.3.dist-info/WHEEL,sha256=usdT0QosYxMEcoxSlW4CkZulh0Nh77V3D2vHeDepZsA,93
+aws_cfn_ses_domain-0.3.dist-info/top_level.txt,sha256=tBPx7rxlNn-z9d-XeRzrZGXOVCLGffFXFaBhz7RIa8U,19
+aws_cfn_ses_domain/__about__.py,sha256=o3m4S97HpGzNG8njFeu9bBNg6JIU1KmiZS_yLYJugAk,1477
+aws_cfn_ses_domain/__init__.py,sha256=58mQSb38XVIBZ9T8xCsYo5uMsBKp4usf2QKkDS_JxNk,170
+aws_cfn_ses_domain/cfnresponse.py,sha256=keAqPT4RKqLifOqWgUxlNNbF7KIyxKvOBItzJtSUxRg,1374
+aws_cfn_ses_domain/ses_domain_identity.py,sha256=EG3qqhZ3tw_dT3aldo4xPfqcWPD325qcKRcGGqG8ZVA,8289
+aws_cfn_ses_domain/ses_email_identity.py,sha256=swtcB1Dno1sfTAO_be8EcZ1UKo8zDY1ooDJ1_l5EqIw,2702
+aws_cfn_ses_domain/utils.py,sha256=GzZHw9HUNRgdRAE6SUSnvbDe4G_UvEb4YfVBxrzZQyg,2094

@@ -148,11 +148,10 @@ clean_aws:
 clean_all: clean_local clean_aws
 
 deploy_ses_identities:
-	$(SUDO) $(SW_INSTALL_PATH)aws ses verify-domain-identity --output=text --domain $(DN_DOMAIN) > $(DN_SES_DNS_TXT_REC_VAL_FILE)
-	$(SUDO) $(SW_INSTALL_PATH)aws ses verify-email-identity --email-address $(DN_REVS_EMAIL_ADDRESS)
+#	$(SUDO) $(SW_INSTALL_PATH)aws ses verify-domain-identity --output=text --domain $(DN_DOMAIN) > $(DN_SES_DNS_TXT_REC_VAL_FILE)
+#	$(SUDO) $(SW_INSTALL_PATH)aws ses verify-email-identity --email-address $(DN_REVS_EMAIL_ADDRESS)
 
 deploy_serverless: IS_LOCAL := false
-deploy_serverless: DN_SES_DNS_TXT_REC_VAL := $(shell cat $(DN_SES_DNS_TXT_REC_VAL_FILE))
 deploy_serverless:
 	@printf "Running serverless deploy.\n"
 	cd $(DN_SERVICE_DIR) && serverless deploy -v > $(DN_SCRIPTS_DIR)/$(DN_SERVERLESS_OUTPUT_LOG_FILE)
@@ -172,7 +171,6 @@ deploy_ses_rules:
 deploy_apigateway:
 	$(DN_SCRIPTS_DIR)/setup-apig-sdk.bsh
 
-deploy_static: DN_SES_DNS_TXT_REC_VAL := $(shell cat $(DN_SES_DNS_TXT_REC_VAL_FILE))
 deploy_static:
 	# The following uses the Finch plugin to deploy the static client files to the S3 bucket.
 	# Create a symbolic link so the files look like they are where Finch expects them to b.
@@ -183,17 +181,14 @@ deploy_static:
 deploy_function:
 	serverless deploy function -f getRandomNugget
 
-serverless_package: 	DN_SES_DNS_TXT_REC_VAL := $(shell cat $(DN_SES_DNS_TXT_REC_VAL_FILE))
 serverless_package:		IS_LOCAL := false
 serverless_package:
 	cd $(DN_SERVICE_DIR) && serverless package
 
-port_to_sam: 	DN_SES_DNS_TXT_REC_VAL := $(shell cat $(DN_SES_DNS_TXT_REC_VAL_FILE))
 port_to_sam:	IS_LOCAL := false
 port_to_sam:
 	cd $(DN_SERVICE_DIR) && serverless sam export --output ./sam-template.yml
 
-print_serverless:	DN_SES_DNS_TXT_REC_VAL := $(shell cat $(DN_SES_DNS_TXT_REC_VAL_FILE))
 print_serverless: IS_LOCAL := false
 print_serverless:
 	@printf "Running serverless print.\n"

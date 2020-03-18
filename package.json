@@ -38,6 +38,7 @@
     "aws-sdk": "^2.633.0",
     "mailparser": "^2.7.1",
     "serverless": "^1.35.1",
+    "serverless-cloudformation-sub-variables": "^0.2.1",
     "serverless-pseudo-parameters": "^2.5.0",
     "serverless-stack-output": "^0.2.3",
     "toml": "^3.0.0",

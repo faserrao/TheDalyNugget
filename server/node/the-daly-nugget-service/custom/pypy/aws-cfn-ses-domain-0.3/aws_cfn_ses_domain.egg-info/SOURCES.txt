@@ -1,0 +1,13 @@
+README.md
+setup.py
+aws_cfn_ses_domain/__about__.py
+aws_cfn_ses_domain/__init__.py
+aws_cfn_ses_domain/cfnresponse.py
+aws_cfn_ses_domain/ses_domain_identity.py
+aws_cfn_ses_domain/ses_email_identity.py
+aws_cfn_ses_domain/utils.py
+aws_cfn_ses_domain.egg-info/PKG-INFO
+aws_cfn_ses_domain.egg-info/SOURCES.txt
+aws_cfn_ses_domain.egg-info/dependency_links.txt
+aws_cfn_ses_domain.egg-info/requires.txt
+aws_cfn_ses_domain.egg-info/top_level.txt
