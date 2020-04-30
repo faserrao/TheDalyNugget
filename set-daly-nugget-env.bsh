@@ -2,3 +2,5 @@
 
 export DN_PROJECTS_DIR="/Users/fas/MyStuff/Business/Projects/CurrentProjects"
 export AWS_PROFILE="daly-nugget-serverless-admin"
+export AWS_PROFILE="daly-nugget-serverless-admin"
+export SLS_DEBUG="*"

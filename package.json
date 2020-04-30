@@ -22,6 +22,7 @@
   "homepage": "https://github.com/faserrao/TheDalyNugget#readme",
   "devDependencies": {
     "@anttiviljami/serverless-stack-output": "^0.3.1",
+    "aws-sdk": "^2.633.0",
     "csv-parse": "^4.8.8",
     "dynamodb-localhost": "0.0.7",
     "eslint": "^5.15.0",
@@ -29,19 +30,17 @@
     "jsctags": "git+https://github.com/ramitos/jsctags.git",
     "serverless-dynamodb-local": "^0.2.37",
     "serverless-finch": "^2.4.2",
+    "serverless": "^1.35.1",
+    "serverless-cloudformation-sub-variables": "^0.2.1",
+    "serverless-pseudo-parameters": "^2.5.0",
+    "serverless-stack-output": "^0.2.3",
     "serverless-offline": "^4.10.6",
     "serverless-plugin-offline-dynamodb-stream": "^1.0.18",
     "serverless-sam": "^0.2.0"
   },
   "dependencies": {
     "async": "^3.2.0",
-    "aws-sdk": "^2.633.0",
     "mailparser": "^2.7.1",
-    "serverless": "^1.35.1",
-    "serverless-cloudformation-sub-variables": "^0.2.1",
-    "serverless-pseudo-parameters": "^2.5.0",
-    "serverless-stack-output": "^0.2.3",
-    "toml": "^3.0.0",
     "uuid": "^3.4.0",
     "uuidv1": "^1.6.14"
   }

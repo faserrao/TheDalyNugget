@@ -10,8 +10,8 @@ const toml    = require('toml');
 //       or somewhere else.
 // TODO: File name should be created in CloudFormation.
 
-const BUCKET_NAME = process.env.DN_STACK_OUTPUT_BUCKET_NAME;
-const FILE_NAME = process.env.DN_STACK_OUTPUT_FILE_NAME;
+const BUCKET_NAME = process.env.DN_S3_STACK_OUTPUT_BUCKET_NAME;
+const FILE_NAME = process.env.DN_S3_STACK_OUTPUT_FILE_NAME;
 
 exports.handler = async (event, context) =>
 {
@@ -19,6 +19,9 @@ exports.handler = async (event, context) =>
 
   delete require.cache[require.resolve("./dnmResponseCodes.js")];
   let RESPONSE  = require("./dnmResponseCodes.js").RESPONSE;
+
+  console.log("event = ", JSON.stringify(event))
+  console.log("context = ", JSON.stringify(context))
 
   const params = {Bucket: BUCKET_NAME, Key: FILE_NAME};
 

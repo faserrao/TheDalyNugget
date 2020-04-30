@@ -4,7 +4,7 @@ const AWS = require("aws-sdk");
 
 const SES = new AWS.SES(
 {
-  region: process.env.DN_AWS_REGION,
+  region: process.env.AWS_REGION,
 });
 
 const NUM_OF_RECIPIENTS_PER_EMAIL = 3;

@@ -17,22 +17,23 @@ exports.handler = async (event, context) =>
 
   let RESPONSE = require("./dnmResponseCodes.js").RESPONSE;
 
+  console.log("Lambda: getRandomNugger(): event = ", JSON.stringify(event))
+  console.log("cLambda: getRandomNugger(): ontext = ", JSON.stringify(context))
+
   var topic  = undefined;
   var author = undefined;
 
   if(event.body.topic)
   {
     topic = event.body.topic;
+    console.log("Lambda: getRandomNugger(): topic = ", topic);
   }
-
-  console.log("Lambda: getRandomNugger(): topic = ", topic);
 
   if (event.body.author)
   {
     author = event.body.author;
+    console.log("Lambda: getRandomNugger(): author = ", author);
   }
-
-  console.log("Lambda: getRandomNugger(): author = ", author);
 
   let randomNuggetPromise = getRandomNugget(db, topic, author);
   let randomNuggetData    = await randomNuggetPromise;

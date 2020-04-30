@@ -6,12 +6,12 @@ const simpleParser  = require("mailparser").simpleParser;
 const S3 = new AWS.S3(
 {
   apiVersion: '2006-03-01',
-  region: process.env.DN_AWS_REGION,
+  region: process.env.AWS_REGION,
 });
 
 AWS.config.update(
 {
-  region: process.env.DN_AWS_REGION
+  region: process.env.AWS_REGION
 });
 
 exports.getEmailFromBucket = async function (emailRecord)

@@ -31,16 +31,11 @@ custom:
         functions:
           - emailNuggetOfTheDay
 
-  output:
-    handler: scripts/output.handler
-    file: scripts/${env:DN_SERVERLESS_OUTPUT_FILE}
-
 plugins:
   - serverless-offline
   - serverless-dynamodb-local
   - serverless-plugin-offline-dynamodb-stream
   - serverless-finch
-  - serverless-stack-output
   - serverless-sam
   - serverless-pseudo-parameters
   - serverless-cloudformation-sub-variables
@@ -159,7 +154,6 @@ functions:
  getServerlessOutputs:
   handler: api/getServerlessOutputs.handler
   memorySize: 128
-  description:
   events:
    - http:
       path: get-serverless-outputs
@@ -170,7 +164,6 @@ functions:
  deleteCognitoUser:
   handler: api/deleteCognitoUser.handler
   memorySize: 128
-  description:
   events:
    - http:
       path: delete-cognito-user
@@ -217,35 +210,30 @@ functions:
  syncSubscriberVerifications:
   handler: api/syncSubscriberVerifications.handler
   memorySize: 128
-  description: 
   events:
     - schedule: cron(0 8,12,17,23 * * ? *)
 
  sendNuggetsWeekly:
   handler: api/sendNuggetsWeekly.handler
   memorySize: 128
-  description: 
   events:
     - schedule: cron(0 8 ? * MON *)
 
  sendNuggetsTwiceWeekly:
   handler: api/sendNuggetsTwiceWeekly.handler
   memorySize: 128
-  description: 
   events:
     - schedule: cron(0 8 ? * MON,FRI *)
 
  sendNuggetsDaily:
   handler: api/sendNuggetsDaily.handler
   memorySize: 128
-  description: 
   events:
     - schedule: cron(0 8 * * ? *)
 
  sendNuggetsTwiceDaily:
   handler: api/sendNuggetsTwiceDaily.handler
   memorySize: 128
-  description: 
   events:
     - schedule: cron(0 8,17 * * ? *)
 
@@ -253,11 +241,7 @@ provider:
  name: aws
  runtime: nodejs10.x
  stage: "${env:DN_PROJECT_STAGE}"
- region: "${env:DN_AWS_REGION}"
-#profile: ${env:DN_AWS_PROFILE}
  environment:
-
-    DN_AWS_REGION: "${self:provider.region}"
 
     DN_DOMAIN: ${env:DN_DOMAIN}
     DN_SUBDOMAIN: ${env:DN_SUBDOMAIN}
@@ -272,7 +256,6 @@ provider:
     NUGGETEER_TABLE: "${env:NUGGETEER_TABLE}-${opt:stage, self:provider.stage}"
     NUGGET_HISTORY_TABLE: "${env:NUGGET_HISTORY_TABLE}-${opt:stage, self:provider.stage}"
 
-    DN_BLESSED_EMAIL_ADDRESS: "thenuggrev.${self:provider.stage}@gmail.com"
     DN_REVS_EMAIL_ADDRESS: "${env:DN_REVS_EMAIL_ADDRESS}"
     DN_NUGGET_EMAIL_SUBJECT: "Your Daily Nugget From The Rev"
 
@@ -292,13 +275,6 @@ provider:
     DN_SES_EMAIL_RECEIPT_RULE_EMAIL_ADDRESS: "faserrao@${env:DN_DOMAIN}" 
 
     DN_SES_CUSTOM_VERIFICATION_EMAIL_TEMPLATE_NAME: "${env:DN_SES_CUSTOM_VERIFICATION_EMAIL_TEMPLATE_NAME}"
-
-    DN_SERVERLESS_OUTPUT_FILE: "${env:DN_SERVERLESS_OUTPUT_FILE}"
-
-    DN_SERVERLESS_VAR_JS_FILE: "${env:DN_SERVERLESS_VAR_JS_FILE}"
-
-    DN_SES_DNS_TXT_REC_NAME: "${env:DN_SES_DNS_TXT_REC_NAME}"
-    DN_SES_DNS_TXT_REC_VAL: "${env:DN_SES_DNS_TXT_REC_VAL}"
 
     DN_S3_STACK_OUTPUT_BUCKET: "${env:DN_S3_STACK_OUTPUT_BUCKET}"
     DN_S3_STACK_OUTPUT_FILE_NAME:  "${env:DN_S3_STACK_OUTPUT_FILE}"
@@ -393,113 +369,86 @@ resources:
       Type: 'AWS::DynamoDB::Table'
       DeletionPolicy: Delete
       Properties:
-
         AttributeDefinitions:
         - AttributeName: "nodKey"
           AttributeType: "S"
-
         KeySchema:
         - AttributeName: "nodKey"
           KeyType: "HASH"
-
         ProvisionedThroughput:
           ReadCapacityUnits: 1
           WriteCapacityUnits: 1
-
         StreamSpecification:
           StreamViewType: "NEW_AND_OLD_IMAGES"
-
         TableName: "${self:provider.environment.NUGGET_OF_THE_DAY_TABLE}"
 
     NuggetHistoryDynamoDbTable:
       Type: 'AWS::DynamoDB::Table'
       DeletionPolicy: Delete
       Properties:
-
         AttributeDefinitions:
         - AttributeName: "nhKey"
           AttributeType: "S"
-
         KeySchema:
         - AttributeName: "nhKey"
           KeyType: "HASH"
-
         ProvisionedThroughput:
           ReadCapacityUnits: 1
           WriteCapacityUnits: 1
-
         StreamSpecification:
           StreamViewType: "NEW_AND_OLD_IMAGES"
-
         TableName: "${self:provider.environment.NUGGET_HISTORY_TABLE}"
 
     NuggetBaseDynamoDbTable:
       Type: 'AWS::DynamoDB::Table'
       DeletionPolicy: Delete
       Properties:
-
         AttributeDefinitions:
         - AttributeName: "id"
           AttributeType: "S"
         - AttributeName: "topic"
           AttributeType: "S"
-
         KeySchema:
         - AttributeName: "id"
           KeyType: "HASH"
         - AttributeName: "topic"
           KeyType: "RANGE"
-
         ProvisionedThroughput:
           ReadCapacityUnits: 1
           WriteCapacityUnits: 1
-
         StreamSpecification:
           StreamViewType: "NEW_AND_OLD_IMAGES"
-
         TableName: "${self:provider.environment.NUGGET_BASE_TABLE}"
 
     NuggetSubscriberDynamoDbTable:
       Type: 'AWS::DynamoDB::Table'
       DeletionPolicy: Delete
       Properties:
-
         AttributeDefinitions:
         - AttributeName: "email"
           AttributeType: "S"
-
         - AttributeName: "verificationStatus"
           AttributeType: "S"
-
         KeySchema:
         - AttributeName: "email"
           KeyType: "HASH"
-
         ProvisionedThroughput:
           ReadCapacityUnits: 1
           WriteCapacityUnits: 1
-
         StreamSpecification:
           StreamViewType: "NEW_AND_OLD_IMAGES"
-
         TableName: "${self:provider.environment.NUGGET_SUBSCRIBER_TABLE}"
-
         GlobalSecondaryIndexes:
-
         - IndexName: nuggetSubscriberGSI
-
           KeySchema:
             -
               AttributeName: verificationStatus
               KeyType: HASH
-
           Projection:
             NonKeyAttributes:
             -
               email
-
             ProjectionType: INCLUDE
-
           ProvisionedThroughput:
             ReadCapacityUnits: '1'
             WriteCapacityUnits: '1'
@@ -508,7 +457,6 @@ resources:
       Type: 'AWS::DynamoDB::Table'
       DeletionPolicy: Delete
       Properties:
-
         AttributeDefinitions:
           -
             AttributeName: "email"
@@ -516,25 +464,18 @@ resources:
           -
             AttributeName: "nuggetDeliveryFrequency"
             AttributeType: "S"
-
         KeySchema:
           -
             AttributeName: "email"
             KeyType: "HASH"
-
         ProvisionedThroughput:
           ReadCapacityUnits: 1
           WriteCapacityUnits: 1
-
         StreamSpecification:
           StreamViewType: "NEW_AND_OLD_IMAGES"
-
         TableName: "${self:provider.environment.NUGGETEER_TABLE}"
-
         GlobalSecondaryIndexes:
-
         - IndexName: nuggetDeliveryGSI
-
           KeySchema:
             -
               AttributeName: nuggetDeliveryFrequency
@@ -542,38 +483,16 @@ resources:
             -
               AttributeName: email
               KeyType: RANGE
-
           Projection:
             NonKeyAttributes:
             -
               nuggetDeliveryMethod
             -
               phone
-
             ProjectionType: INCLUDE
-
           ProvisionedThroughput:
             ReadCapacityUnits: '1'
             WriteCapacityUnits: '1'
-
-    AttachmentsBucket:
-      Type: AWS::S3::Bucket
-      Properties:
-        # Set the CORS policy
-        CorsConfiguration:
-          CorsRules:
-            -
-              AllowedOrigins:
-                - '*'
-              AllowedHeaders:
-                - '*'
-              AllowedMethods:
-                - GET
-                - PUT
-                - POST
-                - DELETE
-                - HEAD
-              MaxAge: 3000
 
     TheDailyNuggetStackOutputsBucket:
       Type: AWS::S3::Bucket
@@ -640,8 +559,18 @@ resources:
               HostedZoneId: !FindInMap [RegionMap, !Ref "AWS::Region", HZID]
               DNSName: !FindInMap [RegionMap, !Ref "AWS::Region", DN]
 
-    DomainIdentity:
+    BinxioSesCustomResourceStack:
+      Type: AWS::CloudFormation::Stack
+      Properties:
+        TemplateURL: 'https://s3.amazonaws.com/dn-custom-cfn-resources/binxio-cfn-ses-provider.yaml'
+        Parameters:
+          LambdaCodeS3Bucket: 'dn-custom-cfn-resources'
+          LambdaCodeS3Key: 'binxio-cfn-ses-provider.zip'
+
+    BinxioDomainIdentity:
       Type: Custom::DomainIdentity
+      DependsOn:
+      - BinxioSesCustomResourceStack
       Properties:
         Domain: '${self:provider.environment.DN_HOSTED_ZONE_NAME}'
         Region: !Ref 'AWS::Region'
@@ -651,21 +580,35 @@ resources:
       Type: AWS::Route53::RecordSetGroup
       Properties:
         HostedZoneId: !Ref 'zonethedailynuggetnet'
-        RecordSets: !GetAtt 'DomainIdentity.RecordSets'
-
+        RecordSets: !GetAtt 'BinxioDomainIdentity.RecordSets'
 
 #    There can only be one email receive rule set per AWS account so if the same account is used for
 #    all development phases (dev, prod, etc.), we will only define it once and only delete it when we
 #    want to do a complete cleanup of all cloudformation stacks (prod, dev. etc.).              
 #    To Do: Actually need to check if it exists and if does not then create it.
 
+  # To wait until the domain identity is verified, add a Custom::VerifiedIdentity:
+
+    BinxioVerifiedIdentity:
+      Type: Custom::VerifiedIdentity
+      DependsOn:
+        - dnsamazonsesthedailynuggetnet
+      Properties:
+        Identity: !GetAtt 'BinxioDomainIdentity.Domain'
+        Region: !GetAtt 'BinxioDomainIdentity.Region'
+        ServiceToken: 'arn:aws:lambda:#{AWS::Region}:#{AWS::AccountId}:function:binxio-cfn-ses-provider'
+
     EmailReceivedRuleSet:
       Type: AWS::SES::ReceiptRuleSet
+      DependsOn:
+      - S3EMailBucketPermissions
       Properties:
         RuleSetName: "${self:provider.environment.DN_SES_EMAIL_RECEIPT_RULE_SET_NAME}"
 
     EmailReceivedRule:
       Type: AWS::SES::ReceiptRule
+      DependsOn:
+      - EmailReceivedRuleSet
       Properties:
         RuleSetName: "${self:provider.environment.DN_SES_EMAIL_RECEIPT_RULE_SET_NAME}"
         Rule:
@@ -679,74 +622,201 @@ resources:
                 BucketName:
                   Ref: "${self:provider.environment.DN_S3_NOD_BUCKET_REF}"
 
-    ActiveReceiptRuleSet:
+    BinxioActiveReceiptRuleSet:
       Type : Custom::ActiveReceiptRuleSet
+      DependsOn:
+      - BinxioSesCustomResourceStack
       Properties:
         RuleSetName: !Ref EmailReceivedRuleSet
         Region: !Ref 'AWS::Region'
         ServiceToken : 'arn:aws:lambda:#{AWS::Region}:#{AWS::AccountId}:function:binxio-cfn-ses-provider'
 
-#  Type : "Custom::VerifiedIdentity"
-#  Properties:
-#    Identity: String
-#    Region: String
-#    ServiceToken : !Sub 'arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:binxio-cfn-ses-provider'
+    BinxioDkimTokens:
+      Type: Custom::DkimTokens
+      Properties:
+        Domain: !GetAtt 'BinxioDomainIdentity.Domain'
+        Region: !GetAtt 'BinxioDomainIdentity.Region'
+        ServiceToken: 'arn:aws:lambda:#{AWS::Region}:#{AWS::AccountId}:function:binxio-cfn-ses-provider'
 
+    DkimRecords:
+      Type: AWS::Route53::RecordSetGroup
+      Properties:
+        HostedZoneId: !Ref 'zonethedailynuggetnet'
+        RecordSets:  !GetAtt 'BinxioDkimTokens.RecordSets'
 
-    CfnSESResources:
+    StepStoneCpNsCustomResourceStack:
       Type: AWS::CloudFormation::Stack
       Properties:
-        TemplateURL: https://s3.amazonaws.com/the-daly-nugget-custom-cfn-resources/aws-cfn-ses-domain-0.3.cf.yaml
+        TemplateURL: 'https://s3.amazonaws.com/dn-custom-cfn-resources/cfn-rt53-cp-ns-provider.yml'
         Parameters:
-          LambdaCodeS3Bucket: the-daly-nugget-custom-cfn-resources
-          LambdaCodeS3Key: aws-cfn-ses-domain-0.3.lambda.zip
+          LambdaCodeS3Bucket: 'dn-custom-cfn-resources'
+          LambdaCodeS3Key: 'cfn-rt53-cp-ns-provider.js.zip'
 
-    # Declare Custom::SES_EmailIdentity resources for each address to verify.
-    MySESSender:
-      Type: Custom::SES_EmailIdentity
+    StepStoneCfnRt53CpNs:
+      Type: Custom::CfnRt53CpNameServers
       Properties:
-        # ServiceToken is the Arn of a Lambda Function from the nested stack:
-        ServiceToken: !GetAtt CfnSESResources.Outputs.CustomEmailIdentityArn
-        # Remaining Properties are options for verifying the email address:
-        # (EmailAddress is required; all others are optional and shown with their defaults)
-        EmailAddress: "thenuggrev@gmail.com"
-        Region: !Ref "AWS::Region"
+        ServiceToken: !GetAtt 'StepStoneCpNsCustomResourceStack.Outputs.CfnRt53CpNsProviderArn'
+        Domain: 'thedalynugget.com'
 
-    MySESReplyTo:
-      Type: Custom::SES_EmailIdentity
+    StepStoneCfnSesVerTmpltResourceStack:
+      Type: AWS::CloudFormation::Stack
+      DependsOn:
+        - BinxioVerifiedIdentity
       Properties:
-        ServiceToken: !GetAtt CfnSESResources.Outputs.CustomEmailIdentityArn
-        EmailAddress: "noreply@example.com"
+        TemplateURL: 'https://s3.amazonaws.com/dn-custom-cfn-resources/cfn-ses-ver-tmplt-provider.yml'
+        Parameters:
+          LambdaCodeS3Bucket: 'dn-custom-cfn-resources'
+          LambdaCodeS3Key: 'cfn-ses-ver-tmnplt-provider.js.zip'
 
+    StepStoneCfnSesVerTmplt:
+      Type: Custom::CfnSesVerificationTemplate
+      DependsOn:
+        - BinxioVerifiedIdentity
+        - StepStoneCfnSesVerTmpltResourceStack
+      Properties:
+        ServiceToken: !GetAtt 'StepStoneCfnSesVerTmpltResourceStack.Outputs.CfnSesVerTmpltProviderArn'
+        TemplateName: 'the-daly-nugget-service-verification-email-template'
+        FromEmailAddress: thenuggrev@thedalynugget.com
+        TemplateSubject: "Please confirm your email address"
+        TemplateContent: >
+                    <html> <head></head> <body style=''font-family:sans-serif;''> 
+                    <h1 style=text-align:center>A friend of yours has invited you
+                    to join The Daily Nugget!</h1> <p>The Daily Nugget is an
+                    inspirational website that provides wisdom (Nuggets) via email
+                    and text messages.  Just click the following link and you will
+                    be take to The Daily Nugget website where you will have the
+                    option of registering.</p> </body> </html>
+        SuccessRedirectionURL: 'http://dev.thedalynugget/index.html'
+        FailureRedirectionURL: 'http://dev.thedalynugget/verify_failure.html'
 
+#    BinxioCertCustomResourceStack:
+#      Type: AWS::CloudFormation::Stack
+#      Properties:
+#        TemplateURL: 'https://s3.amazonaws.com/dn-custom-cfn-resources/binxio-cfn-certificate-provider.yml'
+#        Parameters:
+#          S3BucketName: dn-custom-cfn-resources
+#          CFNCustomProviderZipFileName: 'binxio-cfn-certificate-provider.zip'
+#
+#    BinxioCertificate:
+#      Type: Custom::Certificate
+#      DependsOn:
+#        - BinxioCertCustomResourceStack 
+#      Properties:
+#        DomainName: thedalynuygget.com
+#        ValidationMethod: DNS
+#        ServiceToken: 'arn:aws:lambda:#{AWS::Region}:#{AWS::AccountId}:function:binxio-cfn-certificate-provider'
+#
+#    BinxioCertificateDNSRecord:
+#      Type: Custom::CertificateDNSRecord
+#      Properties:
+#        CertificateArn: !Ref BinxioCertificate
+#        DomainName: 'thedalynugget.com'
+#        ServiceToken: 'arn:aws:lambda:#{AWS::Region}:#{AWS::AccountId}:function:binxio-cfn-certificate-provider'
+#
+#    DomainValidationRecord:
+#      Type: AWS::Route53::RecordSetGroup
+#      Properties:
+#        HostedZoneId: !Ref 'zonethedailynuggetnet'
+#        RecordSets:
+#          - Name: !GetAtt BinxioCertificateDNSRecord.Name
+#            Type: !GetAtt BinxioCertificateDNSRecord.Type
+#            TTL: 60
+#            Weight: 1
+#            SetIdentifier: !Ref BinxioCertificate
+#            ResourceRecords:
+#              - !GetAtt BinxioCertificateDNSRecord.Value
+#
+#    BinxioIssuedCertificate:
+#      Type: Custom::IssuedCertificate
+#      DependsOn:
+#        - DomainValidationRecord
+#      Properties:
+#        CertificateArn: !Ref BinxioCertificate
+#        ServiceToken: 'arn:aws:lambda:#{AWS::Region}:#{AWS::AccountId}:function:binxio-cfn-certificate-provider'
 
-#  MySESDomain:
-#    Type: Custom::SES_Domain
-#    Properties:
-      # ServiceToken is the Arn of a Lambda Function from the nested stack:
-#      ServiceToken: !GetAtt CfnSESResources.Outputs.CustomDomainIdentityArn
-      # Remaining Properties are options for provisioning for your SES domain identity:
-      # (Domain is required; all others are optional and shown with their defaults)
-#      Domain: "example.com"
-#      EnableSend: true
-#      EnableReceive: false
-#      MailFromSubdomain: "mail"
-#      TTL: "1800"
-#      CustomDMARC: '"v=DMARC1; p=none; pct=100; sp=none; aspf=r;"'
-#      Region: !Ref "AWS::Region"
-
-  # 3. Declare a Route 53 RecordSetGroup to manage SES's required DNS entries.
-  #    (This assumes you already have a Route 53 hosted zone for your domain;
-  #    if not, you'll also want an AWS::Route53::HostedZone resource for it.
-  #    Or if you don't use Route 53, see "Return Values" for other DNS options.)
-#  MyRoute53RecordsForSES:
-#    Type: AWS::Route53::RecordSetGroup
-#    Properties:
-#      HostedZoneName: "example.com."
-      # The Route53RecordSets attribute specifies all DNS records needed:
-#      RecordSets: !GetAtt MySESDomain.Route53RecordSets
-
-
+#    CloudFrontDistribution:
+#      Type: AWS::CloudFront::Distribution
+#      DependsOn:
+#        - BinxioIssuedCertificate
+#      Properties:
+#        DistributionConfig:
+#          Aliases:
+#            - thedalynugget.com
+#          DefaultCacheBehavior:
+#            Compress: true
+#            ForwardedValues:
+#              QueryString: false
+#            TargetOriginId: !Ref CloudFrontBucket
+#            ViewerProtocolPolicy: redirect-to-https
+#          DefaultRootObject: index.html
+#          CustomErrorResponses:
+#            - ErrorCachingMinTTL: 300
+#              ErrorCode: 403
+#              ResponseCode: 200
+#              ResponsePagePath: /index.html
+#            - ErrorCachingMinTTL: 300
+#              ErrorCode: 404
+#              ResponseCode: 200
+#              ResponsePagePath: /index.html
+#          Enabled: true
+#          HttpVersion: http2
+#          Origins:
+#            - DomainName: !Join ['', [!Ref CloudFrontBucket, '.s3.amazonaws.com']]
+#              Id: !Ref CloudFrontBucket
+#              S3OriginConfig:
+#                OriginAccessIdentity:
+#                  !Join ['', ['origin-access-identity/cloudfront/', !Ref CloudFrontOriginAccessIdentity]]
+#          PriceClass: 'PriceClass_All'
+#          ViewerCertificate:
+#            AcmCertificateArn: !Ref BinxioCertificate
+#            MinimumProtocolVersion: TLSv1
+#            SslSupportMethod: sni-only
+#        Tags:
+#          - Key: Domain
+#            Value: 'PriceClass_All'
+#
+#    CloudFrontOriginAccessIdentity:
+#      Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
+#      Properties:
+#        CloudFrontOriginAccessIdentityConfig:
+#          Comment: 'CloudFront OAI for thedalynugget.com'
+#
+#    CloudFrontBucket:
+#      Type: AWS::S3::Bucket
+#      DeletionPolicy: Retain
+#      Properties:
+#        BucketEncryption:
+#          ServerSideEncryptionConfiguration:
+#            - ServerSideEncryptionByDefault:
+#                SSEAlgorithm: AES256
+#        Tags:
+#          - Key: Domain
+#            Value: 'thedalynugget.com'
+#
+#    CloudFrontBucketPolicy:
+#      Type: AWS::S3::BucketPolicy
+#      Properties:
+#        Bucket: !Ref CloudFrontBucket
+#        PolicyDocument:
+#          Statement:
+#            - Action:
+#                - s3:GetObject
+#              Effect: Allow
+#              Resource: !Join ['', ['arn:aws:s3:::', !Ref CloudFrontBucket, '/*']]
+#              Principal:
+#                CanonicalUser: !GetAtt CloudFrontOriginAccessIdentity.S3CanonicalUserId
+#
+#    TheDlyNuggetDomainAliasRecordSet:
+#      Type: 'AWS::Route53::RecordSetGroup'
+#      Properties:
+#        HostedZoneId:
+#          Ref: !Ref 'zonethedailynuggetnet'
+#        RecordSets:
+#          - Name: 'thedalynugget.com'
+#            Type: A
+#            AliasTarget:
+#              HostedZoneId: Z2FDTNDATAQYW2
+#              DNSName: !GetAtt 'CloudFrontDistribution.DomainName'
 
     CognitoUserPool:
       Type: "AWS::Cognito::UserPool"
@@ -790,6 +860,26 @@ resources:
             ProviderName:
               Fn::GetAtt: [ "CognitoUserPool", "ProviderName" ]
 
+#    StepStoneSvCognitoIdCustomResourceStack:
+#      Type: AWS::CloudFormation::Stack
+#      Properties:
+#        TemplateURL: 'https://s3.amazonaws.com/dn-custom-cfn-resources/cfn-cognito-sv-id-provider.yml'
+#        Parameters:
+#          LambdaCodeS3Bucket: 'dn-custom-cfn-resources'
+#          LambdaCodeS3Key: 'cfn-cognito-sv-id-provider.js.zip'
+#
+#    StepStoneCfnCognitoSvId:
+#      Type: Custom::CfnCognitoSvId
+#      DependsOn:
+#        - StepStoneSvCognitoIdCustomResourceStack
+#      Properties:
+#        ServiceToken: !GetAtt 'StepStoneSvCognitoIdCustomResourceStack.Outputs.CfnCognitoSvIdProviderArn'
+#        identityPoolId: !Ref 'CognitoIdentityPool'
+#        userPoolClientId: !Ref 'CognitoUserPoolClient'
+#        userPoolId: !Ref 'CognitoUserPool'
+#        stackOutputBucket: 'the-daly-nugget-dev-stack-outputs'
+#        stackOutputFileName: 'stack-output'
+
     CognitoIdentityPoolRoles:
       Type: AWS::Cognito::IdentityPoolRoleAttachment
       Properties:
@@ -831,19 +921,6 @@ resources:
                     - 'cognito-sync:*'
                     - 'cognito-identity:*'
                   Resource: '*'
-
-                - Effect: 'Allow'
-                  Action:
-                    - 's3:*'
-                  Resource:
-                    - Fn::Join:
-                      - ''
-                      -
-                        - Fn::GetAtt: [AttachmentsBucket, Arn]
-                        - '/private/'
-                        - '$'
-                        - '{cognito-identity.amazonaws.com:sub}/*'
-
                 - Effect: 'Allow'
                   Action:
                     - 'execute-api:Invoke'
@@ -889,13 +966,31 @@ resources:
                     - 'cognito-sync:*'
                   Resource: '*'
 
-  Outputs:
-    UserPoolId:
-      Value:
-        Ref: CognitoUserPool
-    UserPoolClientId:
-      Value:
-        Ref: CognitoUserPoolClient
-    IdentityPoolId:
-      Value: 
-        Ref: CognitoIdentityPool
+#  Outputs:
+#  UserPoolId:
+#    Value:
+#      Ref: CognitoUserPool
+#    Export:
+#      Name: UserPoolId
+#  UserPoolClientId:
+#    Value:
+#      Ref: CognitoUserPoolClient
+#    Export:
+#      Name: UserPoolClientId
+#  IdentityPoolId:
+#    Value:
+#      Ref: CognitoIdentityPool
+#    Export:
+#      Name: IdentityPoolId
+#  MyZone:
+#    Value: !Ref TheDlyNuggetHostedZone
+#    Export:
+#      Name:   MyZone
+#  MyZoneServers:
+#    Value: !Join [',', !GetAtt TheDlyNuggetHostedZone.NameServers]
+#    Export:
+#      Name:   MyZoneServers
+#  RestApiId:
+#    Value: !Ref TheDalyNuggetService
+#  CertificateDNSRecord:
+#    Value: !Sub '${BinxioCertificateDNSRecord.Name} ${BinxioCertificateDNSRecord.Type} ${BinxioCertificateDNSRecord.Value}'

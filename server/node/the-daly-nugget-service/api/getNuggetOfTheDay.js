@@ -15,6 +15,9 @@ exports.handler = async (event, context) =>
 
   let RESPONSE  = require("./dnmResponseCodes.js").RESPONSE;
 
+  console.log("event = ", JSON.stringify(event))
+  console.log("context = ", JSON.stringify(context))
+
   let data = await getNuggetOfTheDay(db);
 
   if (data.error === true)
