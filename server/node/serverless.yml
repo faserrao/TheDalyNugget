@@ -266,6 +266,7 @@ provider:
     NUGGET_HISTORY_TABLE:     '${env:NUGGET_HISTORY_TABLE}-${opt:stage, self:provider.stage}'
 
     DN_REVS_EMAIL_ADDRESS:    '${env:DN_REVS_EMAIL_ADDRESS}'
+    DN_NOD_EMAIL_ADDRESS:     '${env:DN_NOD_EMAIL_ADDRESS}'
     DN_NUGGET_EMAIL_SUBJECT:  'Your Daily Nugget From The Rev'
 
     DN_S3_BUCKET_PREFIX:        '${env:DN_S3_BUCKET_PREFIX}'

@@ -1,5 +1,7 @@
 "use strict";
 
+// Need to check and see if we should be sending NOD to subscribers.
+
 const VERIFICATION_STATUS_PENDING = "Pending";
 
 exports.createSubscriber = async function (db, email)

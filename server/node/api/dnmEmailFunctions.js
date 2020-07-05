@@ -31,7 +31,7 @@ exports.extractEmailAddress = function (emailFromText)
 
 exports.isEmailFromBlessedSource = function (emailSenderAddress)
 {
-  if (emailSenderAddress === process.env.DN_REVS_EMAIL_ADDRESS)
+  if (emailSenderAddress === process.env.DN_NOD_EMAIL_ADDRESS)
   {
     return(true);
   }
