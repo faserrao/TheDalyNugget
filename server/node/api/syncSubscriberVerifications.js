@@ -1,5 +1,6 @@
 "use strict";
 
+const lambdaLog                   = require("./dnmLogLambda.js").lambdaLog;
 const db                          = require("./dnmDbObjects.js").db;
 const getPendingIdentities        = require("./dnmSyncSubscriberVerifications.js").getPendingIdentities;
 const getIDVerificationAttributes = require("./dnmSyncSubscriberVerifications.js").getIDVerificationAttributes;
@@ -8,7 +9,8 @@ const updateVerificationStatus    = require("./dnmSyncSubscriberVerifications.js
 exports.handler = async (event, context) =>
 {
   console.log("Lambda Entering syncSubscriberVerifications()");
-  console.log("event = ", event);
+
+  lambdaLog('syncSubscriberVerifications', context, event);
 
   let pendingIdentityData = await getPendingIdentities(db);
   console.log("Lambda nsyncSubscriberVerifications(): pendingIdentityData = ", pendingIdentityData);

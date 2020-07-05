@@ -1,5 +1,6 @@
 "use strict";
 
+const lambdaLog         = require("./dnmLogLambda.js").lambdaLog;
 const db                = require("./dnmDbObjects.js").db;
 const RESPONSE          = require("./dnmResponseCodes.js").RESPONSE;
 const deleteSubscriber  = require("./dnmDeleteSubscriber.js").deleteSubscriber;
@@ -7,6 +8,8 @@ const deleteSubscriber  = require("./dnmDeleteSubscriber.js").deleteSubscriber;
 exports.handler = async (event, context) =>
 {
   console.log("Entering Lambda: deleteSubscriber()");
+
+  lambdaLog('deleteSubscriber', context, event);
  
   if(!event.body.email)
   {

@@ -1,11 +1,14 @@
 "use strict";
 
+const lambdaLog         = require("./dnmLogLambda.js").lambdaLog;
 const RESPONSE          = require("./dnmResponseCodes.js").RESPONSE;
 const deleteCognitoUser = require("./dnmDeleteCognitoUser.js").deleteCognitoUser;
 
 exports.handler = async (event, context) =>
 {
   console.log("Entering Lambda: deleteCognitoUser()");
+
+  lambdaLog('deleteCognitoUser', context, event);
  
   if(!event.body.userPoolId)
   {

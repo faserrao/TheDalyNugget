@@ -307,7 +307,7 @@ function viewDisplayRandomNugget(nuggetData, nuggetIndex)
   console.log("Entering viewDisplayRandomNugget()");
 
   const nuggetDisplayArea = document.getElementById("nuggets-display-area-" + nuggetIndex + "-id");
-  nuggetDisplayArea.innerHTML = nuggetData.nugget + "<br>" + nuggetData.author;
+  nuggetDisplayArea.innerHTML = nuggetData.quote + "<br>" + nuggetData.author;
 
   if (nuggetData.topic !== "TBD")
   {
@@ -350,11 +350,11 @@ function viewDisplayTakeRiskNugget(nuggetData)
 {
   console.log("Entering viewDisplayTakeRiskNugget()");
 
-  console.log("viewDisplayTakeRiskNugget(): nuggetData.nugget = ", nuggetData.nugget);
+  console.log("viewDisplayTakeRiskNugget(): nuggetData.quote = ", nuggetData.quote);
   console.log("viewDisplayTakeRiskNugget(): nuggetData.author = ", nuggetData.author);
 
   let nuggetDisplayArea = document.getElementById("take-risk-display-area-1-id");
-  nuggetDisplayArea.innerHTML = nuggetData.nugget + "<br>";
+  nuggetDisplayArea.innerHTML = nuggetData.quote + "<br>";
 
   nuggetDisplayArea = document.getElementById("take-risk-display-area-2-id");
   nuggetDisplayArea.innerHTML = "- " + nuggetData.author;

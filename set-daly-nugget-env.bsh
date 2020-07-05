@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export DN_PROJECTS_DIR="/Users/fas/MyStuff/Business/Projects/CurrentProjects"
-export AWS_PROFILE="daly-nugget-serverless-admin"
+export DN_PROJECTS_DIR="/Users/fas/MyStuff/Business/Projects/CurrentProjects/the-dly-nugget"
 export AWS_PROFILE="daly-nugget-serverless-admin"
 export SLS_DEBUG="*"
+export NODE_PATH="./node_modules"

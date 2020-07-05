@@ -1,5 +1,6 @@
 "use strict";
 
+const lambdaLog         = require("./dnmLogLambda.js").lambdaLog;
 const db                = require("./dnmDbObjects.js").db;
 const RESPONSE          = require("./dnmResponseCodes.js").RESPONSE;
 const deleteNuggeteer   = require("./dnmDeleteNuggeteer.js").deleteNuggeteer;
@@ -7,6 +8,8 @@ const deleteNuggeteer   = require("./dnmDeleteNuggeteer.js").deleteNuggeteer;
 exports.handler = async (event, context) =>
 {
   console.log("Entering Lambda: deleteNuggeteer()");
+
+  lambdaLog('deleteNuggeteer', context, event);
 
   if (!event.body.email)
   {

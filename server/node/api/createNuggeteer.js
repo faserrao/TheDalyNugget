@@ -1,5 +1,6 @@
 "use strict";
 
+const lambdaLog         = require("./dnmLogLambda.js").lambdaLog;
 const db                = require("./dnmDbObjects.js").db;
 const createNuggeteer   = require("./dnmCreateNuggeteer.js").createNuggeteer;
 const RESPONSE          = require("./dnmResponseCodes.js").RESPONSE;
@@ -7,6 +8,8 @@ const RESPONSE          = require("./dnmResponseCodes.js").RESPONSE;
 exports.handler = async (event, context) =>
 {
   console.log("Entering Lambda: createNuggeteer()");
+
+  lambdaLog('createNuggeteer', context, event);
 
   if(!event.body.email)
   {

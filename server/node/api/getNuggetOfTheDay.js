@@ -1,11 +1,14 @@
 "use strict";
 
+const lambdaLog         = require("./dnmLogLambda.js").lambdaLog;
 const db                 = require("./dnmDbObjects.js").db;
 const getNuggetOfTheDay  = require("./dnmGetNuggetOfTheDay.js").getNuggetOfTheDay;
 
 exports.handler = async (event, context) =>
 {
   console.log("Lambda: Entering getNuggetOfTheDay()");
+
+  lambdaLog('getNuggetOfTheDay', context, event);
 
   // Lambdas cache globals so need to reload the error code
   // structure - or the same message as the last Lambda call
@@ -14,9 +17,6 @@ exports.handler = async (event, context) =>
   delete require.cache[require.resolve("./dnmResponseCodes.js")];
 
   let RESPONSE  = require("./dnmResponseCodes.js").RESPONSE;
-
-  console.log("event = ", JSON.stringify(event))
-  console.log("context = ", JSON.stringify(context))
 
   let data = await getNuggetOfTheDay(db);
 

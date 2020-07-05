@@ -1,5 +1,6 @@
 "use strict";
 
+const lambdaLog         = require("./dnmLogLambda.js").lambdaLog;
 const db                = require("./dnmDbObjects.js").db;
 const RESPONSE          = require("./dnmResponseCodes.js").RESPONSE;
 const createSubscriber  = require("./dnmCreateSubscriber.js").createSubscriber;
@@ -7,6 +8,8 @@ const createSubscriber  = require("./dnmCreateSubscriber.js").createSubscriber;
 exports.handler = async (event, context) =>
 {
   console.log("Entering Lambda: createSubscriber()");
+
+  lambdaLog('createSubscriber', context, event);
 
   console.log("Lambda: createSubscriber(): event.body.email = ", event.body.email);
 

@@ -1,11 +1,15 @@
 'use strict';
 
+const lambdaLog                 = require("./dnmLogLambda.js").lambdaLog;
 const SesSendVerificationEmail  = require("./dnmSyncSubscriberTblAndSES.js").SesSendVerificationEmail;
 const SesDeleteIdentity         = require("./dnmSyncSubscriberTblAndSES.js").SesDeleteIdenity;
 
 exports.handler = async (event, context) =>
 {
   console.log("Entering Lambda: syncSubscriberTblAndSES()");
+
+  lambdaLog('syncSubscriberTblAndSES', context, event);
+
   let email;
 
   //  event.Records.forEach((record) =>

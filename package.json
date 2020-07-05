@@ -28,15 +28,17 @@
     "eslint": "^5.15.0",
     "eslint-plugin-react": "^7.12.4",
     "jsctags": "git+https://github.com/ramitos/jsctags.git",
-    "serverless-dynamodb-local": "^0.2.37",
-    "serverless-finch": "^2.4.2",
     "serverless": "^1.35.1",
     "serverless-cloudformation-sub-variables": "^0.2.1",
-    "serverless-pseudo-parameters": "^2.5.0",
-    "serverless-stack-output": "^0.2.3",
+    "serverless-dynamodb-local": "^0.2.37",
+    "serverless-finch": "^2.4.2",
     "serverless-offline": "^4.10.6",
+    "serverless-plugin-common-excludes": "^3.0.0",
+    "serverless-plugin-include-dependencies": "^4.1.0",
     "serverless-plugin-offline-dynamodb-stream": "^1.0.18",
-    "serverless-sam": "^0.2.0"
+    "serverless-pseudo-parameters": "^2.5.0",
+    "serverless-sam": "^0.2.0",
+    "serverless-stack-output": "^0.2.3"
   },
   "dependencies": {
     "async": "^3.2.0",

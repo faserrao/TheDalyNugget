@@ -1,11 +1,15 @@
 "use strict";
 
+const lambdaLog         = require("./dnmLogLambda.js").lambdaLog;
 const db            = require("./dnmDbObjects.js").db;
 const getNuggeteer  = require("./dnmGetNuggeteer.js").getNuggeteer;
 
 exports.handler = async (event, context) =>
 {
   console.log("Lambda: Entering getNuggeteerDeliveryPreferences()");
+
+  lambdaLog('getNuggeteerDeliveryPreferences', context, event);
+
   //
   // Lambdas cache globals so need to reload the error code
   // structure - or the same message as the last Lambda call
