@@ -21,7 +21,7 @@ DN_S3_BUCKET_PREFIX						:= $(DN_SERVICE_PREFIX)
 DN_DOMAIN								:= $(DN_ROOT_PREFIX_NO_DASHES).com
 DN_SUBDOMAIN							:= $(DN_PROJECT_STAGE).${DN_DOMAIN}
 
-DN_REVS_EMAIL_ADDRESS					:= thenuggrev@thedalynugget.com
+DN_REVS_EMAIL_ADDRESS					:= thenuggrev@gmail.com
 
 DN_S3_STACK_OUTPUT_BUCKET				:= $(DN_S3_BUCKET_PREFIX)-stack-outputs
 DN_S3_STACK_OUTPUT_FILE					:= stack-output
