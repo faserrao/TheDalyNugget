@@ -112,186 +112,176 @@ Skipping automatic replacement of regions with account region!
 Serverless: Invoke aws:common:moveArtifactsToPackage
 Serverless: Invoke aws:common:validate
 Serverless: Invoke aws:deploy:deploy
-Serverless: [AWS cloudformation 200 0.683s 0 retries] describeStacks({ StackName: 'the-daly-nugget-dev' })
-Serverless: [AWS cloudformation 200 0.925s 0 retries] describeStackResource({ StackName: 'the-daly-nugget-dev',
+Serverless: [AWS cloudformation 200 0.462s 0 retries] describeStacks({ StackName: 'the-daly-nugget-dev' })
+Serverless: [AWS cloudformation 200 0.11s 0 retries] describeStackResource({ StackName: 'the-daly-nugget-dev',
   LogicalResourceId: 'ServerlessDeploymentBucket' })
-Serverless: [AWS s3 200 0.192s 0 retries] listObjectsV2({ Bucket:
+Serverless: [AWS s3 200 0.176s 0 retries] listObjectsV2({ Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Prefix: 'serverless/the-daly-nugget/dev' })
-Serverless: [AWS s3 200 0.11s 0 retries] headObject({ Bucket:
+Serverless: [AWS s3 200 0.112s 0 retries] headObject({ Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593922804716-2020-07-05T04:20:04.716Z/updateNuggeteerDelivPrefs.zip' })
-Serverless: [AWS s3 200 0.114s 0 retries] headObject({ Bucket:
+   'serverless/the-daly-nugget/dev/1593945802652-2020-07-05T10:43:22.652Z/updateNuggeteerPhone.zip' })
+Serverless: [AWS s3 200 0.116s 0 retries] headObject({ Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593922804716-2020-07-05T04:20:04.716Z/updateNuggeteerPhone.zip' })
-Serverless: [AWS s3 200 0.084s 0 retries] headObject({ Bucket:
+   'serverless/the-daly-nugget/dev/1593945802652-2020-07-05T10:43:22.652Z/updateNuggeteerDelivPrefs.zip' })
+Serverless: [AWS s3 200 0.092s 0 retries] headObject({ Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593922804716-2020-07-05T04:20:04.716Z/syncSubscriberTblAndSES.zip' })
-Serverless: [AWS s3 200 0.138s 0 retries] headObject({ Bucket:
+   'serverless/the-daly-nugget/dev/1593945802652-2020-07-05T10:43:22.652Z/syncSubscriberTblAndSES.zip' })
+Serverless: [AWS s3 200 0.134s 0 retries] headObject({ Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593922804716-2020-07-05T04:20:04.716Z/syncSubscriberVerifications.zip' })
-Serverless: [AWS s3 200 0.114s 0 retries] headObject({ Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593922804716-2020-07-05T04:20:04.716Z/sendNuggetsWeekly.zip' })
-Serverless: [AWS s3 200 0.108s 0 retries] headObject({ Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593922804716-2020-07-05T04:20:04.716Z/sendNuggetsTwiceWeekly.zip' })
-Serverless: [AWS s3 200 0.127s 0 retries] headObject({ Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593922804716-2020-07-05T04:20:04.716Z/sendNuggetsTwiceDaily.zip' })
-Serverless: [AWS s3 200 0.087s 0 retries] headObject({ Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593922804716-2020-07-05T04:20:04.716Z/sendNuggetsDaily.zip' })
-Serverless: [AWS s3 200 0.128s 0 retries] headObject({ Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593922804716-2020-07-05T04:20:04.716Z/recordNuggetOfTheDay.zip' })
-Serverless: [AWS s3 200 0.178s 0 retries] headObject({ Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593922804716-2020-07-05T04:20:04.716Z/getServerlessOutputs.zip' })
-Serverless: [AWS s3 200 0.087s 0 retries] headObject({ Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593922804716-2020-07-05T04:20:04.716Z/getNuggeteerDelivPrefs.zip' })
-Serverless: [AWS s3 200 0.178s 0 retries] headObject({ Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593922804716-2020-07-05T04:20:04.716Z/getRandomNugget.zip' })
-Serverless: [AWS s3 200 0.111s 0 retries] headObject({ Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593922804716-2020-07-05T04:20:04.716Z/getNuggeteer.zip' })
+   'serverless/the-daly-nugget/dev/1593945802652-2020-07-05T10:43:22.652Z/syncSubscriberVerifications.zip' })
 Serverless: [AWS s3 200 0.09s 0 retries] headObject({ Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593922804716-2020-07-05T04:20:04.716Z/getNuggetOfTheDay.zip' })
-Serverless: [AWS s3 200 0.127s 0 retries] headObject({ Bucket:
+   'serverless/the-daly-nugget/dev/1593945802652-2020-07-05T10:43:22.652Z/sendNuggetsWeekly.zip' })
+Serverless: [AWS s3 200 0.089s 0 retries] headObject({ Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593922804716-2020-07-05T04:20:04.716Z/deleteSubscriber.zip' })
-Serverless: [AWS s3 200 0.169s 0 retries] headObject({ Bucket:
+   'serverless/the-daly-nugget/dev/1593945802652-2020-07-05T10:43:22.652Z/sendNuggetsTwiceWeekly.zip' })
+Serverless: [AWS s3 200 0.089s 0 retries] headObject({ Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593922804716-2020-07-05T04:20:04.716Z/emailNuggetOfTheDay.zip' })
-Serverless: [AWS s3 200 0.517s 0 retries] headObject({ Bucket:
+   'serverless/the-daly-nugget/dev/1593945802652-2020-07-05T10:43:22.652Z/sendNuggetsTwiceDaily.zip' })
+Serverless: [AWS s3 200 0.103s 0 retries] headObject({ Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593922804716-2020-07-05T04:20:04.716Z/deleteNuggeteer.zip' })
-Serverless: [AWS s3 200 0.522s 0 retries] headObject({ Bucket:
+   'serverless/the-daly-nugget/dev/1593945802652-2020-07-05T10:43:22.652Z/sendNuggetsDaily.zip' })
+Serverless: [AWS s3 200 0.078s 0 retries] headObject({ Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593922804716-2020-07-05T04:20:04.716Z/deleteCognitoUser.zip' })
-Serverless: [AWS s3 200 0.099s 0 retries] headObject({ Bucket:
+   'serverless/the-daly-nugget/dev/1593945802652-2020-07-05T10:43:22.652Z/recordNuggetOfTheDay.zip' })
+Serverless: [AWS s3 200 0.105s 0 retries] headObject({ Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593922804716-2020-07-05T04:20:04.716Z/createSubscriber.zip' })
-Serverless: [AWS s3 200 0.079s 0 retries] headObject({ Bucket:
+   'serverless/the-daly-nugget/dev/1593945802652-2020-07-05T10:43:22.652Z/getServerlessOutputs.zip' })
+Serverless: [AWS s3 200 0.083s 0 retries] headObject({ Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593922804716-2020-07-05T04:20:04.716Z/createNuggeteer.zip' })
-Serverless: [AWS s3 200 0.09s 0 retries] headObject({ Bucket:
+   'serverless/the-daly-nugget/dev/1593945802652-2020-07-05T10:43:22.652Z/getNuggeteerDelivPrefs.zip' })
+Serverless: [AWS s3 200 0.473s 0 retries] headObject({ Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593922804716-2020-07-05T04:20:04.716Z/compiled-cloudformation-template.json' })
-Serverless: [AWS lambda 200 0.163s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-getNuggetOfTheDay' })
-Serverless: [AWS lambda 200 0.107s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-getRandomNugget' })
-Serverless: [AWS lambda 200 0.101s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-createSubscriber' })
-Serverless: [AWS lambda 200 0.105s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-createNuggeteer' })
-Serverless: [AWS lambda 200 0.1s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-deleteSubscriber' })
-Serverless: [AWS lambda 200 0.098s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-deleteNuggeteer' })
-Serverless: [AWS lambda 200 0.086s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-updateNuggeteerDelivPrefs' })
-Serverless: [AWS lambda 200 0.091s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-getNuggeteerDelivPrefs' })
-Serverless: [AWS lambda 200 0.102s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-updateNuggeteerPhone' })
-Serverless: [AWS lambda 200 0.084s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-getServerlessOutputs' })
-Serverless: [AWS lambda 200 0.174s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-getNuggeteer' })
-Serverless: [AWS lambda 200 0.1s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-deleteCognitoUser' })
-Serverless: [AWS lambda 200 0.09s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-syncSubscriberTblAndSES' })
-Serverless: [AWS lambda 200 0.094s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-emailNuggetOfTheDay' })
-Serverless: [AWS lambda 200 0.103s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-recordNuggetOfTheDay' })
-Serverless: [AWS lambda 200 0.09s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-sendNuggetsWeekly' })
-Serverless: [AWS lambda 200 0.164s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-syncSubscriberVerifications' })
-Serverless: [AWS lambda 200 0.095s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-sendNuggetsTwiceWeekly' })
-Serverless: [AWS lambda 200 0.104s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-sendNuggetsDaily' })
-Serverless: [AWS lambda 200 0.111s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-sendNuggetsTwiceDaily' })
-Serverless: [AWS sts 200 0.112s 0 retries] getCallerIdentity({})
+   'serverless/the-daly-nugget/dev/1593945802652-2020-07-05T10:43:22.652Z/getRandomNugget.zip' })
+Serverless: [AWS s3 200 0.326s 0 retries] headObject({ Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593945802652-2020-07-05T10:43:22.652Z/getNuggeteer.zip' })
+Serverless: [AWS s3 200 0.087s 0 retries] headObject({ Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593945802652-2020-07-05T10:43:22.652Z/emailNuggetOfTheDay.zip' })
+Serverless: [AWS s3 200 0.134s 0 retries] headObject({ Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593945802652-2020-07-05T10:43:22.652Z/getNuggetOfTheDay.zip' })
+Serverless: [AWS s3 200 0.074s 0 retries] headObject({ Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593945802652-2020-07-05T10:43:22.652Z/deleteSubscriber.zip' })
+Serverless: [AWS s3 200 0.08s 0 retries] headObject({ Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593945802652-2020-07-05T10:43:22.652Z/deleteNuggeteer.zip' })
+Serverless: [AWS s3 200 0.077s 0 retries] headObject({ Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593945802652-2020-07-05T10:43:22.652Z/deleteCognitoUser.zip' })
+Serverless: [AWS s3 200 0.112s 0 retries] headObject({ Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593945802652-2020-07-05T10:43:22.652Z/createSubscriber.zip' })
+Serverless: [AWS s3 200 0.087s 0 retries] headObject({ Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593945802652-2020-07-05T10:43:22.652Z/createNuggeteer.zip' })
+Serverless: [AWS s3 200 0.12s 0 retries] headObject({ Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593945802652-2020-07-05T10:43:22.652Z/compiled-cloudformation-template.json' })
+Serverless: [AWS lambda 200 0.153s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-getNuggetOfTheDay' })
+Serverless: [AWS lambda 200 0.094s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-getRandomNugget' })
+Serverless: [AWS lambda 200 0.093s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-createSubscriber' })
+Serverless: [AWS lambda 200 0.098s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-createNuggeteer' })
+Serverless: [AWS lambda 200 0.095s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-deleteSubscriber' })
+Serverless: [AWS lambda 200 0.1s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-deleteNuggeteer' })
+Serverless: [AWS lambda 200 0.101s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-updateNuggeteerDelivPrefs' })
+Serverless: [AWS lambda 200 0.088s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-getNuggeteerDelivPrefs' })
+Serverless: [AWS lambda 200 0.094s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-updateNuggeteerPhone' })
+Serverless: [AWS lambda 200 0.087s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-getNuggeteer' })
+Serverless: [AWS lambda 200 0.088s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-getServerlessOutputs' })
+Serverless: [AWS lambda 200 0.083s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-deleteCognitoUser' })
+Serverless: [AWS lambda 200 0.101s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-syncSubscriberTblAndSES' })
+Serverless: [AWS lambda 200 0.088s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-emailNuggetOfTheDay' })
+Serverless: [AWS lambda 200 0.095s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-recordNuggetOfTheDay' })
+Serverless: [AWS lambda 200 0.101s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-syncSubscriberVerifications' })
+Serverless: [AWS lambda 200 0.094s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-sendNuggetsWeekly' })
+Serverless: [AWS lambda 200 0.094s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-sendNuggetsTwiceWeekly' })
+Serverless: [AWS lambda 200 0.085s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-sendNuggetsDaily' })
+Serverless: [AWS lambda 200 0.101s 0 retries] getFunction({ FunctionName: 'the-daly-nugget-dev-sendNuggetsTwiceDaily' })
+Serverless: [AWS sts 200 0.176s 0 retries] getCallerIdentity({})
 Serverless: Uploading CloudFormation file to S3...
-Serverless: [AWS s3 200 0.304s 0 retries] putObject({ Body:
+Serverless: [AWS s3 200 0.273s 0 retries] putObject({ Body:
    <Buffer 7b 22 41 57 53 54 65 6d 70 6c 61 74 65 46 6f 72 6d 61 74 56 65 72 73 69 6f 6e 22 3a 22 32 30 31 30 2d 30 39 2d 30 39 22 2c 22 44 65 73 63 72 69 70 74 ... >,
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/compiled-cloudformation-template.json',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/compiled-cloudformation-template.json',
   ContentType: 'application/json',
   Metadata:
-   { filesha256: 'WFLn630lBt9stox5qzcjr9LHD7nCeZ/yCFOJdiKIjsE=' } })
+   { filesha256: 'QvA4fZDwRgYwuo8CDBWGvB93kEC33O4+wZtcVZrDDoM=' } })
 Serverless: Uploading artifacts...
 Serverless: Uploading service getNuggetOfTheDay.zip file to S3 (8.8 MB)...
 Serverless: Uploading service getRandomNugget.zip file to S3 (8.8 MB)...
 Serverless: Uploading service createSubscriber.zip file to S3 (8.8 MB)...
-Serverless: [AWS s3 200 0.137s 0 retries] createMultipartUpload({ Bucket:
+Serverless: [AWS s3 200 0.19s 0 retries] createMultipartUpload({ Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/getNuggetOfTheDay.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/getRandomNugget.zip',
   ContentType: 'application/zip',
   Metadata:
    { filesha256: 'e7jhYRdeYubWY9IxwZ3XOnqOyg9RJ4eSzu0QSPswGaY=' } })
-Serverless: [AWS s3 200 0.175s 0 retries] createMultipartUpload({ Bucket:
+Serverless: [AWS s3 200 0.198s 0 retries] createMultipartUpload({ Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/getRandomNugget.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/getNuggetOfTheDay.zip',
   ContentType: 'application/zip',
   Metadata:
    { filesha256: 'e7jhYRdeYubWY9IxwZ3XOnqOyg9RJ4eSzu0QSPswGaY=' } })
-Serverless: [AWS s3 200 1.125s 0 retries] uploadPart({ Body:
-   <Buffer ab 56 88 bc 2b cf 7b e3 d9 66 ea ee 40 a7 76 9c 79 76 67 b7 10 0d bf 28 ce 6f c7 ef 51 5b 8c 95 ae d6 ec 02 46 70 42 77 42 41 b7 a2 d9 54 2f 75 f1 64 ... >,
-  ContentLength: 3982812,
-  PartNumber: 2,
-  Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/getRandomNugget.zip',
-  UploadId:
-   '4_DUc0KzVjWWn3BS1xY7Xc9rNqdnM4JCYBTFHVIhOLEKzrbYehP_AmxjjUW58XYamQQdX5_0PU1enP2ps.NNQ_CCzbE6lKhCF24ACz6TFbHlqffcLgtSmrqeCCpIncTA' })
-Serverless: [AWS s3 200 1.911s 0 retries] uploadPart({ Body:
-   <Buffer ab 56 88 bc 2b cf 7b e3 d9 66 ea ee 40 a7 76 9c 79 76 67 b7 10 0d bf 28 ce 6f c7 ef 51 5b 8c 95 ae d6 ec 02 46 70 42 77 42 41 b7 a2 d9 54 2f 75 f1 64 ... >,
-  ContentLength: 3982812,
-  PartNumber: 2,
-  Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/getNuggetOfTheDay.zip',
-  UploadId:
-   'csWoJS.5vhLku5Z6l49gwKFMeMO_Jyr2T6KtPm0d7tmB8RjTNiTrh3piwyYvizSdAIF9LgeSk2xVXAjY2_OsDbNZShNv9KjZQoEzXu_MSmeGQmaIaZczmBKjB0u2Vxrf' })
-Serverless: [AWS s3 200 2.582s 0 retries] uploadPart({ Body:
+Serverless: [AWS s3 200 1.096s 0 retries] uploadPart({ Body:
    <Buffer 50 4b 03 04 14 00 08 00 08 00 00 00 21 00 00 00 00 00 00 00 00 00 00 00 00 00 41 00 00 00 6e 6f 64 65 5f 6d 6f 64 75 6c 65 73 2f 61 77 73 2d 73 64 6b ... >,
   ContentLength: 5242880,
   PartNumber: 1,
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/getNuggetOfTheDay.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/getRandomNugget.zip',
   UploadId:
-   'csWoJS.5vhLku5Z6l49gwKFMeMO_Jyr2T6KtPm0d7tmB8RjTNiTrh3piwyYvizSdAIF9LgeSk2xVXAjY2_OsDbNZShNv9KjZQoEzXu_MSmeGQmaIaZczmBKjB0u2Vxrf' })
-Serverless: [AWS s3 200 2.714s 0 retries] uploadPart({ Body:
+   '07u02EOSCGLstjOB5znipZYek7LYqhx3P00hBMa4XeYTYy265EEuxuNj.5rdvOG3lfxExrJOaxSAg.iNnxaVa7bRQ6vkGz.N94yvwIcydAY0VmNWPZ7kwGvMeI3fsyJQ' })
+Serverless: [AWS s3 200 1.45s 0 retries] uploadPart({ Body:
    <Buffer 50 4b 03 04 14 00 08 00 08 00 00 00 21 00 00 00 00 00 00 00 00 00 00 00 00 00 41 00 00 00 6e 6f 64 65 5f 6d 6f 64 75 6c 65 73 2f 61 77 73 2d 73 64 6b ... >,
   ContentLength: 5242880,
   PartNumber: 1,
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/getRandomNugget.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/getNuggetOfTheDay.zip',
   UploadId:
-   '4_DUc0KzVjWWn3BS1xY7Xc9rNqdnM4JCYBTFHVIhOLEKzrbYehP_AmxjjUW58XYamQQdX5_0PU1enP2ps.NNQ_CCzbE6lKhCF24ACz6TFbHlqffcLgtSmrqeCCpIncTA' })
-Serverless: [AWS s3 200 0.195s 0 retries] completeMultipartUpload({ MultipartUpload:
+   '2FAScXRJSJEQKFEURBrkgtQPjNO7r3bxkfQzmMJw7N5ReYud50blKBonOYwVKa42QMuWFiNxnfs00nOX.Q8u5CLdRXJFF5ersYtaN8976qvdYYs72Z3vrziVb2X7kIVQ' })
+Serverless: [AWS s3 200 1.712s 0 retries] uploadPart({ Body:
+   <Buffer ab 56 88 bc 2b cf 7b e3 d9 66 ea ee 40 a7 76 9c 79 76 67 b7 10 0d bf 28 ce 6f c7 ef 51 5b 8c 95 ae d6 ec 02 46 70 42 77 42 41 b7 a2 d9 54 2f 75 f1 64 ... >,
+  ContentLength: 3982812,
+  PartNumber: 2,
+  Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/getNuggetOfTheDay.zip',
+  UploadId:
+   '2FAScXRJSJEQKFEURBrkgtQPjNO7r3bxkfQzmMJw7N5ReYud50blKBonOYwVKa42QMuWFiNxnfs00nOX.Q8u5CLdRXJFF5ersYtaN8976qvdYYs72Z3vrziVb2X7kIVQ' })
+Serverless: [AWS s3 200 0.17s 0 retries] completeMultipartUpload({ MultipartUpload:
    { Parts:
       [ { ETag: '"6ac7db3995fd899b6f62547194f5ef12"', PartNumber: 1 },
         { ETag: '"bac3f8f0b39240a857d955a9cbe748ef"', PartNumber: 2 },
@@ -299,18 +289,48 @@ Serverless: [AWS s3 200 0.195s 0 retries] completeMultipartUpload({ MultipartUpl
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/getNuggetOfTheDay.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/getNuggetOfTheDay.zip',
   UploadId:
-   'csWoJS.5vhLku5Z6l49gwKFMeMO_Jyr2T6KtPm0d7tmB8RjTNiTrh3piwyYvizSdAIF9LgeSk2xVXAjY2_OsDbNZShNv9KjZQoEzXu_MSmeGQmaIaZczmBKjB0u2Vxrf' })
+   '2FAScXRJSJEQKFEURBrkgtQPjNO7r3bxkfQzmMJw7N5ReYud50blKBonOYwVKa42QMuWFiNxnfs00nOX.Q8u5CLdRXJFF5ersYtaN8976qvdYYs72Z3vrziVb2X7kIVQ' })
 Serverless: Uploading service sendNuggetsTwiceDaily.zip file to S3 (8.8 MB)...
-Serverless: [AWS s3 200 0.101s 0 retries] createMultipartUpload({ Bucket:
+Serverless: [AWS s3 200 0.108s 0 retries] createMultipartUpload({ Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/createSubscriber.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/createSubscriber.zip',
   ContentType: 'application/zip',
   Metadata:
    { filesha256: 'e7jhYRdeYubWY9IxwZ3XOnqOyg9RJ4eSzu0QSPswGaY=' } })
-Serverless: [AWS s3 200 0.18s 0 retries] completeMultipartUpload({ MultipartUpload:
+Serverless: [AWS s3 200 2.064s 0 retries] uploadPart({ Body:
+   <Buffer 50 4b 03 04 14 00 08 00 08 00 00 00 21 00 00 00 00 00 00 00 00 00 00 00 00 00 41 00 00 00 6e 6f 64 65 5f 6d 6f 64 75 6c 65 73 2f 61 77 73 2d 73 64 6b ... >,
+  ContentLength: 5242880,
+  PartNumber: 1,
+  Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/createSubscriber.zip',
+  UploadId:
+   'wKY8NXCxy9B6blEvIEX0BG0hB4bKK.jGdotTTbvC1yATFbCKWvCSj3HfCH3vato5bEdF0regViZYyn5M6E2EErfl.OZXC9MxZIR25YmAfxj7B1nyUjOvo3EwE5Gt24kf' })
+Serverless: [AWS s3 200 2.215s 0 retries] uploadPart({ Body:
+   <Buffer ab 56 88 bc 2b cf 7b e3 d9 66 ea ee 40 a7 76 9c 79 76 67 b7 10 0d bf 28 ce 6f c7 ef 51 5b 8c 95 ae d6 ec 02 46 70 42 77 42 41 b7 a2 d9 54 2f 75 f1 64 ... >,
+  ContentLength: 3982812,
+  PartNumber: 2,
+  Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/createSubscriber.zip',
+  UploadId:
+   'wKY8NXCxy9B6blEvIEX0BG0hB4bKK.jGdotTTbvC1yATFbCKWvCSj3HfCH3vato5bEdF0regViZYyn5M6E2EErfl.OZXC9MxZIR25YmAfxj7B1nyUjOvo3EwE5Gt24kf' })
+Serverless: [AWS s3 200 4.276s 0 retries] uploadPart({ Body:
+   <Buffer ab 56 88 bc 2b cf 7b e3 d9 66 ea ee 40 a7 76 9c 79 76 67 b7 10 0d bf 28 ce 6f c7 ef 51 5b 8c 95 ae d6 ec 02 46 70 42 77 42 41 b7 a2 d9 54 2f 75 f1 64 ... >,
+  ContentLength: 3982812,
+  PartNumber: 2,
+  Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/getRandomNugget.zip',
+  UploadId:
+   '07u02EOSCGLstjOB5znipZYek7LYqhx3P00hBMa4XeYTYy265EEuxuNj.5rdvOG3lfxExrJOaxSAg.iNnxaVa7bRQ6vkGz.N94yvwIcydAY0VmNWPZ7kwGvMeI3fsyJQ' })
+Serverless: [AWS s3 200 0.509s 0 retries] completeMultipartUpload({ MultipartUpload:
    { Parts:
       [ { ETag: '"6ac7db3995fd899b6f62547194f5ef12"', PartNumber: 1 },
         { ETag: '"bac3f8f0b39240a857d955a9cbe748ef"', PartNumber: 2 },
@@ -318,48 +338,11 @@ Serverless: [AWS s3 200 0.18s 0 retries] completeMultipartUpload({ MultipartUplo
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/getRandomNugget.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/getRandomNugget.zip',
   UploadId:
-   '4_DUc0KzVjWWn3BS1xY7Xc9rNqdnM4JCYBTFHVIhOLEKzrbYehP_AmxjjUW58XYamQQdX5_0PU1enP2ps.NNQ_CCzbE6lKhCF24ACz6TFbHlqffcLgtSmrqeCCpIncTA' })
+   '07u02EOSCGLstjOB5znipZYek7LYqhx3P00hBMa4XeYTYy265EEuxuNj.5rdvOG3lfxExrJOaxSAg.iNnxaVa7bRQ6vkGz.N94yvwIcydAY0VmNWPZ7kwGvMeI3fsyJQ' })
 Serverless: Uploading service sendNuggetsDaily.zip file to S3 (8.8 MB)...
-Serverless: [AWS s3 200 0.24s 0 retries] createMultipartUpload({ Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/sendNuggetsTwiceDaily.zip',
-  ContentType: 'application/zip',
-  Metadata:
-   { filesha256: 'e7jhYRdeYubWY9IxwZ3XOnqOyg9RJ4eSzu0QSPswGaY=' } })
-Serverless: [AWS s3 200 1.141s 0 retries] uploadPart({ Body:
-   <Buffer ab 56 88 bc 2b cf 7b e3 d9 66 ea ee 40 a7 76 9c 79 76 67 b7 10 0d bf 28 ce 6f c7 ef 51 5b 8c 95 ae d6 ec 02 46 70 42 77 42 41 b7 a2 d9 54 2f 75 f1 64 ... >,
-  ContentLength: 3982812,
-  PartNumber: 2,
-  Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/createSubscriber.zip',
-  UploadId:
-   'l7B_4NaeSDt8E6x4s8tw92MUHRHoy2KXAqenyIyNOREKYXN5gKmcv9FGJSwLkAB7h8qFeogdW6gOu0hnVO76azrNEz_iJXdI5aK2qjGn1_vVGqN0076CyFQpxvQpjHcl' })
-Serverless: [AWS s3 200 1.443s 0 retries] uploadPart({ Body:
-   <Buffer 50 4b 03 04 14 00 08 00 08 00 00 00 21 00 00 00 00 00 00 00 00 00 00 00 00 00 41 00 00 00 6e 6f 64 65 5f 6d 6f 64 75 6c 65 73 2f 61 77 73 2d 73 64 6b ... >,
-  ContentLength: 5242880,
-  PartNumber: 1,
-  Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/sendNuggetsTwiceDaily.zip',
-  UploadId:
-   'tS.n.GdffDw7TI7mBitQXN2f9Q4gUR8sfo5uUilivLee8N3ocs_q3KTVV_VhSh2ci2juDQKn4dFJnH2Ar_dla5tKFCLohqHTLHeyoVIlTobjxNdthIjYwvwJJrp4eGM0' })
-Serverless: [AWS s3 200 1.842s 0 retries] uploadPart({ Body:
-   <Buffer 50 4b 03 04 14 00 08 00 08 00 00 00 21 00 00 00 00 00 00 00 00 00 00 00 00 00 41 00 00 00 6e 6f 64 65 5f 6d 6f 64 75 6c 65 73 2f 61 77 73 2d 73 64 6b ... >,
-  ContentLength: 5242880,
-  PartNumber: 1,
-  Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/createSubscriber.zip',
-  UploadId:
-   'l7B_4NaeSDt8E6x4s8tw92MUHRHoy2KXAqenyIyNOREKYXN5gKmcv9FGJSwLkAB7h8qFeogdW6gOu0hnVO76azrNEz_iJXdI5aK2qjGn1_vVGqN0076CyFQpxvQpjHcl' })
-Serverless: [AWS s3 200 0.246s 0 retries] completeMultipartUpload({ MultipartUpload:
+Serverless: [AWS s3 200 0.726s 0 retries] completeMultipartUpload({ MultipartUpload:
    { Parts:
       [ { ETag: '"6ac7db3995fd899b6f62547194f5ef12"', PartNumber: 1 },
         { ETag: '"bac3f8f0b39240a857d955a9cbe748ef"', PartNumber: 2 },
@@ -367,28 +350,55 @@ Serverless: [AWS s3 200 0.246s 0 retries] completeMultipartUpload({ MultipartUpl
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/createSubscriber.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/createSubscriber.zip',
   UploadId:
-   'l7B_4NaeSDt8E6x4s8tw92MUHRHoy2KXAqenyIyNOREKYXN5gKmcv9FGJSwLkAB7h8qFeogdW6gOu0hnVO76azrNEz_iJXdI5aK2qjGn1_vVGqN0076CyFQpxvQpjHcl' })
+   'wKY8NXCxy9B6blEvIEX0BG0hB4bKK.jGdotTTbvC1yATFbCKWvCSj3HfCH3vato5bEdF0regViZYyn5M6E2EErfl.OZXC9MxZIR25YmAfxj7B1nyUjOvo3EwE5Gt24kf' })
 Serverless: Uploading service sendNuggetsTwiceWeekly.zip file to S3 (8.8 MB)...
-Serverless: [AWS s3 200 0.297s 0 retries] createMultipartUpload({ Bucket:
+Serverless: [AWS s3 200 0.497s 0 retries] createMultipartUpload({ Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/sendNuggetsDaily.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/sendNuggetsTwiceDaily.zip',
   ContentType: 'application/zip',
   Metadata:
    { filesha256: 'e7jhYRdeYubWY9IxwZ3XOnqOyg9RJ4eSzu0QSPswGaY=' } })
-Serverless: [AWS s3 200 7.138s 0 retries] uploadPart({ Body:
+Serverless: [AWS s3 200 0.485s 0 retries] createMultipartUpload({ Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/sendNuggetsDaily.zip',
+  ContentType: 'application/zip',
+  Metadata:
+   { filesha256: 'e7jhYRdeYubWY9IxwZ3XOnqOyg9RJ4eSzu0QSPswGaY=' } })
+Serverless: [AWS s3 200 1.991s 0 retries] uploadPart({ Body:
    <Buffer ab 56 88 bc 2b cf 7b e3 d9 66 ea ee 40 a7 76 9c 79 76 67 b7 10 0d bf 28 ce 6f c7 ef 51 5b 8c 95 ae d6 ec 02 46 70 42 77 42 41 b7 a2 d9 54 2f 75 f1 64 ... >,
   ContentLength: 3982812,
   PartNumber: 2,
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/sendNuggetsTwiceDaily.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/sendNuggetsDaily.zip',
   UploadId:
-   'tS.n.GdffDw7TI7mBitQXN2f9Q4gUR8sfo5uUilivLee8N3ocs_q3KTVV_VhSh2ci2juDQKn4dFJnH2Ar_dla5tKFCLohqHTLHeyoVIlTobjxNdthIjYwvwJJrp4eGM0' })
-Serverless: [AWS s3 200 0.27s 0 retries] completeMultipartUpload({ MultipartUpload:
+   'tMpN5SFT7mt5heGx2ep0J5LsJIhkQ.d6fIWKDVFxcKxC5gm0gjhCTT1CZbPSO1mXf2wFOQ9uIF9Y9xZgE0PDibI.KIsjdWlzbCvsRWddFGwyu8C4rp.zcmlXSTg.RL7p' })
+Serverless: [AWS s3 200 2.471s 0 retries] uploadPart({ Body:
+   <Buffer 50 4b 03 04 14 00 08 00 08 00 00 00 21 00 00 00 00 00 00 00 00 00 00 00 00 00 41 00 00 00 6e 6f 64 65 5f 6d 6f 64 75 6c 65 73 2f 61 77 73 2d 73 64 6b ... >,
+  ContentLength: 5242880,
+  PartNumber: 1,
+  Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/sendNuggetsDaily.zip',
+  UploadId:
+   'tMpN5SFT7mt5heGx2ep0J5LsJIhkQ.d6fIWKDVFxcKxC5gm0gjhCTT1CZbPSO1mXf2wFOQ9uIF9Y9xZgE0PDibI.KIsjdWlzbCvsRWddFGwyu8C4rp.zcmlXSTg.RL7p' })
+Serverless: [AWS s3 200 2.705s 0 retries] uploadPart({ Body:
+   <Buffer ab 56 88 bc 2b cf 7b e3 d9 66 ea ee 40 a7 76 9c 79 76 67 b7 10 0d bf 28 ce 6f c7 ef 51 5b 8c 95 ae d6 ec 02 46 70 42 77 42 41 b7 a2 d9 54 2f 75 f1 64 ... >,
+  ContentLength: 3982812,
+  PartNumber: 2,
+  Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/sendNuggetsTwiceDaily.zip',
+  UploadId:
+   'wuzo.tXK4pX1nNtAaLTHKjfNgUf0G2rjLNdL6K.JfK7.prCpiaT2nWJc_en2K8baERWP2yLDzpeP39Bd9_ruJqPsF98_uKy7M952Hcjx.C_THZbSlUUz.3OQ40T74dl0' })
+Serverless: [AWS s3 200 0.198s 0 retries] completeMultipartUpload({ MultipartUpload:
    { Parts:
       [ { ETag: '"6ac7db3995fd899b6f62547194f5ef12"', PartNumber: 1 },
         { ETag: '"bac3f8f0b39240a857d955a9cbe748ef"', PartNumber: 2 },
@@ -396,58 +406,38 @@ Serverless: [AWS s3 200 0.27s 0 retries] completeMultipartUpload({ MultipartUplo
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/sendNuggetsTwiceDaily.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/sendNuggetsDaily.zip',
   UploadId:
-   'tS.n.GdffDw7TI7mBitQXN2f9Q4gUR8sfo5uUilivLee8N3ocs_q3KTVV_VhSh2ci2juDQKn4dFJnH2Ar_dla5tKFCLohqHTLHeyoVIlTobjxNdthIjYwvwJJrp4eGM0' })
+   'tMpN5SFT7mt5heGx2ep0J5LsJIhkQ.d6fIWKDVFxcKxC5gm0gjhCTT1CZbPSO1mXf2wFOQ9uIF9Y9xZgE0PDibI.KIsjdWlzbCvsRWddFGwyu8C4rp.zcmlXSTg.RL7p' })
 Serverless: Uploading service sendNuggetsWeekly.zip file to S3 (8.8 MB)...
-Serverless: [AWS s3 200 0.176s 0 retries] createMultipartUpload({ Bucket:
+Serverless: [AWS s3 200 0.104s 0 retries] createMultipartUpload({ Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/sendNuggetsTwiceWeekly.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/sendNuggetsTwiceWeekly.zip',
   ContentType: 'application/zip',
   Metadata:
    { filesha256: 'e7jhYRdeYubWY9IxwZ3XOnqOyg9RJ4eSzu0QSPswGaY=' } })
-Serverless: [AWS s3 200 6.665s 0 retries] uploadPart({ Body:
-   <Buffer ab 56 88 bc 2b cf 7b e3 d9 66 ea ee 40 a7 76 9c 79 76 67 b7 10 0d bf 28 ce 6f c7 ef 51 5b 8c 95 ae d6 ec 02 46 70 42 77 42 41 b7 a2 d9 54 2f 75 f1 64 ... >,
-  ContentLength: 3982812,
-  PartNumber: 2,
-  Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/sendNuggetsDaily.zip',
-  UploadId:
-   'PAfpm0XFnmgxmJON50jadUNSRy095GK0wetl8l7AB.KOdtkETVOMQBKBYTOgJV41ZO5gEe_PqXOphyFhQicXlpseBZ510UTjzUq9N4i2q8I3IkdEVd3cybw73HKZcN3Q' })
-Serverless: [AWS s3 200 1.282s 0 retries] uploadPart({ Body:
-   <Buffer ab 56 88 bc 2b cf 7b e3 d9 66 ea ee 40 a7 76 9c 79 76 67 b7 10 0d bf 28 ce 6f c7 ef 51 5b 8c 95 ae d6 ec 02 46 70 42 77 42 41 b7 a2 d9 54 2f 75 f1 64 ... >,
-  ContentLength: 3982812,
-  PartNumber: 2,
-  Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/sendNuggetsTwiceWeekly.zip',
-  UploadId:
-   'oKONYfbFeOX8nNuFOOZJFm7oGTtMWQzksQGwJEh8xHHFA8833L1Hw6me2T0btDn1NKPMQkpvyq11OpyxtJLg5nSvqT1AlVhvLcsXfTCiyyZoxQwMnlDR0tal7nSzx5qa' })
-Serverless: [AWS s3 200 1.417s 0 retries] uploadPart({ Body:
+Serverless: [AWS s3 200 1.041s 0 retries] uploadPart({ Body:
    <Buffer 50 4b 03 04 14 00 08 00 08 00 00 00 21 00 00 00 00 00 00 00 00 00 00 00 00 00 41 00 00 00 6e 6f 64 65 5f 6d 6f 64 75 6c 65 73 2f 61 77 73 2d 73 64 6b ... >,
   ContentLength: 5242880,
   PartNumber: 1,
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/sendNuggetsTwiceWeekly.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/sendNuggetsTwiceWeekly.zip',
   UploadId:
-   'oKONYfbFeOX8nNuFOOZJFm7oGTtMWQzksQGwJEh8xHHFA8833L1Hw6me2T0btDn1NKPMQkpvyq11OpyxtJLg5nSvqT1AlVhvLcsXfTCiyyZoxQwMnlDR0tal7nSzx5qa' })
-Serverless: [AWS s3 200 6.958s 0 retries] uploadPart({ Body:
-   <Buffer 50 4b 03 04 14 00 08 00 08 00 00 00 21 00 00 00 00 00 00 00 00 00 00 00 00 00 41 00 00 00 6e 6f 64 65 5f 6d 6f 64 75 6c 65 73 2f 61 77 73 2d 73 64 6b ... >,
-  ContentLength: 5242880,
-  PartNumber: 1,
+   'NyDCROwv5VpwSoMV4FPIsjjKtU.W9NsQw280Qj13Nh9f1MzBztBp2sIkEjV44qiBfMmw0T1hQ0hQ5gTG8g3gK4Bz.MHdnk1ltw5gW1BlP7dyTNSe7j3XVrNEtR.j3TQV' })
+Serverless: [AWS s3 200 1.048s 0 retries] uploadPart({ Body:
+   <Buffer ab 56 88 bc 2b cf 7b e3 d9 66 ea ee 40 a7 76 9c 79 76 67 b7 10 0d bf 28 ce 6f c7 ef 51 5b 8c 95 ae d6 ec 02 46 70 42 77 42 41 b7 a2 d9 54 2f 75 f1 64 ... >,
+  ContentLength: 3982812,
+  PartNumber: 2,
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/sendNuggetsDaily.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/sendNuggetsTwiceWeekly.zip',
   UploadId:
-   'PAfpm0XFnmgxmJON50jadUNSRy095GK0wetl8l7AB.KOdtkETVOMQBKBYTOgJV41ZO5gEe_PqXOphyFhQicXlpseBZ510UTjzUq9N4i2q8I3IkdEVd3cybw73HKZcN3Q' })
-Serverless: [AWS s3 200 0.214s 0 retries] completeMultipartUpload({ MultipartUpload:
+   'NyDCROwv5VpwSoMV4FPIsjjKtU.W9NsQw280Qj13Nh9f1MzBztBp2sIkEjV44qiBfMmw0T1hQ0hQ5gTG8g3gK4Bz.MHdnk1ltw5gW1BlP7dyTNSe7j3XVrNEtR.j3TQV' })
+Serverless: [AWS s3 200 0.178s 0 retries] completeMultipartUpload({ MultipartUpload:
    { Parts:
       [ { ETag: '"6ac7db3995fd899b6f62547194f5ef12"', PartNumber: 1 },
         { ETag: '"bac3f8f0b39240a857d955a9cbe748ef"', PartNumber: 2 },
@@ -455,57 +445,28 @@ Serverless: [AWS s3 200 0.214s 0 retries] completeMultipartUpload({ MultipartUpl
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/sendNuggetsTwiceWeekly.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/sendNuggetsTwiceWeekly.zip',
   UploadId:
-   'oKONYfbFeOX8nNuFOOZJFm7oGTtMWQzksQGwJEh8xHHFA8833L1Hw6me2T0btDn1NKPMQkpvyq11OpyxtJLg5nSvqT1AlVhvLcsXfTCiyyZoxQwMnlDR0tal7nSzx5qa' })
+   'NyDCROwv5VpwSoMV4FPIsjjKtU.W9NsQw280Qj13Nh9f1MzBztBp2sIkEjV44qiBfMmw0T1hQ0hQ5gTG8g3gK4Bz.MHdnk1ltw5gW1BlP7dyTNSe7j3XVrNEtR.j3TQV' })
 Serverless: Uploading service syncSubscriberVerifications.zip file to S3 (8.8 MB)...
-Serverless: [AWS s3 200 0.183s 0 retries] completeMultipartUpload({ MultipartUpload:
-   { Parts:
-      [ { ETag: '"6ac7db3995fd899b6f62547194f5ef12"', PartNumber: 1 },
-        { ETag: '"bac3f8f0b39240a857d955a9cbe748ef"', PartNumber: 2 },
-        [length]: 2 ] },
-  Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/sendNuggetsDaily.zip',
-  UploadId:
-   'PAfpm0XFnmgxmJON50jadUNSRy095GK0wetl8l7AB.KOdtkETVOMQBKBYTOgJV41ZO5gEe_PqXOphyFhQicXlpseBZ510UTjzUq9N4i2q8I3IkdEVd3cybw73HKZcN3Q' })
-Serverless: Uploading service recordNuggetOfTheDay.zip file to S3 (10.58 MB)...
-Serverless: [AWS s3 200 0.146s 0 retries] createMultipartUpload({ Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/sendNuggetsWeekly.zip',
-  ContentType: 'application/zip',
-  Metadata:
-   { filesha256: 'e7jhYRdeYubWY9IxwZ3XOnqOyg9RJ4eSzu0QSPswGaY=' } })
-Serverless: [AWS s3 200 0.223s 0 retries] createMultipartUpload({ Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/syncSubscriberVerifications.zip',
-  ContentType: 'application/zip',
-  Metadata:
-   { filesha256: 'e7jhYRdeYubWY9IxwZ3XOnqOyg9RJ4eSzu0QSPswGaY=' } })
-Serverless: [AWS s3 200 1.567s 0 retries] uploadPart({ Body:
-   <Buffer ab 56 88 bc 2b cf 7b e3 d9 66 ea ee 40 a7 76 9c 79 76 67 b7 10 0d bf 28 ce 6f c7 ef 51 5b 8c 95 ae d6 ec 02 46 70 42 77 42 41 b7 a2 d9 54 2f 75 f1 64 ... >,
-  ContentLength: 3982812,
-  PartNumber: 2,
-  Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/sendNuggetsWeekly.zip',
-  UploadId:
-   'ixhH.i8k91Pb0apTg3JVU0ZRg4MShm8SwrkK5h8zxinkKjbospvAXRkjRWh5ze_5XSCC2bDEv6tw858yle0y0nCxfg58Rmyo7h6vnvp0viNvocb7Zy2da5Iw315Vr_06' })
-Serverless: [AWS s3 200 1.631s 0 retries] uploadPart({ Body:
+Serverless: [AWS s3 200 4.241s 0 retries] uploadPart({ Body:
    <Buffer 50 4b 03 04 14 00 08 00 08 00 00 00 21 00 00 00 00 00 00 00 00 00 00 00 00 00 41 00 00 00 6e 6f 64 65 5f 6d 6f 64 75 6c 65 73 2f 61 77 73 2d 73 64 6b ... >,
   ContentLength: 5242880,
   PartNumber: 1,
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/sendNuggetsWeekly.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/sendNuggetsTwiceDaily.zip',
   UploadId:
-   'ixhH.i8k91Pb0apTg3JVU0ZRg4MShm8SwrkK5h8zxinkKjbospvAXRkjRWh5ze_5XSCC2bDEv6tw858yle0y0nCxfg58Rmyo7h6vnvp0viNvocb7Zy2da5Iw315Vr_06' })
-Serverless: [AWS s3 200 0.238s 0 retries] completeMultipartUpload({ MultipartUpload:
+   'wuzo.tXK4pX1nNtAaLTHKjfNgUf0G2rjLNdL6K.JfK7.prCpiaT2nWJc_en2K8baERWP2yLDzpeP39Bd9_ruJqPsF98_uKy7M952Hcjx.C_THZbSlUUz.3OQ40T74dl0' })
+Serverless: [AWS s3 200 0.162s 0 retries] createMultipartUpload({ Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/sendNuggetsWeekly.zip',
+  ContentType: 'application/zip',
+  Metadata:
+   { filesha256: 'e7jhYRdeYubWY9IxwZ3XOnqOyg9RJ4eSzu0QSPswGaY=' } })
+Serverless: [AWS s3 200 0.242s 0 retries] completeMultipartUpload({ MultipartUpload:
    { Parts:
       [ { ETag: '"6ac7db3995fd899b6f62547194f5ef12"', PartNumber: 1 },
         { ETag: '"bac3f8f0b39240a857d955a9cbe748ef"', PartNumber: 2 },
@@ -513,58 +474,146 @@ Serverless: [AWS s3 200 0.238s 0 retries] completeMultipartUpload({ MultipartUpl
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/sendNuggetsWeekly.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/sendNuggetsTwiceDaily.zip',
   UploadId:
-   'ixhH.i8k91Pb0apTg3JVU0ZRg4MShm8SwrkK5h8zxinkKjbospvAXRkjRWh5ze_5XSCC2bDEv6tw858yle0y0nCxfg58Rmyo7h6vnvp0viNvocb7Zy2da5Iw315Vr_06' })
-Serverless: Uploading service emailNuggetOfTheDay.zip file to S3 (8.8 MB)...
-Serverless: [AWS s3 200 0.122s 0 retries] createMultipartUpload({ Bucket:
+   'wuzo.tXK4pX1nNtAaLTHKjfNgUf0G2rjLNdL6K.JfK7.prCpiaT2nWJc_en2K8baERWP2yLDzpeP39Bd9_ruJqPsF98_uKy7M952Hcjx.C_THZbSlUUz.3OQ40T74dl0' })
+Serverless: Uploading service recordNuggetOfTheDay.zip file to S3 (10.58 MB)...
+Serverless: [AWS s3 200 0.205s 0 retries] createMultipartUpload({ Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/recordNuggetOfTheDay.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/syncSubscriberVerifications.zip',
+  ContentType: 'application/zip',
+  Metadata:
+   { filesha256: 'e7jhYRdeYubWY9IxwZ3XOnqOyg9RJ4eSzu0QSPswGaY=' } })
+Serverless: [AWS s3 200 0.873s 0 retries] uploadPart({ Body:
+   <Buffer ab 56 88 bc 2b cf 7b e3 d9 66 ea ee 40 a7 76 9c 79 76 67 b7 10 0d bf 28 ce 6f c7 ef 51 5b 8c 95 ae d6 ec 02 46 70 42 77 42 41 b7 a2 d9 54 2f 75 f1 64 ... >,
+  ContentLength: 3982812,
+  PartNumber: 2,
+  Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/sendNuggetsWeekly.zip',
+  UploadId:
+   '7th5yaWhRcX38nCajKoLSHKG0FrXDZpWER4cLFIYjSvdxSlV3tjbNNNXseR4.smdNf3zq3oXH1u7cWc8._rqYankiH0o3XfHT5ApxuChjyWL6gLH83s2wRerGBfoJDO3' })
+Serverless: [AWS s3 200 1.717s 0 retries] uploadPart({ Body:
+   <Buffer 50 4b 03 04 14 00 08 00 08 00 00 00 21 00 00 00 00 00 00 00 00 00 00 00 00 00 41 00 00 00 6e 6f 64 65 5f 6d 6f 64 75 6c 65 73 2f 61 77 73 2d 73 64 6b ... >,
+  ContentLength: 5242880,
+  PartNumber: 1,
+  Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/sendNuggetsWeekly.zip',
+  UploadId:
+   '7th5yaWhRcX38nCajKoLSHKG0FrXDZpWER4cLFIYjSvdxSlV3tjbNNNXseR4.smdNf3zq3oXH1u7cWc8._rqYankiH0o3XfHT5ApxuChjyWL6gLH83s2wRerGBfoJDO3' })
+Serverless: [AWS s3 200 1.42s 0 retries] uploadPart({ Body:
+   <Buffer ab 56 88 bc 2b cf 7b e3 d9 66 ea ee 40 a7 76 9c 79 76 67 b7 10 0d bf 28 ce 6f c7 ef 51 5b 8c 95 ae d6 ec 02 46 70 42 77 42 41 b7 a2 d9 54 2f 75 f1 64 ... >,
+  ContentLength: 3982812,
+  PartNumber: 2,
+  Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/syncSubscriberVerifications.zip',
+  UploadId:
+   '.6Mc69ZvUX732gDfqMdveREnpsPCe27zgov3cOaLslXShnpE2aEpaOQiHe0NRxhS9C_wR0fPhQafT6JLdQrGk1YYbukD1j23i3heVy20BophQbSSPWhBar38gtIHb20v' })
+Serverless: [AWS s3 200 1.441s 0 retries] uploadPart({ Body:
+   <Buffer 50 4b 03 04 14 00 08 00 08 00 00 00 21 00 00 00 00 00 00 00 00 00 00 00 00 00 41 00 00 00 6e 6f 64 65 5f 6d 6f 64 75 6c 65 73 2f 61 77 73 2d 73 64 6b ... >,
+  ContentLength: 5242880,
+  PartNumber: 1,
+  Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/syncSubscriberVerifications.zip',
+  UploadId:
+   '.6Mc69ZvUX732gDfqMdveREnpsPCe27zgov3cOaLslXShnpE2aEpaOQiHe0NRxhS9C_wR0fPhQafT6JLdQrGk1YYbukD1j23i3heVy20BophQbSSPWhBar38gtIHb20v' })
+Serverless: [AWS s3 200 0.154s 0 retries] completeMultipartUpload({ MultipartUpload:
+   { Parts:
+      [ { ETag: '"6ac7db3995fd899b6f62547194f5ef12"', PartNumber: 1 },
+        { ETag: '"bac3f8f0b39240a857d955a9cbe748ef"', PartNumber: 2 },
+        [length]: 2 ] },
+  Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/sendNuggetsWeekly.zip',
+  UploadId:
+   '7th5yaWhRcX38nCajKoLSHKG0FrXDZpWER4cLFIYjSvdxSlV3tjbNNNXseR4.smdNf3zq3oXH1u7cWc8._rqYankiH0o3XfHT5ApxuChjyWL6gLH83s2wRerGBfoJDO3' })
+Serverless: Uploading service emailNuggetOfTheDay.zip file to S3 (8.8 MB)...
+Serverless: [AWS s3 200 0.163s 0 retries] completeMultipartUpload({ MultipartUpload:
+   { Parts:
+      [ { ETag: '"6ac7db3995fd899b6f62547194f5ef12"', PartNumber: 1 },
+        { ETag: '"bac3f8f0b39240a857d955a9cbe748ef"', PartNumber: 2 },
+        [length]: 2 ] },
+  Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/syncSubscriberVerifications.zip',
+  UploadId:
+   '.6Mc69ZvUX732gDfqMdveREnpsPCe27zgov3cOaLslXShnpE2aEpaOQiHe0NRxhS9C_wR0fPhQafT6JLdQrGk1YYbukD1j23i3heVy20BophQbSSPWhBar38gtIHb20v' })
+Serverless: Uploading service syncSubscriberTblAndSES.zip file to S3 (8.8 MB)...
+Serverless: [AWS s3 200 0.201s 0 retries] createMultipartUpload({ Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/recordNuggetOfTheDay.zip',
   ContentType: 'application/zip',
   Metadata:
    { filesha256: '07FUi8aFAzUuK+NcN3EVTxXRb2sHX8hjPvNLvLPMFjY=' } })
-Serverless: [AWS s3 200 0.345s 0 retries] uploadPart({ Body:
+Serverless: [AWS s3 200 0.169s 0 retries] createMultipartUpload({ Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/emailNuggetOfTheDay.zip',
+  ContentType: 'application/zip',
+  Metadata:
+   { filesha256: 'e7jhYRdeYubWY9IxwZ3XOnqOyg9RJ4eSzu0QSPswGaY=' } })
+Serverless: [AWS s3 200 0.359s 0 retries] uploadPart({ Body:
    <Buffer 81 9d 2d 10 50 69 b0 4f 5f c2 ee 25 fd 0b 17 c3 de 21 fc f4 f5 dd 90 8a 1b 61 5f 50 0e c9 67 76 a4 a7 db 09 e7 50 2a 2e 73 2b 1e a1 cc 89 4d 0c 93 2a ... >,
   ContentLength: 608714,
   PartNumber: 3,
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/recordNuggetOfTheDay.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/recordNuggetOfTheDay.zip',
   UploadId:
-   '0FYpQo2irv_9VHJXuvSJq9kLjAvPH5XleGrXq472S.6ohHBa1ilHg1yZPqnmfQIcuL9HI5Sk65m42UEctBmFRlcvaKkGzHQviUjhpuF0EwOfVK_wjXj0UvYzukM1ow98' })
-Serverless: [AWS s3 200 2.938s 0 retries] uploadPart({ Body:
-   <Buffer ab 56 88 bc 2b cf 7b e3 d9 66 ea ee 40 a7 76 9c 79 76 67 b7 10 0d bf 28 ce 6f c7 ef 51 5b 8c 95 ae d6 ec 02 46 70 42 77 42 41 b7 a2 d9 54 2f 75 f1 64 ... >,
-  ContentLength: 3982812,
-  PartNumber: 2,
-  Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/syncSubscriberVerifications.zip',
-  UploadId:
-   's.cyNb6WjCAzsN0gYv4JcFqf9nQgoPOSBTLgKu18lnQ8DfExjSpDjAcM1QX7tXfAWfKVA3Fg_C_o2FPKou9sdth16BBpKyCPKPF7TH4HfoGvg2g6K86YYP9BRbkz5nxC' })
-Serverless: [AWS s3 200 1.514s 0 retries] uploadPart({ Body:
+   '1qqu7BNeFxAXulqw2Z_4EX146cueYcVP8QSqN2ao7gkFK4pfc4n1eXIY8jnGtGTtCxcTdHNHV106PwtGsWZK5g6jd0OdiPQMZzSHyfh_C9DedOne6iq.92iwShKTFqtk' })
+Serverless: [AWS s3 200 1.159s 0 retries] uploadPart({ Body:
    <Buffer 50 4b 03 04 14 00 08 00 08 00 00 00 21 00 00 00 00 00 00 00 00 00 00 00 00 00 41 00 00 00 6e 6f 64 65 5f 6d 6f 64 75 6c 65 73 2f 61 77 73 2d 73 64 6b ... >,
   ContentLength: 5242880,
   PartNumber: 1,
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/recordNuggetOfTheDay.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/emailNuggetOfTheDay.zip',
   UploadId:
-   '0FYpQo2irv_9VHJXuvSJq9kLjAvPH5XleGrXq472S.6ohHBa1ilHg1yZPqnmfQIcuL9HI5Sk65m42UEctBmFRlcvaKkGzHQviUjhpuF0EwOfVK_wjXj0UvYzukM1ow98' })
-Serverless: [AWS s3 200 1.558s 0 retries] uploadPart({ Body:
+   'LhU6J7ZknkrTxVT0H4.47VxSN4JtL3sm9FkW1RaycpiZ7Obw7jTzlueWJZxpYhjP_gbnBTqVjdP_Fuqd68Y3Mp4DFRmGYhs7qh5dGd5Pbd9m_AwnfHCuqs7G3GsQbGQJ' })
+Serverless: [AWS s3 200 1.714s 0 retries] uploadPart({ Body:
    <Buffer ab 56 88 bc 2b cf 7b e3 d9 66 ea ee 40 a7 76 9c 79 76 67 b7 10 0d bf 28 ce 6f c7 ef 51 5b 8c 95 ae d6 ec 02 46 70 42 77 42 41 b7 a2 d9 54 2f 75 f1 64 ... >,
   ContentLength: 5242880,
   PartNumber: 2,
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/recordNuggetOfTheDay.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/recordNuggetOfTheDay.zip',
   UploadId:
-   '0FYpQo2irv_9VHJXuvSJq9kLjAvPH5XleGrXq472S.6ohHBa1ilHg1yZPqnmfQIcuL9HI5Sk65m42UEctBmFRlcvaKkGzHQviUjhpuF0EwOfVK_wjXj0UvYzukM1ow98' })
-Serverless: [AWS s3 200 0.747s 0 retries] completeMultipartUpload({ MultipartUpload:
+   '1qqu7BNeFxAXulqw2Z_4EX146cueYcVP8QSqN2ao7gkFK4pfc4n1eXIY8jnGtGTtCxcTdHNHV106PwtGsWZK5g6jd0OdiPQMZzSHyfh_C9DedOne6iq.92iwShKTFqtk' })
+Serverless: [AWS s3 200 1.84s 0 retries] uploadPart({ Body:
+   <Buffer 50 4b 03 04 14 00 08 00 08 00 00 00 21 00 00 00 00 00 00 00 00 00 00 00 00 00 41 00 00 00 6e 6f 64 65 5f 6d 6f 64 75 6c 65 73 2f 61 77 73 2d 73 64 6b ... >,
+  ContentLength: 5242880,
+  PartNumber: 1,
+  Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/recordNuggetOfTheDay.zip',
+  UploadId:
+   '1qqu7BNeFxAXulqw2Z_4EX146cueYcVP8QSqN2ao7gkFK4pfc4n1eXIY8jnGtGTtCxcTdHNHV106PwtGsWZK5g6jd0OdiPQMZzSHyfh_C9DedOne6iq.92iwShKTFqtk' })
+Serverless: [AWS s3 200 1.863s 0 retries] uploadPart({ Body:
+   <Buffer ab 56 88 bc 2b cf 7b e3 d9 66 ea ee 40 a7 76 9c 79 76 67 b7 10 0d bf 28 ce 6f c7 ef 51 5b 8c 95 ae d6 ec 02 46 70 42 77 42 41 b7 a2 d9 54 2f 75 f1 64 ... >,
+  ContentLength: 3982812,
+  PartNumber: 2,
+  Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/emailNuggetOfTheDay.zip',
+  UploadId:
+   'LhU6J7ZknkrTxVT0H4.47VxSN4JtL3sm9FkW1RaycpiZ7Obw7jTzlueWJZxpYhjP_gbnBTqVjdP_Fuqd68Y3Mp4DFRmGYhs7qh5dGd5Pbd9m_AwnfHCuqs7G3GsQbGQJ' })
+Serverless: [AWS s3 200 0.149s 0 retries] completeMultipartUpload({ MultipartUpload:
    { Parts:
       [ { ETag: '"6ac7db3995fd899b6f62547194f5ef12"', PartNumber: 1 },
         { ETag: '"1dd0efee653721bd0a7386712c6f9c80"', PartNumber: 2 },
@@ -573,67 +622,11 @@ Serverless: [AWS s3 200 0.747s 0 retries] completeMultipartUpload({ MultipartUpl
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/recordNuggetOfTheDay.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/recordNuggetOfTheDay.zip',
   UploadId:
-   '0FYpQo2irv_9VHJXuvSJq9kLjAvPH5XleGrXq472S.6ohHBa1ilHg1yZPqnmfQIcuL9HI5Sk65m42UEctBmFRlcvaKkGzHQviUjhpuF0EwOfVK_wjXj0UvYzukM1ow98' })
-Serverless: Uploading service syncSubscriberTblAndSES.zip file to S3 (8.8 MB)...
-Serverless: [AWS s3 200 0.127s 0 retries] createMultipartUpload({ Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/emailNuggetOfTheDay.zip',
-  ContentType: 'application/zip',
-  Metadata:
-   { filesha256: 'e7jhYRdeYubWY9IxwZ3XOnqOyg9RJ4eSzu0QSPswGaY=' } })
-Serverless: [AWS s3 200 0.818s 0 retries] uploadPart({ Body:
-   <Buffer ab 56 88 bc 2b cf 7b e3 d9 66 ea ee 40 a7 76 9c 79 76 67 b7 10 0d bf 28 ce 6f c7 ef 51 5b 8c 95 ae d6 ec 02 46 70 42 77 42 41 b7 a2 d9 54 2f 75 f1 64 ... >,
-  ContentLength: 3982812,
-  PartNumber: 2,
-  Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/emailNuggetOfTheDay.zip',
-  UploadId:
-   'mPiVxAUYby9dpDjfAXG5jbz36O5Fm_3hXphaLNJ7Lul1X4xgYWO9NmItlTQZD1KYAIgEqpx6LZ7YeV2inXOI8260mnb0Ho_yUrK91O4c4LMWT3xHvcy7qxvL6uwk10hv' })
-Serverless: [AWS s3 200 1.166s 0 retries] uploadPart({ Body:
-   <Buffer 50 4b 03 04 14 00 08 00 08 00 00 00 21 00 00 00 00 00 00 00 00 00 00 00 00 00 41 00 00 00 6e 6f 64 65 5f 6d 6f 64 75 6c 65 73 2f 61 77 73 2d 73 64 6b ... >,
-  ContentLength: 5242880,
-  PartNumber: 1,
-  Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/emailNuggetOfTheDay.zip',
-  UploadId:
-   'mPiVxAUYby9dpDjfAXG5jbz36O5Fm_3hXphaLNJ7Lul1X4xgYWO9NmItlTQZD1KYAIgEqpx6LZ7YeV2inXOI8260mnb0Ho_yUrK91O4c4LMWT3xHvcy7qxvL6uwk10hv' })
-Serverless: [AWS s3 200 0.253s 0 retries] completeMultipartUpload({ MultipartUpload:
-   { Parts:
-      [ { ETag: '"6ac7db3995fd899b6f62547194f5ef12"', PartNumber: 1 },
-        { ETag: '"bac3f8f0b39240a857d955a9cbe748ef"', PartNumber: 2 },
-        [length]: 2 ] },
-  Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/emailNuggetOfTheDay.zip',
-  UploadId:
-   'mPiVxAUYby9dpDjfAXG5jbz36O5Fm_3hXphaLNJ7Lul1X4xgYWO9NmItlTQZD1KYAIgEqpx6LZ7YeV2inXOI8260mnb0Ho_yUrK91O4c4LMWT3xHvcy7qxvL6uwk10hv' })
+   '1qqu7BNeFxAXulqw2Z_4EX146cueYcVP8QSqN2ao7gkFK4pfc4n1eXIY8jnGtGTtCxcTdHNHV106PwtGsWZK5g6jd0OdiPQMZzSHyfh_C9DedOne6iq.92iwShKTFqtk' })
 Serverless: Uploading service deleteCognitoUser.zip file to S3 (8.8 MB)...
-Serverless: [AWS s3 200 5.875s 0 retries] uploadPart({ Body:
-   <Buffer 50 4b 03 04 14 00 08 00 08 00 00 00 21 00 00 00 00 00 00 00 00 00 00 00 00 00 41 00 00 00 6e 6f 64 65 5f 6d 6f 64 75 6c 65 73 2f 61 77 73 2d 73 64 6b ... >,
-  ContentLength: 5242880,
-  PartNumber: 1,
-  Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/syncSubscriberVerifications.zip',
-  UploadId:
-   's.cyNb6WjCAzsN0gYv4JcFqf9nQgoPOSBTLgKu18lnQ8DfExjSpDjAcM1QX7tXfAWfKVA3Fg_C_o2FPKou9sdth16BBpKyCPKPF7TH4HfoGvg2g6K86YYP9BRbkz5nxC' })
-Serverless: [AWS s3 200 0.136s 0 retries] createMultipartUpload({ Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/syncSubscriberTblAndSES.zip',
-  ContentType: 'application/zip',
-  Metadata:
-   { filesha256: 'e7jhYRdeYubWY9IxwZ3XOnqOyg9RJ4eSzu0QSPswGaY=' } })
-Serverless: [AWS s3 200 0.195s 0 retries] completeMultipartUpload({ MultipartUpload:
+Serverless: [AWS s3 200 0.194s 0 retries] completeMultipartUpload({ MultipartUpload:
    { Parts:
       [ { ETag: '"6ac7db3995fd899b6f62547194f5ef12"', PartNumber: 1 },
         { ETag: '"bac3f8f0b39240a857d955a9cbe748ef"', PartNumber: 2 },
@@ -641,48 +634,45 @@ Serverless: [AWS s3 200 0.195s 0 retries] completeMultipartUpload({ MultipartUpl
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/syncSubscriberVerifications.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/emailNuggetOfTheDay.zip',
   UploadId:
-   's.cyNb6WjCAzsN0gYv4JcFqf9nQgoPOSBTLgKu18lnQ8DfExjSpDjAcM1QX7tXfAWfKVA3Fg_C_o2FPKou9sdth16BBpKyCPKPF7TH4HfoGvg2g6K86YYP9BRbkz5nxC' })
+   'LhU6J7ZknkrTxVT0H4.47VxSN4JtL3sm9FkW1RaycpiZ7Obw7jTzlueWJZxpYhjP_gbnBTqVjdP_Fuqd68Y3Mp4DFRmGYhs7qh5dGd5Pbd9m_AwnfHCuqs7G3GsQbGQJ' })
 Serverless: Uploading service getServerlessOutputs.zip file to S3 (8.8 MB)...
-Serverless: [AWS s3 200 0.172s 0 retries] createMultipartUpload({ Bucket:
+Serverless: [AWS s3 200 0.116s 0 retries] createMultipartUpload({ Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/deleteCognitoUser.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/deleteCognitoUser.zip',
   ContentType: 'application/zip',
   Metadata:
    { filesha256: 'e7jhYRdeYubWY9IxwZ3XOnqOyg9RJ4eSzu0QSPswGaY=' } })
-Serverless: [AWS s3 200 2.471s 0 retries] uploadPart({ Body:
-   <Buffer 50 4b 03 04 14 00 08 00 08 00 00 00 21 00 00 00 00 00 00 00 00 00 00 00 00 00 41 00 00 00 6e 6f 64 65 5f 6d 6f 64 75 6c 65 73 2f 61 77 73 2d 73 64 6b ... >,
-  ContentLength: 5242880,
-  PartNumber: 1,
-  Bucket:
+Serverless: [AWS s3 200 0.519s 0 retries] createMultipartUpload({ Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/syncSubscriberTblAndSES.zip',
-  UploadId:
-   'Mi_ESnwLQXFg.bt9GgJ_BGVeSOyfHPibm4MqGmOu79GIJtpZSsvvukS_TQsTKSge6tJx2h3l5J9.3pSqmYRaFyVF7XUMNgHl3JL9QvaKCGyxd61IXa7jVxEVQWC2OV6T' })
-Serverless: [AWS s3 200 4.482s 0 retries] uploadPart({ Body:
-   <Buffer 50 4b 03 04 14 00 08 00 08 00 00 00 21 00 00 00 00 00 00 00 00 00 00 00 00 00 41 00 00 00 6e 6f 64 65 5f 6d 6f 64 75 6c 65 73 2f 61 77 73 2d 73 64 6b ... >,
-  ContentLength: 5242880,
-  PartNumber: 1,
-  Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/deleteCognitoUser.zip',
-  UploadId:
-   'OqR7FSQ1sI09B.WwomxWNx.oMAh6bPcwFfRLFxF0mxLntztg_9JRpwWhETLrWrL6wX5G6rBvLtLtbVGQnnnYLfL9JQx7f4Mv3fM3lmTxrNoqZOrl3SxpcTrcn4G2Lbrp' })
-Serverless: [AWS s3 200 4.505s 0 retries] uploadPart({ Body:
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/syncSubscriberTblAndSES.zip',
+  ContentType: 'application/zip',
+  Metadata:
+   { filesha256: 'e7jhYRdeYubWY9IxwZ3XOnqOyg9RJ4eSzu0QSPswGaY=' } })
+Serverless: [AWS s3 200 1.026s 0 retries] uploadPart({ Body:
    <Buffer ab 56 88 bc 2b cf 7b e3 d9 66 ea ee 40 a7 76 9c 79 76 67 b7 10 0d bf 28 ce 6f c7 ef 51 5b 8c 95 ae d6 ec 02 46 70 42 77 42 41 b7 a2 d9 54 2f 75 f1 64 ... >,
   ContentLength: 3982812,
   PartNumber: 2,
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/deleteCognitoUser.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/deleteCognitoUser.zip',
   UploadId:
-   'OqR7FSQ1sI09B.WwomxWNx.oMAh6bPcwFfRLFxF0mxLntztg_9JRpwWhETLrWrL6wX5G6rBvLtLtbVGQnnnYLfL9JQx7f4Mv3fM3lmTxrNoqZOrl3SxpcTrcn4G2Lbrp' })
-Serverless: [AWS s3 200 0.176s 0 retries] completeMultipartUpload({ MultipartUpload:
+   'p.8SzYFn6GARpLnPMKi0VcP2eduhMY1xPY0Mn5j2GYEi.SiDeg3zwOPOjHAjmAzW7UPx3i1nFgA2GmILug6GugBWMpfB3IlTo8lrvtLiftNC6FKVNKgkkDB3bbm1DlXf' })
+Serverless: [AWS s3 200 1.039s 0 retries] uploadPart({ Body:
+   <Buffer 50 4b 03 04 14 00 08 00 08 00 00 00 21 00 00 00 00 00 00 00 00 00 00 00 00 00 41 00 00 00 6e 6f 64 65 5f 6d 6f 64 75 6c 65 73 2f 61 77 73 2d 73 64 6b ... >,
+  ContentLength: 5242880,
+  PartNumber: 1,
+  Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/deleteCognitoUser.zip',
+  UploadId:
+   'p.8SzYFn6GARpLnPMKi0VcP2eduhMY1xPY0Mn5j2GYEi.SiDeg3zwOPOjHAjmAzW7UPx3i1nFgA2GmILug6GugBWMpfB3IlTo8lrvtLiftNC6FKVNKgkkDB3bbm1DlXf' })
+Serverless: [AWS s3 200 0.434s 0 retries] completeMultipartUpload({ MultipartUpload:
    { Parts:
       [ { ETag: '"6ac7db3995fd899b6f62547194f5ef12"', PartNumber: 1 },
         { ETag: '"bac3f8f0b39240a857d955a9cbe748ef"', PartNumber: 2 },
@@ -690,38 +680,38 @@ Serverless: [AWS s3 200 0.176s 0 retries] completeMultipartUpload({ MultipartUpl
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/deleteCognitoUser.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/deleteCognitoUser.zip',
   UploadId:
-   'OqR7FSQ1sI09B.WwomxWNx.oMAh6bPcwFfRLFxF0mxLntztg_9JRpwWhETLrWrL6wX5G6rBvLtLtbVGQnnnYLfL9JQx7f4Mv3fM3lmTxrNoqZOrl3SxpcTrcn4G2Lbrp' })
+   'p.8SzYFn6GARpLnPMKi0VcP2eduhMY1xPY0Mn5j2GYEi.SiDeg3zwOPOjHAjmAzW7UPx3i1nFgA2GmILug6GugBWMpfB3IlTo8lrvtLiftNC6FKVNKgkkDB3bbm1DlXf' })
 Serverless: Uploading service getNuggeteer.zip file to S3 (8.8 MB)...
-Serverless: [AWS s3 200 0.109s 0 retries] createMultipartUpload({ Bucket:
+Serverless: [AWS s3 200 0.173s 0 retries] createMultipartUpload({ Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/getServerlessOutputs.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/getServerlessOutputs.zip',
   ContentType: 'application/zip',
   Metadata:
    { filesha256: 'e7jhYRdeYubWY9IxwZ3XOnqOyg9RJ4eSzu0QSPswGaY=' } })
-Serverless: [AWS s3 200 1.688s 0 retries] uploadPart({ Body:
-   <Buffer ab 56 88 bc 2b cf 7b e3 d9 66 ea ee 40 a7 76 9c 79 76 67 b7 10 0d bf 28 ce 6f c7 ef 51 5b 8c 95 ae d6 ec 02 46 70 42 77 42 41 b7 a2 d9 54 2f 75 f1 64 ... >,
-  ContentLength: 3982812,
-  PartNumber: 2,
-  Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/getServerlessOutputs.zip',
-  UploadId:
-   'gQ9NYoTb2XZTwQA8Oap.Vf7jYzVa_VCDz2tTTdETWY_0FfbDCgnXN88YoVcSm.4msMeXa1BkHu5oHiUIUCiEWpDgQhbCYYOfLrfDsJj17uDYtP2kW0pTcC5B0XwpHw4L' })
-Serverless: [AWS s3 200 1.715s 0 retries] uploadPart({ Body:
+Serverless: [AWS s3 200 1.772s 0 retries] uploadPart({ Body:
    <Buffer 50 4b 03 04 14 00 08 00 08 00 00 00 21 00 00 00 00 00 00 00 00 00 00 00 00 00 41 00 00 00 6e 6f 64 65 5f 6d 6f 64 75 6c 65 73 2f 61 77 73 2d 73 64 6b ... >,
   ContentLength: 5242880,
   PartNumber: 1,
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/getServerlessOutputs.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/syncSubscriberTblAndSES.zip',
   UploadId:
-   'gQ9NYoTb2XZTwQA8Oap.Vf7jYzVa_VCDz2tTTdETWY_0FfbDCgnXN88YoVcSm.4msMeXa1BkHu5oHiUIUCiEWpDgQhbCYYOfLrfDsJj17uDYtP2kW0pTcC5B0XwpHw4L' })
-Serverless: [AWS s3 200 0.156s 0 retries] completeMultipartUpload({ MultipartUpload:
+   'phCXux940ieR72dDnySMpCTD9OHU4Qgot3MDfbonzzUBXmeLp3tCi58Wi5FxCb7zhuLh1Fj0sDmCUP4ZMZ02jEzGA9HAEgvBOwqlboopjMyPj5eaT2EuslMv8NwA2ita' })
+Serverless: [AWS s3 200 1.885s 0 retries] uploadPart({ Body:
+   <Buffer ab 56 88 bc 2b cf 7b e3 d9 66 ea ee 40 a7 76 9c 79 76 67 b7 10 0d bf 28 ce 6f c7 ef 51 5b 8c 95 ae d6 ec 02 46 70 42 77 42 41 b7 a2 d9 54 2f 75 f1 64 ... >,
+  ContentLength: 3982812,
+  PartNumber: 2,
+  Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/syncSubscriberTblAndSES.zip',
+  UploadId:
+   'phCXux940ieR72dDnySMpCTD9OHU4Qgot3MDfbonzzUBXmeLp3tCi58Wi5FxCb7zhuLh1Fj0sDmCUP4ZMZ02jEzGA9HAEgvBOwqlboopjMyPj5eaT2EuslMv8NwA2ita' })
+Serverless: [AWS s3 200 0.422s 0 retries] completeMultipartUpload({ MultipartUpload:
    { Parts:
       [ { ETag: '"6ac7db3995fd899b6f62547194f5ef12"', PartNumber: 1 },
         { ETag: '"bac3f8f0b39240a857d955a9cbe748ef"', PartNumber: 2 },
@@ -729,28 +719,38 @@ Serverless: [AWS s3 200 0.156s 0 retries] completeMultipartUpload({ MultipartUpl
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/getServerlessOutputs.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/syncSubscriberTblAndSES.zip',
   UploadId:
-   'gQ9NYoTb2XZTwQA8Oap.Vf7jYzVa_VCDz2tTTdETWY_0FfbDCgnXN88YoVcSm.4msMeXa1BkHu5oHiUIUCiEWpDgQhbCYYOfLrfDsJj17uDYtP2kW0pTcC5B0XwpHw4L' })
+   'phCXux940ieR72dDnySMpCTD9OHU4Qgot3MDfbonzzUBXmeLp3tCi58Wi5FxCb7zhuLh1Fj0sDmCUP4ZMZ02jEzGA9HAEgvBOwqlboopjMyPj5eaT2EuslMv8NwA2ita' })
 Serverless: Uploading service updateNuggeteerPhone.zip file to S3 (8.8 MB)...
-Serverless: [AWS s3 200 7.071s 0 retries] uploadPart({ Body:
+Serverless: [AWS s3 200 0.971s 0 retries] uploadPart({ Body:
+   <Buffer 50 4b 03 04 14 00 08 00 08 00 00 00 21 00 00 00 00 00 00 00 00 00 00 00 00 00 41 00 00 00 6e 6f 64 65 5f 6d 6f 64 75 6c 65 73 2f 61 77 73 2d 73 64 6b ... >,
+  ContentLength: 5242880,
+  PartNumber: 1,
+  Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/getServerlessOutputs.zip',
+  UploadId:
+   '38IJ_WfgOKMdZtqN0_0AooXmTLwbcqXY0Gc4DiLQTMlphFv6nisZN8asdq7PSNBw24o6OdDxZR1ui_WIpct.yR2cfhiw8xR74wUlSHr7FW9wj9Mfu0qYUc5YKNaf7u9p' })
+Serverless: [AWS s3 200 0.191s 0 retries] createMultipartUpload({ Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/getNuggeteer.zip',
+  ContentType: 'application/zip',
+  Metadata:
+   { filesha256: 'e7jhYRdeYubWY9IxwZ3XOnqOyg9RJ4eSzu0QSPswGaY=' } })
+Serverless: [AWS s3 200 1.31s 0 retries] uploadPart({ Body:
    <Buffer ab 56 88 bc 2b cf 7b e3 d9 66 ea ee 40 a7 76 9c 79 76 67 b7 10 0d bf 28 ce 6f c7 ef 51 5b 8c 95 ae d6 ec 02 46 70 42 77 42 41 b7 a2 d9 54 2f 75 f1 64 ... >,
   ContentLength: 3982812,
   PartNumber: 2,
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/syncSubscriberTblAndSES.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/getServerlessOutputs.zip',
   UploadId:
-   'Mi_ESnwLQXFg.bt9GgJ_BGVeSOyfHPibm4MqGmOu79GIJtpZSsvvukS_TQsTKSge6tJx2h3l5J9.3pSqmYRaFyVF7XUMNgHl3JL9QvaKCGyxd61IXa7jVxEVQWC2OV6T' })
-Serverless: [AWS s3 200 0.096s 0 retries] createMultipartUpload({ Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/getNuggeteer.zip',
-  ContentType: 'application/zip',
-  Metadata:
-   { filesha256: 'e7jhYRdeYubWY9IxwZ3XOnqOyg9RJ4eSzu0QSPswGaY=' } })
-Serverless: [AWS s3 200 0.171s 0 retries] completeMultipartUpload({ MultipartUpload:
+   '38IJ_WfgOKMdZtqN0_0AooXmTLwbcqXY0Gc4DiLQTMlphFv6nisZN8asdq7PSNBw24o6OdDxZR1ui_WIpct.yR2cfhiw8xR74wUlSHr7FW9wj9Mfu0qYUc5YKNaf7u9p' })
+Serverless: [AWS s3 200 0.215s 0 retries] completeMultipartUpload({ MultipartUpload:
    { Parts:
       [ { ETag: '"6ac7db3995fd899b6f62547194f5ef12"', PartNumber: 1 },
         { ETag: '"bac3f8f0b39240a857d955a9cbe748ef"', PartNumber: 2 },
@@ -758,38 +758,38 @@ Serverless: [AWS s3 200 0.171s 0 retries] completeMultipartUpload({ MultipartUpl
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/syncSubscriberTblAndSES.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/getServerlessOutputs.zip',
   UploadId:
-   'Mi_ESnwLQXFg.bt9GgJ_BGVeSOyfHPibm4MqGmOu79GIJtpZSsvvukS_TQsTKSge6tJx2h3l5J9.3pSqmYRaFyVF7XUMNgHl3JL9QvaKCGyxd61IXa7jVxEVQWC2OV6T' })
+   '38IJ_WfgOKMdZtqN0_0AooXmTLwbcqXY0Gc4DiLQTMlphFv6nisZN8asdq7PSNBw24o6OdDxZR1ui_WIpct.yR2cfhiw8xR74wUlSHr7FW9wj9Mfu0qYUc5YKNaf7u9p' })
 Serverless: Uploading service getNuggeteerDelivPrefs.zip file to S3 (8.8 MB)...
-Serverless: [AWS s3 200 0.512s 0 retries] createMultipartUpload({ Bucket:
+Serverless: [AWS s3 200 0.392s 0 retries] createMultipartUpload({ Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/updateNuggeteerPhone.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/updateNuggeteerPhone.zip',
   ContentType: 'application/zip',
   Metadata:
    { filesha256: 'e7jhYRdeYubWY9IxwZ3XOnqOyg9RJ4eSzu0QSPswGaY=' } })
-Serverless: [AWS s3 200 1.033s 0 retries] uploadPart({ Body:
+Serverless: [AWS s3 200 0.88s 0 retries] uploadPart({ Body:
    <Buffer 50 4b 03 04 14 00 08 00 08 00 00 00 21 00 00 00 00 00 00 00 00 00 00 00 00 00 41 00 00 00 6e 6f 64 65 5f 6d 6f 64 75 6c 65 73 2f 61 77 73 2d 73 64 6b ... >,
   ContentLength: 5242880,
   PartNumber: 1,
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/getNuggeteer.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/getNuggeteer.zip',
   UploadId:
-   '8B2V8YRxPvsOBGmYAN4seAyBZLDcA5vZzDsZBVQEYhHXyN3UkgXlYQMz.WBryY_7R03t.45L8hWWMSE94XFGqNDl.LmvhXtTqTL7ASMpIM5rfsFEA142dIw4IRXGzUUh' })
-Serverless: [AWS s3 200 1.072s 0 retries] uploadPart({ Body:
+   'CbyJg5DmfQTsymlvzmhHySir3cSDFUbAlMrN0YtdI4080lVBgBJGO9YOKrrVUjlOyEWdnnn_zxMh.UTiBGriX0zoAKjiBQAMJwWv4t7vpEO3rRMk3FApmJAlYnYMwkdC' })
+Serverless: [AWS s3 200 1.053s 0 retries] uploadPart({ Body:
    <Buffer ab 56 88 bc 2b cf 7b e3 d9 66 ea ee 40 a7 76 9c 79 76 67 b7 10 0d bf 28 ce 6f c7 ef 51 5b 8c 95 ae d6 ec 02 46 70 42 77 42 41 b7 a2 d9 54 2f 75 f1 64 ... >,
   ContentLength: 3982812,
   PartNumber: 2,
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/getNuggeteer.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/getNuggeteer.zip',
   UploadId:
-   '8B2V8YRxPvsOBGmYAN4seAyBZLDcA5vZzDsZBVQEYhHXyN3UkgXlYQMz.WBryY_7R03t.45L8hWWMSE94XFGqNDl.LmvhXtTqTL7ASMpIM5rfsFEA142dIw4IRXGzUUh' })
-Serverless: [AWS s3 200 0.72s 0 retries] completeMultipartUpload({ MultipartUpload:
+   'CbyJg5DmfQTsymlvzmhHySir3cSDFUbAlMrN0YtdI4080lVBgBJGO9YOKrrVUjlOyEWdnnn_zxMh.UTiBGriX0zoAKjiBQAMJwWv4t7vpEO3rRMk3FApmJAlYnYMwkdC' })
+Serverless: [AWS s3 200 0.48s 0 retries] completeMultipartUpload({ MultipartUpload:
    { Parts:
       [ { ETag: '"6ac7db3995fd899b6f62547194f5ef12"', PartNumber: 1 },
         { ETag: '"bac3f8f0b39240a857d955a9cbe748ef"', PartNumber: 2 },
@@ -797,38 +797,38 @@ Serverless: [AWS s3 200 0.72s 0 retries] completeMultipartUpload({ MultipartUplo
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/getNuggeteer.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/getNuggeteer.zip',
   UploadId:
-   '8B2V8YRxPvsOBGmYAN4seAyBZLDcA5vZzDsZBVQEYhHXyN3UkgXlYQMz.WBryY_7R03t.45L8hWWMSE94XFGqNDl.LmvhXtTqTL7ASMpIM5rfsFEA142dIw4IRXGzUUh' })
+   'CbyJg5DmfQTsymlvzmhHySir3cSDFUbAlMrN0YtdI4080lVBgBJGO9YOKrrVUjlOyEWdnnn_zxMh.UTiBGriX0zoAKjiBQAMJwWv4t7vpEO3rRMk3FApmJAlYnYMwkdC' })
 Serverless: Uploading service updateNuggeteerDelivPrefs.zip file to S3 (8.8 MB)...
-Serverless: [AWS s3 200 1.281s 0 retries] uploadPart({ Body:
+Serverless: [AWS s3 200 0.905s 0 retries] uploadPart({ Body:
    <Buffer ab 56 88 bc 2b cf 7b e3 d9 66 ea ee 40 a7 76 9c 79 76 67 b7 10 0d bf 28 ce 6f c7 ef 51 5b 8c 95 ae d6 ec 02 46 70 42 77 42 41 b7 a2 d9 54 2f 75 f1 64 ... >,
   ContentLength: 3982812,
   PartNumber: 2,
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/updateNuggeteerPhone.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/updateNuggeteerPhone.zip',
   UploadId:
-   'jy5HBm2kCkPSKSSlkEXgMaUuXKq2oCIfvzhy._KL1QJS_NUROHfUBcAQdJsATuqoCp_9RMunVewxip4PvLz24V7WtaTOo499A76PBfXQPtv93HePPcSdjF0.vkgI1n16' })
-Serverless: [AWS s3 200 1.367s 0 retries] uploadPart({ Body:
+   'aA9SIeaws1rxIt5yd.0ajEC7TNV7xSbTYg3H2OlCHIvdLJ2qlUqXxsHejjeZfZu6Fz2tUeZIEQQdS8J9QVoydtm.bi6rTHUIeg07o0N.KvA5T79dVFmXHouPjtM5iJw8' })
+Serverless: [AWS s3 200 0.221s 0 retries] createMultipartUpload({ Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/getNuggeteerDelivPrefs.zip',
+  ContentType: 'application/zip',
+  Metadata:
+   { filesha256: 'e7jhYRdeYubWY9IxwZ3XOnqOyg9RJ4eSzu0QSPswGaY=' } })
+Serverless: [AWS s3 200 1.006s 0 retries] uploadPart({ Body:
    <Buffer 50 4b 03 04 14 00 08 00 08 00 00 00 21 00 00 00 00 00 00 00 00 00 00 00 00 00 41 00 00 00 6e 6f 64 65 5f 6d 6f 64 75 6c 65 73 2f 61 77 73 2d 73 64 6b ... >,
   ContentLength: 5242880,
   PartNumber: 1,
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/updateNuggeteerPhone.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/updateNuggeteerPhone.zip',
   UploadId:
-   'jy5HBm2kCkPSKSSlkEXgMaUuXKq2oCIfvzhy._KL1QJS_NUROHfUBcAQdJsATuqoCp_9RMunVewxip4PvLz24V7WtaTOo499A76PBfXQPtv93HePPcSdjF0.vkgI1n16' })
-Serverless: [AWS s3 200 0.278s 0 retries] createMultipartUpload({ Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/getNuggeteerDelivPrefs.zip',
-  ContentType: 'application/zip',
-  Metadata:
-   { filesha256: 'e7jhYRdeYubWY9IxwZ3XOnqOyg9RJ4eSzu0QSPswGaY=' } })
-Serverless: [AWS s3 200 0.168s 0 retries] completeMultipartUpload({ MultipartUpload:
+   'aA9SIeaws1rxIt5yd.0ajEC7TNV7xSbTYg3H2OlCHIvdLJ2qlUqXxsHejjeZfZu6Fz2tUeZIEQQdS8J9QVoydtm.bi6rTHUIeg07o0N.KvA5T79dVFmXHouPjtM5iJw8' })
+Serverless: [AWS s3 200 0.199s 0 retries] completeMultipartUpload({ MultipartUpload:
    { Parts:
       [ { ETag: '"6ac7db3995fd899b6f62547194f5ef12"', PartNumber: 1 },
         { ETag: '"bac3f8f0b39240a857d955a9cbe748ef"', PartNumber: 2 },
@@ -836,48 +836,77 @@ Serverless: [AWS s3 200 0.168s 0 retries] completeMultipartUpload({ MultipartUpl
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/updateNuggeteerPhone.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/updateNuggeteerPhone.zip',
   UploadId:
-   'jy5HBm2kCkPSKSSlkEXgMaUuXKq2oCIfvzhy._KL1QJS_NUROHfUBcAQdJsATuqoCp_9RMunVewxip4PvLz24V7WtaTOo499A76PBfXQPtv93HePPcSdjF0.vkgI1n16' })
+   'aA9SIeaws1rxIt5yd.0ajEC7TNV7xSbTYg3H2OlCHIvdLJ2qlUqXxsHejjeZfZu6Fz2tUeZIEQQdS8J9QVoydtm.bi6rTHUIeg07o0N.KvA5T79dVFmXHouPjtM5iJw8' })
 Serverless: Uploading service deleteNuggeteer.zip file to S3 (8.8 MB)...
+Serverless: [AWS s3 200 0.716s 0 retries] uploadPart({ Body:
+   <Buffer ab 56 88 bc 2b cf 7b e3 d9 66 ea ee 40 a7 76 9c 79 76 67 b7 10 0d bf 28 ce 6f c7 ef 51 5b 8c 95 ae d6 ec 02 46 70 42 77 42 41 b7 a2 d9 54 2f 75 f1 64 ... >,
+  ContentLength: 3982812,
+  PartNumber: 2,
+  Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/getNuggeteerDelivPrefs.zip',
+  UploadId:
+   'uppNXQX2DIP3YciVUfvpvRv7gcraCd6lu8FyfiD8yj0BToWSMkp2v2GcUU6PWR_MUC5gPQ0JGZAn4wYSur7DRccTKN1iXUcfD5O8IACbut3wc4eTsHoHWCuGSxie4LI5' })
+Serverless: [AWS s3 200 0.565s 0 retries] createMultipartUpload({ Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/updateNuggeteerDelivPrefs.zip',
+  ContentType: 'application/zip',
+  Metadata:
+   { filesha256: 'e7jhYRdeYubWY9IxwZ3XOnqOyg9RJ4eSzu0QSPswGaY=' } })
+Serverless: [AWS s3 200 1.048s 0 retries] uploadPart({ Body:
+   <Buffer 50 4b 03 04 14 00 08 00 08 00 00 00 21 00 00 00 00 00 00 00 00 00 00 00 00 00 41 00 00 00 6e 6f 64 65 5f 6d 6f 64 75 6c 65 73 2f 61 77 73 2d 73 64 6b ... >,
+  ContentLength: 5242880,
+  PartNumber: 1,
+  Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/getNuggeteerDelivPrefs.zip',
+  UploadId:
+   'uppNXQX2DIP3YciVUfvpvRv7gcraCd6lu8FyfiD8yj0BToWSMkp2v2GcUU6PWR_MUC5gPQ0JGZAn4wYSur7DRccTKN1iXUcfD5O8IACbut3wc4eTsHoHWCuGSxie4LI5' })
+Serverless: [AWS s3 200 0.44s 0 retries] completeMultipartUpload({ MultipartUpload:
+   { Parts:
+      [ { ETag: '"6ac7db3995fd899b6f62547194f5ef12"', PartNumber: 1 },
+        { ETag: '"bac3f8f0b39240a857d955a9cbe748ef"', PartNumber: 2 },
+        [length]: 2 ] },
+  Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/getNuggeteerDelivPrefs.zip',
+  UploadId:
+   'uppNXQX2DIP3YciVUfvpvRv7gcraCd6lu8FyfiD8yj0BToWSMkp2v2GcUU6PWR_MUC5gPQ0JGZAn4wYSur7DRccTKN1iXUcfD5O8IACbut3wc4eTsHoHWCuGSxie4LI5' })
+Serverless: Uploading service deleteSubscriber.zip file to S3 (8.8 MB)...
+Serverless: [AWS s3 200 0.908s 0 retries] uploadPart({ Body:
+   <Buffer ab 56 88 bc 2b cf 7b e3 d9 66 ea ee 40 a7 76 9c 79 76 67 b7 10 0d bf 28 ce 6f c7 ef 51 5b 8c 95 ae d6 ec 02 46 70 42 77 42 41 b7 a2 d9 54 2f 75 f1 64 ... >,
+  ContentLength: 3982812,
+  PartNumber: 2,
+  Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/updateNuggeteerDelivPrefs.zip',
+  UploadId:
+   'AV88CEKOPFsc_38oBI708b9ETbQfDEL18iN_yAP2D3WvMNxhbV8B0vrWoJFnoGNdoFKPUFkQbwFpVYz3uda0G9qBvWZ0nlJ.rC2A.6dq55hVuZFTUfljxTa15zrcaYCt' })
 Serverless: [AWS s3 200 0.251s 0 retries] createMultipartUpload({ Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/updateNuggeteerDelivPrefs.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/deleteNuggeteer.zip',
   ContentType: 'application/zip',
   Metadata:
    { filesha256: 'e7jhYRdeYubWY9IxwZ3XOnqOyg9RJ4eSzu0QSPswGaY=' } })
-Serverless: [AWS s3 200 0.933s 0 retries] uploadPart({ Body:
-   <Buffer ab 56 88 bc 2b cf 7b e3 d9 66 ea ee 40 a7 76 9c 79 76 67 b7 10 0d bf 28 ce 6f c7 ef 51 5b 8c 95 ae d6 ec 02 46 70 42 77 42 41 b7 a2 d9 54 2f 75 f1 64 ... >,
-  ContentLength: 3982812,
-  PartNumber: 2,
-  Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/updateNuggeteerDelivPrefs.zip',
-  UploadId:
-   'beP7KbeGN196VterdkRzyx4jmyd.wX8F.a8kwjC.iG9cL2cJK3ODYfH2Nqd882VwvVN2xM6TLNYqfHeNYKD86fBV2Bv0zZiwaX2YA42BKOLmKCLUvKq7uFrJGeVgW.7g' })
-Serverless: [AWS s3 200 1.622s 0 retries] uploadPart({ Body:
-   <Buffer ab 56 88 bc 2b cf 7b e3 d9 66 ea ee 40 a7 76 9c 79 76 67 b7 10 0d bf 28 ce 6f c7 ef 51 5b 8c 95 ae d6 ec 02 46 70 42 77 42 41 b7 a2 d9 54 2f 75 f1 64 ... >,
-  ContentLength: 3982812,
-  PartNumber: 2,
-  Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/getNuggeteerDelivPrefs.zip',
-  UploadId:
-   'iDr9wP9UVl_IVrW6Qd63wJGyxmvRjSBNZJ9RdbDbyip7bmo.DVk7q7O.idXvpylADL4lg_67eGJ5nyov5SfaM8C0fvgfaypnXQBu3zoKviBvr2Ucur28wvTW.dZHT50f' })
-Serverless: [AWS s3 200 1.553s 0 retries] uploadPart({ Body:
+Serverless: [AWS s3 200 1.122s 0 retries] uploadPart({ Body:
    <Buffer 50 4b 03 04 14 00 08 00 08 00 00 00 21 00 00 00 00 00 00 00 00 00 00 00 00 00 41 00 00 00 6e 6f 64 65 5f 6d 6f 64 75 6c 65 73 2f 61 77 73 2d 73 64 6b ... >,
   ContentLength: 5242880,
   PartNumber: 1,
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/updateNuggeteerDelivPrefs.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/updateNuggeteerDelivPrefs.zip',
   UploadId:
-   'beP7KbeGN196VterdkRzyx4jmyd.wX8F.a8kwjC.iG9cL2cJK3ODYfH2Nqd882VwvVN2xM6TLNYqfHeNYKD86fBV2Bv0zZiwaX2YA42BKOLmKCLUvKq7uFrJGeVgW.7g' })
-Serverless: [AWS s3 200 0.322s 0 retries] completeMultipartUpload({ MultipartUpload:
+   'AV88CEKOPFsc_38oBI708b9ETbQfDEL18iN_yAP2D3WvMNxhbV8B0vrWoJFnoGNdoFKPUFkQbwFpVYz3uda0G9qBvWZ0nlJ.rC2A.6dq55hVuZFTUfljxTa15zrcaYCt' })
+Serverless: [AWS s3 200 0.341s 0 retries] completeMultipartUpload({ MultipartUpload:
    { Parts:
       [ { ETag: '"6ac7db3995fd899b6f62547194f5ef12"', PartNumber: 1 },
         { ETag: '"bac3f8f0b39240a857d955a9cbe748ef"', PartNumber: 2 },
@@ -885,67 +914,38 @@ Serverless: [AWS s3 200 0.322s 0 retries] completeMultipartUpload({ MultipartUpl
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/updateNuggeteerDelivPrefs.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/updateNuggeteerDelivPrefs.zip',
   UploadId:
-   'beP7KbeGN196VterdkRzyx4jmyd.wX8F.a8kwjC.iG9cL2cJK3ODYfH2Nqd882VwvVN2xM6TLNYqfHeNYKD86fBV2Bv0zZiwaX2YA42BKOLmKCLUvKq7uFrJGeVgW.7g' })
-Serverless: Uploading service deleteSubscriber.zip file to S3 (8.8 MB)...
-Serverless: [AWS s3 200 0.143s 0 retries] createMultipartUpload({ Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/deleteNuggeteer.zip',
-  ContentType: 'application/zip',
-  Metadata:
-   { filesha256: 'e7jhYRdeYubWY9IxwZ3XOnqOyg9RJ4eSzu0QSPswGaY=' } })
-Serverless: [AWS s3 200 3.481s 0 retries] uploadPart({ Body:
-   <Buffer 50 4b 03 04 14 00 08 00 08 00 00 00 21 00 00 00 00 00 00 00 00 00 00 00 00 00 41 00 00 00 6e 6f 64 65 5f 6d 6f 64 75 6c 65 73 2f 61 77 73 2d 73 64 6b ... >,
-  ContentLength: 5242880,
-  PartNumber: 1,
-  Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/getNuggeteerDelivPrefs.zip',
-  UploadId:
-   'iDr9wP9UVl_IVrW6Qd63wJGyxmvRjSBNZJ9RdbDbyip7bmo.DVk7q7O.idXvpylADL4lg_67eGJ5nyov5SfaM8C0fvgfaypnXQBu3zoKviBvr2Ucur28wvTW.dZHT50f' })
-Serverless: [AWS s3 200 0.179s 0 retries] completeMultipartUpload({ MultipartUpload:
-   { Parts:
-      [ { ETag: '"6ac7db3995fd899b6f62547194f5ef12"', PartNumber: 1 },
-        { ETag: '"bac3f8f0b39240a857d955a9cbe748ef"', PartNumber: 2 },
-        [length]: 2 ] },
-  Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/getNuggeteerDelivPrefs.zip',
-  UploadId:
-   'iDr9wP9UVl_IVrW6Qd63wJGyxmvRjSBNZJ9RdbDbyip7bmo.DVk7q7O.idXvpylADL4lg_67eGJ5nyov5SfaM8C0fvgfaypnXQBu3zoKviBvr2Ucur28wvTW.dZHT50f' })
+   'AV88CEKOPFsc_38oBI708b9ETbQfDEL18iN_yAP2D3WvMNxhbV8B0vrWoJFnoGNdoFKPUFkQbwFpVYz3uda0G9qBvWZ0nlJ.rC2A.6dq55hVuZFTUfljxTa15zrcaYCt' })
 Serverless: Uploading service createNuggeteer.zip file to S3 (8.8 MB)...
-Serverless: [AWS s3 200 0.179s 0 retries] createMultipartUpload({ Bucket:
+Serverless: [AWS s3 200 0.399s 0 retries] createMultipartUpload({ Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/deleteSubscriber.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/deleteSubscriber.zip',
   ContentType: 'application/zip',
   Metadata:
    { filesha256: 'e7jhYRdeYubWY9IxwZ3XOnqOyg9RJ4eSzu0QSPswGaY=' } })
-Serverless: [AWS s3 200 1.429s 0 retries] uploadPart({ Body:
-   <Buffer ab 56 88 bc 2b cf 7b e3 d9 66 ea ee 40 a7 76 9c 79 76 67 b7 10 0d bf 28 ce 6f c7 ef 51 5b 8c 95 ae d6 ec 02 46 70 42 77 42 41 b7 a2 d9 54 2f 75 f1 64 ... >,
-  ContentLength: 3982812,
-  PartNumber: 2,
-  Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/deleteNuggeteer.zip',
-  UploadId:
-   'sd5PCnNrLTQvkeuhMEx1tSJVrZu5g0_9CuTGMrlvFQL4z8k4LAR_Asw11vxThHTAYFbS6y2YamPFkvEKO3Q46W6UxyZGV.gpYM.jBm_Rq8_angvWr1TLiFPIDqvudTFQ' })
-Serverless: [AWS s3 200 1.611s 0 retries] uploadPart({ Body:
+Serverless: [AWS s3 200 1s 0 retries] uploadPart({ Body:
    <Buffer 50 4b 03 04 14 00 08 00 08 00 00 00 21 00 00 00 00 00 00 00 00 00 00 00 00 00 41 00 00 00 6e 6f 64 65 5f 6d 6f 64 75 6c 65 73 2f 61 77 73 2d 73 64 6b ... >,
   ContentLength: 5242880,
   PartNumber: 1,
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/deleteNuggeteer.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/deleteNuggeteer.zip',
   UploadId:
-   'sd5PCnNrLTQvkeuhMEx1tSJVrZu5g0_9CuTGMrlvFQL4z8k4LAR_Asw11vxThHTAYFbS6y2YamPFkvEKO3Q46W6UxyZGV.gpYM.jBm_Rq8_angvWr1TLiFPIDqvudTFQ' })
-Serverless: [AWS s3 200 0.191s 0 retries] completeMultipartUpload({ MultipartUpload:
+   'sbqso3NYelgmEZt5UvtzHSU_QMxsn7jjtJpeTuMcyEay4znQ8ZMOhvkzScnteEhnbzJGTu1uOQuK1cN1GDCVhZTP7gHJTLNig3jlaIofnMXuOdaw6G_yUX.MnVhy0Af5' })
+Serverless: [AWS s3 200 1.002s 0 retries] uploadPart({ Body:
+   <Buffer ab 56 88 bc 2b cf 7b e3 d9 66 ea ee 40 a7 76 9c 79 76 67 b7 10 0d bf 28 ce 6f c7 ef 51 5b 8c 95 ae d6 ec 02 46 70 42 77 42 41 b7 a2 d9 54 2f 75 f1 64 ... >,
+  ContentLength: 3982812,
+  PartNumber: 2,
+  Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/deleteNuggeteer.zip',
+  UploadId:
+   'sbqso3NYelgmEZt5UvtzHSU_QMxsn7jjtJpeTuMcyEay4znQ8ZMOhvkzScnteEhnbzJGTu1uOQuK1cN1GDCVhZTP7gHJTLNig3jlaIofnMXuOdaw6G_yUX.MnVhy0Af5' })
+Serverless: [AWS s3 200 0.224s 0 retries] completeMultipartUpload({ MultipartUpload:
    { Parts:
       [ { ETag: '"6ac7db3995fd899b6f62547194f5ef12"', PartNumber: 1 },
         { ETag: '"bac3f8f0b39240a857d955a9cbe748ef"', PartNumber: 2 },
@@ -953,37 +953,47 @@ Serverless: [AWS s3 200 0.191s 0 retries] completeMultipartUpload({ MultipartUpl
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/deleteNuggeteer.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/deleteNuggeteer.zip',
   UploadId:
-   'sd5PCnNrLTQvkeuhMEx1tSJVrZu5g0_9CuTGMrlvFQL4z8k4LAR_Asw11vxThHTAYFbS6y2YamPFkvEKO3Q46W6UxyZGV.gpYM.jBm_Rq8_angvWr1TLiFPIDqvudTFQ' })
-Serverless: [AWS s3 200 0.176s 0 retries] createMultipartUpload({ Bucket:
+   'sbqso3NYelgmEZt5UvtzHSU_QMxsn7jjtJpeTuMcyEay4znQ8ZMOhvkzScnteEhnbzJGTu1uOQuK1cN1GDCVhZTP7gHJTLNig3jlaIofnMXuOdaw6G_yUX.MnVhy0Af5' })
+Serverless: [AWS s3 200 0.406s 0 retries] createMultipartUpload({ Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/createNuggeteer.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/createNuggeteer.zip',
   ContentType: 'application/zip',
   Metadata:
    { filesha256: 'e7jhYRdeYubWY9IxwZ3XOnqOyg9RJ4eSzu0QSPswGaY=' } })
-Serverless: [AWS s3 200 1.287s 0 retries] uploadPart({ Body:
-   <Buffer ab 56 88 bc 2b cf 7b e3 d9 66 ea ee 40 a7 76 9c 79 76 67 b7 10 0d bf 28 ce 6f c7 ef 51 5b 8c 95 ae d6 ec 02 46 70 42 77 42 41 b7 a2 d9 54 2f 75 f1 64 ... >,
-  ContentLength: 3982812,
-  PartNumber: 2,
-  Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/deleteSubscriber.zip',
-  UploadId:
-   'BewG32wmn3gzoiomhbIjEbnSGHlXm.JKSc42rky4f7OXT8u6J0D_PMFYzhaF9WhTCvuL5lgRKitVvh9F4jG0bjh6ZclDKUwdNGOkC6Ilpj7nWF.TVdbcMPV8iIhQXA.a' })
-Serverless: [AWS s3 200 1.605s 0 retries] uploadPart({ Body:
+Serverless: [AWS s3 200 0.95s 0 retries] uploadPart({ Body:
    <Buffer 50 4b 03 04 14 00 08 00 08 00 00 00 21 00 00 00 00 00 00 00 00 00 00 00 00 00 41 00 00 00 6e 6f 64 65 5f 6d 6f 64 75 6c 65 73 2f 61 77 73 2d 73 64 6b ... >,
   ContentLength: 5242880,
   PartNumber: 1,
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/deleteSubscriber.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/deleteSubscriber.zip',
   UploadId:
-   'BewG32wmn3gzoiomhbIjEbnSGHlXm.JKSc42rky4f7OXT8u6J0D_PMFYzhaF9WhTCvuL5lgRKitVvh9F4jG0bjh6ZclDKUwdNGOkC6Ilpj7nWF.TVdbcMPV8iIhQXA.a' })
-Serverless: [AWS s3 200 0.593s 0 retries] completeMultipartUpload({ MultipartUpload:
+   'soMjFaiojQBQ9xFdxXrvCKrmOeie1WZo3YhxkAAVRCW2vik1Gt9bQ0KiGQ94XEf9bvqpoBPT55fCndzEfOPrpFS.8FD9H0FLMQXRDOtISFcYGHyEckdArPjt9Q4pvReW' })
+Serverless: [AWS s3 200 1.559s 0 retries] uploadPart({ Body:
+   <Buffer ab 56 88 bc 2b cf 7b e3 d9 66 ea ee 40 a7 76 9c 79 76 67 b7 10 0d bf 28 ce 6f c7 ef 51 5b 8c 95 ae d6 ec 02 46 70 42 77 42 41 b7 a2 d9 54 2f 75 f1 64 ... >,
+  ContentLength: 3982812,
+  PartNumber: 2,
+  Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/deleteSubscriber.zip',
+  UploadId:
+   'soMjFaiojQBQ9xFdxXrvCKrmOeie1WZo3YhxkAAVRCW2vik1Gt9bQ0KiGQ94XEf9bvqpoBPT55fCndzEfOPrpFS.8FD9H0FLMQXRDOtISFcYGHyEckdArPjt9Q4pvReW' })
+Serverless: [AWS s3 200 0.857s 0 retries] uploadPart({ Body:
+   <Buffer ab 56 88 bc 2b cf 7b e3 d9 66 ea ee 40 a7 76 9c 79 76 67 b7 10 0d bf 28 ce 6f c7 ef 51 5b 8c 95 ae d6 ec 02 46 70 42 77 42 41 b7 a2 d9 54 2f 75 f1 64 ... >,
+  ContentLength: 3982812,
+  PartNumber: 2,
+  Bucket:
+   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
+  Key:
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/createNuggeteer.zip',
+  UploadId:
+   'XZgPiXCpW9DWQmjaT0zHRl.99tpsI_4xR05qrXG8kKAz_nZZl5O_.A18zlWUGlIKf0fmHXHqPfz7_vHq2BVO0fYWdmoHaU1p49AFApnoPzJNMzD5WY4KpOi8V.hD04af' })
+Serverless: [AWS s3 200 0.22s 0 retries] completeMultipartUpload({ MultipartUpload:
    { Parts:
       [ { ETag: '"6ac7db3995fd899b6f62547194f5ef12"', PartNumber: 1 },
         { ETag: '"bac3f8f0b39240a857d955a9cbe748ef"', PartNumber: 2 },
@@ -991,30 +1001,20 @@ Serverless: [AWS s3 200 0.593s 0 retries] completeMultipartUpload({ MultipartUpl
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/deleteSubscriber.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/deleteSubscriber.zip',
   UploadId:
-   'BewG32wmn3gzoiomhbIjEbnSGHlXm.JKSc42rky4f7OXT8u6J0D_PMFYzhaF9WhTCvuL5lgRKitVvh9F4jG0bjh6ZclDKUwdNGOkC6Ilpj7nWF.TVdbcMPV8iIhQXA.a' })
-Serverless: [AWS s3 200 2.524s 0 retries] uploadPart({ Body:
-   <Buffer ab 56 88 bc 2b cf 7b e3 d9 66 ea ee 40 a7 76 9c 79 76 67 b7 10 0d bf 28 ce 6f c7 ef 51 5b 8c 95 ae d6 ec 02 46 70 42 77 42 41 b7 a2 d9 54 2f 75 f1 64 ... >,
-  ContentLength: 3982812,
-  PartNumber: 2,
-  Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/createNuggeteer.zip',
-  UploadId:
-   'OhN35sMF1o5J36wafMz29yVdT9YwVAefXmJz60WRd9DHm08o_ryswQs1AL_n82zx.9kMfnSOU.sPbG._W9OP.VOvh.01QyKrE4yiXvYVZNwwvwudV2fjeM7n2hsa57Zl' })
-Serverless: [AWS s3 200 8.341s 0 retries] uploadPart({ Body:
+   'soMjFaiojQBQ9xFdxXrvCKrmOeie1WZo3YhxkAAVRCW2vik1Gt9bQ0KiGQ94XEf9bvqpoBPT55fCndzEfOPrpFS.8FD9H0FLMQXRDOtISFcYGHyEckdArPjt9Q4pvReW' })
+Serverless: [AWS s3 200 1.073s 0 retries] uploadPart({ Body:
    <Buffer 50 4b 03 04 14 00 08 00 08 00 00 00 21 00 00 00 00 00 00 00 00 00 00 00 00 00 41 00 00 00 6e 6f 64 65 5f 6d 6f 64 75 6c 65 73 2f 61 77 73 2d 73 64 6b ... >,
   ContentLength: 5242880,
   PartNumber: 1,
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/createNuggeteer.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/createNuggeteer.zip',
   UploadId:
-   'OhN35sMF1o5J36wafMz29yVdT9YwVAefXmJz60WRd9DHm08o_ryswQs1AL_n82zx.9kMfnSOU.sPbG._W9OP.VOvh.01QyKrE4yiXvYVZNwwvwudV2fjeM7n2hsa57Zl' })
-Serverless: [AWS s3 200 0.25s 0 retries] completeMultipartUpload({ MultipartUpload:
+   'XZgPiXCpW9DWQmjaT0zHRl.99tpsI_4xR05qrXG8kKAz_nZZl5O_.A18zlWUGlIKf0fmHXHqPfz7_vHq2BVO0fYWdmoHaU1p49AFApnoPzJNMzD5WY4KpOi8V.hD04af' })
+Serverless: [AWS s3 200 0.152s 0 retries] completeMultipartUpload({ MultipartUpload:
    { Parts:
       [ { ETag: '"6ac7db3995fd899b6f62547194f5ef12"', PartNumber: 1 },
         { ETag: '"bac3f8f0b39240a857d955a9cbe748ef"', PartNumber: 2 },
@@ -1022,268 +1022,376 @@ Serverless: [AWS s3 200 0.25s 0 retries] completeMultipartUpload({ MultipartUplo
   Bucket:
    'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
   Key:
-   'serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/createNuggeteer.zip',
+   'serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/createNuggeteer.zip',
   UploadId:
-   'OhN35sMF1o5J36wafMz29yVdT9YwVAefXmJz60WRd9DHm08o_ryswQs1AL_n82zx.9kMfnSOU.sPbG._W9OP.VOvh.01QyKrE4yiXvYVZNwwvwudV2fjeM7n2hsa57Zl' })
+   'XZgPiXCpW9DWQmjaT0zHRl.99tpsI_4xR05qrXG8kKAz_nZZl5O_.A18zlWUGlIKf0fmHXHqPfz7_vHq2BVO0fYWdmoHaU1p49AFApnoPzJNMzD5WY4KpOi8V.hD04af' })
 Serverless: Validating template...
-Serverless: [AWS cloudformation 200 0.665s 0 retries] validateTemplate({ TemplateURL:
-   'https://s3.amazonaws.com/the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6/serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/compiled-cloudformation-template.json' })
+Serverless: [AWS cloudformation 200 0.616s 0 retries] validateTemplate({ TemplateURL:
+   'https://s3.amazonaws.com/the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6/serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/compiled-cloudformation-template.json' })
 Serverless: Updating Stack...
-Serverless: [AWS cloudformation 200 1.058s 0 retries] updateStack({ StackName: 'the-daly-nugget-dev',
+Serverless: [AWS cloudformation 200 1.211s 0 retries] updateStack({ StackName: 'the-daly-nugget-dev',
   Capabilities: [ 'CAPABILITY_IAM', 'CAPABILITY_NAMED_IAM', [length]: 2 ],
   Parameters: [ [length]: 0 ],
   TemplateURL:
-   'https://s3.amazonaws.com/the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6/serverless/the-daly-nugget/dev/1593925181641-2020-07-05T04:59:41.641Z/compiled-cloudformation-template.json',
+   'https://s3.amazonaws.com/the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6/serverless/the-daly-nugget/dev/1593946602128-2020-07-05T10:56:42.128Z/compiled-cloudformation-template.json',
   Tags: [ { Key: 'STAGE', Value: 'dev' }, [length]: 1 ] })
 Serverless: Checking Stack update progress...
-Serverless: [AWS cloudformation 200 0.942s 0 retries] describeStackEvents({ StackName:
+Serverless: [AWS cloudformation 200 0.521s 0 retries] describeStackEvents({ StackName:
    'arn:aws:cloudformation:us-east-1:550659257614:stack/the-daly-nugget-dev/6279c3f0-be5b-11ea-9891-1225390e8313' })
 CloudFormation - UPDATE_IN_PROGRESS - AWS::CloudFormation::Stack - the-daly-nugget-dev
-Serverless: [AWS cloudformation 200 0.203s 0 retries] describeStackEvents({ StackName:
+Serverless: [AWS cloudformation 200 0.313s 0 retries] describeStackEvents({ StackName:
    'arn:aws:cloudformation:us-east-1:550659257614:stack/the-daly-nugget-dev/6279c3f0-be5b-11ea-9891-1225390e8313' })
-Serverless: [AWS cloudformation 200 0.231s 0 retries] describeStackEvents({ StackName:
+Serverless: [AWS cloudformation 200 0.467s 0 retries] describeStackEvents({ StackName:
    'arn:aws:cloudformation:us-east-1:550659257614:stack/the-daly-nugget-dev/6279c3f0-be5b-11ea-9891-1225390e8313' })
-Serverless: [AWS cloudformation 200 0.398s 0 retries] describeStackEvents({ StackName:
-   'arn:aws:cloudformation:us-east-1:550659257614:stack/the-daly-nugget-dev/6279c3f0-be5b-11ea-9891-1225390e8313' })
-Serverless: [AWS cloudformation 200 0.212s 0 retries] describeStackEvents({ StackName:
-   'arn:aws:cloudformation:us-east-1:550659257614:stack/the-daly-nugget-dev/6279c3f0-be5b-11ea-9891-1225390e8313' })
-Serverless: [AWS cloudformation 200 0.237s 0 retries] describeStackEvents({ StackName:
-   'arn:aws:cloudformation:us-east-1:550659257614:stack/the-daly-nugget-dev/6279c3f0-be5b-11ea-9891-1225390e8313' })
-Serverless: [AWS cloudformation 200 0.232s 0 retries] describeStackEvents({ StackName:
-   'arn:aws:cloudformation:us-east-1:550659257614:stack/the-daly-nugget-dev/6279c3f0-be5b-11ea-9891-1225390e8313' })
-CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - DeleteCognitoUserLambdaFunction
-CloudFormation - UPDATE_IN_PROGRESS - AWS::CloudFormation::Stack - StepStoneSvCognitoIdCustomResourceStack
-CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - CreateSubscriberLambdaFunction
-CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - SendNuggetsTwiceWeeklyLambdaFunction
-CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - SyncSubscriberVerificationsLambdaFunction
-CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - GetNuggeteerLambdaFunction
-CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - DeleteSubscriberLambdaFunction
-CloudFormation - UPDATE_COMPLETE - AWS::CloudFormation::Stack - StepStoneSvCognitoIdCustomResourceStack
-CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - GetRandomNuggetLambdaFunction
-CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - UpdateNuggeteerPhoneLambdaFunction
-CloudFormation - UPDATE_IN_PROGRESS - AWS::CloudFormation::Stack - BinxioCertCustomResourceStack
-CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - GetServerlessOutputsLambdaFunction
-CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - SendNuggetsWeeklyLambdaFunction
-CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - SendNuggetsTwiceDailyLambdaFunction
-CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - SyncSubscriberTblAndSESLambdaFunction
-CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - DeleteCognitoUserLambdaFunction
-CloudFormation - UPDATE_IN_PROGRESS - AWS::CloudFormation::Stack - BinxioSesCustomResourceStack
-CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - DeleteNuggeteerLambdaFunction
-CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - CreateSubscriberLambdaFunction
-CloudFormation - UPDATE_IN_PROGRESS - AWS::CloudFormation::Stack - StepStoneCpNsCustomResourceStack
-CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - GetNuggeteerLambdaFunction
-CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - GetNuggetOfTheDayLambdaFunction
-CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - SyncSubscriberVerificationsLambdaFunction
-CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - SendNuggetsTwiceWeeklyLambdaFunction
-CloudFormation - UPDATE_COMPLETE - AWS::CloudFormation::Stack - BinxioCertCustomResourceStack
-CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - EmailNuggetOfTheDayLambdaFunction
-CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - UpdateNuggeteerDelivPrefsLambdaFunction
-CloudFormation - UPDATE_COMPLETE - AWS::CloudFormation::Stack - BinxioSesCustomResourceStack
-CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - DeleteSubscriberLambdaFunction
-CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - UpdateNuggeteerPhoneLambdaFunction
-CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - GetServerlessOutputsLambdaFunction
-Serverless: [AWS cloudformation 200 0.259s 0 retries] describeStackEvents({ StackName:
-   'arn:aws:cloudformation:us-east-1:550659257614:stack/the-daly-nugget-dev/6279c3f0-be5b-11ea-9891-1225390e8313' })
-CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - GetNuggeteerDelivPrefsLambdaFunction
-CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - SyncSubscriberTblAndSESLambdaFunction
-CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - GetRandomNuggetLambdaFunction
-CloudFormation - UPDATE_COMPLETE - AWS::CloudFormation::Stack - StepStoneCpNsCustomResourceStack
-CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - DeleteNuggeteerLambdaFunction
-CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - SendNuggetsTwiceDailyLambdaFunction
-CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - SendNuggetsWeeklyLambdaFunction
-CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - RecordNuggetOfTheDayLambdaFunction
-CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - UpdateNuggeteerDelivPrefsLambdaFunction
-CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - GetNuggetOfTheDayLambdaFunction
-CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - EmailNuggetOfTheDayLambdaFunction
-CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - CreateNuggeteerLambdaFunction
-CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - GetNuggeteerDelivPrefsLambdaFunction
-CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - RecordNuggetOfTheDayLambdaFunction
-CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - SendNuggetsDailyLambdaFunction
-CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - CreateNuggeteerLambdaFunction
-CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - SendNuggetsDailyLambdaFunction
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - DeleteCognitoUserLambdaVersionVPxR0AQBSmpjCdJOixvCdDaa2e5AvN9RAGC6LIlyI
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - SendNuggetsTwiceDailyLambdaVersionoGmgzttgwBJZxBu6SZAFT70JBCcmvDkpcJ7bEOUNBCQ
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GetServerlessOutputsLambdaVersionEBKNJ7vCMscXDmhPUktcE7BPcEzXUAKV3zdX6bww
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - SendNuggetsTwiceWeeklyLambdaVersionZ6lYWd6CP94kxq8dwiKYSDAUz544ISZKzbW89BdsJ6Q
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GetRandomNuggetLambdaVersionQyeMRhcRQkjLgZrGfSCJqNIGNXjsxDKdgjtRMEftwc
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - CreateSubscriberLambdaVersionoZZH4AeeEApHmv2hn9QVBNnSjwmtX8x9sdrHZC3TE
-Serverless: [AWS cloudformation 200 0.983s 0 retries] describeStackEvents({ StackName:
-   'arn:aws:cloudformation:us-east-1:550659257614:stack/the-daly-nugget-dev/6279c3f0-be5b-11ea-9891-1225390e8313' })
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - SyncSubscriberVerificationsLambdaVersionZtXRCFh1Yx5RRkqLawCm7hGAYiKoBf09AZZiPRpXU9s
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - DeleteCognitoUserLambdaVersionVPxR0AQBSmpjCdJOixvCdDaa2e5AvN9RAGC6LIlyI
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - UpdateNuggeteerDelivPrefsLambdaVersion9lJFywRPB3w91R1HJQORc8wkLqFekcMYA3Ln3A94
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - SendNuggetsTwiceWeeklyLambdaVersionZ6lYWd6CP94kxq8dwiKYSDAUz544ISZKzbW89BdsJ6Q
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - SendNuggetsTwiceDailyLambdaVersionoGmgzttgwBJZxBu6SZAFT70JBCcmvDkpcJ7bEOUNBCQ
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - SyncSubscriberTblAndSESLambdaVersionJDV90UJmFScaD1vwG4tT5gjqK1mmwIJM0tWviDYyxQ
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - UpdateNuggeteerPhoneLambdaVersionPv8sbcKJh7IeEC1rnuxug2vsJFUtVhw0Zkb526A
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GetNuggetOfTheDayLambdaVersionL1CLiRqhlUz0scAN6QgNbDV3ob7fBCsnKACet0
-CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - DeleteCognitoUserLambdaVersionVPxR0AQBSmpjCdJOixvCdDaa2e5AvN9RAGC6LIlyI
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GetRandomNuggetLambdaVersionQyeMRhcRQkjLgZrGfSCJqNIGNXjsxDKdgjtRMEftwc
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - DeleteNuggeteerLambdaVersionEIV8YsqJwZlo2RBoYVqNn7rRRLUrWoyPyPTBbgRHYA
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GetServerlessOutputsLambdaVersionEBKNJ7vCMscXDmhPUktcE7BPcEzXUAKV3zdX6bww
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - SendNuggetsWeeklyLambdaVersionIpjrBNgRABsRgJdulzbzwUoRLxzhU6pU6oyoj1CQ
-CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - SendNuggetsTwiceWeeklyLambdaVersionZ6lYWd6CP94kxq8dwiKYSDAUz544ISZKzbW89BdsJ6Q
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - SyncSubscriberVerificationsLambdaVersionZtXRCFh1Yx5RRkqLawCm7hGAYiKoBf09AZZiPRpXU9s
-CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - SendNuggetsTwiceDailyLambdaVersionoGmgzttgwBJZxBu6SZAFT70JBCcmvDkpcJ7bEOUNBCQ
-CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - GetServerlessOutputsLambdaVersionEBKNJ7vCMscXDmhPUktcE7BPcEzXUAKV3zdX6bww
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - CreateSubscriberLambdaVersionoZZH4AeeEApHmv2hn9QVBNnSjwmtX8x9sdrHZC3TE
-CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - GetRandomNuggetLambdaVersionQyeMRhcRQkjLgZrGfSCJqNIGNXjsxDKdgjtRMEftwc
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - UpdateNuggeteerDelivPrefsLambdaVersion9lJFywRPB3w91R1HJQORc8wkLqFekcMYA3Ln3A94
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GetNuggeteerDelivPrefsLambdaVersiondRxDJd374OfBJpohSig01EhrJBycFRKRWLTIvvsfUw
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - DeleteSubscriberLambdaVersionDQcoWUO54OdwRFvDsRxmoj2pEnJUPgoavwFXTUYJwwo
-CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - SyncSubscriberVerificationsLambdaVersionZtXRCFh1Yx5RRkqLawCm7hGAYiKoBf09AZZiPRpXU9s
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - EmailNuggetOfTheDayLambdaVersionhEe5R5LrW0xsdOTWDDjw3ZalMrsUIqbwf0hejzM
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GetNuggetOfTheDayLambdaVersionL1CLiRqhlUz0scAN6QgNbDV3ob7fBCsnKACet0
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - RecordNuggetOfTheDayLambdaVersionPpB7S8aqR5AtsxLaP4fKo4Cmc6Ofuys7aoUdMbw5wg
-CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - CreateSubscriberLambdaVersionoZZH4AeeEApHmv2hn9QVBNnSjwmtX8x9sdrHZC3TE
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GetNuggeteerLambdaVersion5DUCfc96d1n2Df6FsX9Je71IYsA50rhcm3fJFx5Wzk
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - DeleteNuggeteerLambdaVersionEIV8YsqJwZlo2RBoYVqNn7rRRLUrWoyPyPTBbgRHYA
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - SendNuggetsWeeklyLambdaVersionIpjrBNgRABsRgJdulzbzwUoRLxzhU6pU6oyoj1CQ
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - UpdateNuggeteerPhoneLambdaVersionPv8sbcKJh7IeEC1rnuxug2vsJFUtVhw0Zkb526A
-CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - UpdateNuggeteerDelivPrefsLambdaVersion9lJFywRPB3w91R1HJQORc8wkLqFekcMYA3Ln3A94
-CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - GetNuggetOfTheDayLambdaVersionL1CLiRqhlUz0scAN6QgNbDV3ob7fBCsnKACet0
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - SyncSubscriberTblAndSESLambdaVersionJDV90UJmFScaD1vwG4tT5gjqK1mmwIJM0tWviDYyxQ
-CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - SendNuggetsWeeklyLambdaVersionIpjrBNgRABsRgJdulzbzwUoRLxzhU6pU6oyoj1CQ
-CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - DeleteNuggeteerLambdaVersionEIV8YsqJwZlo2RBoYVqNn7rRRLUrWoyPyPTBbgRHYA
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - EmailNuggetOfTheDayLambdaVersionhEe5R5LrW0xsdOTWDDjw3ZalMrsUIqbwf0hejzM
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GetNuggeteerDelivPrefsLambdaVersiondRxDJd374OfBJpohSig01EhrJBycFRKRWLTIvvsfUw
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - RecordNuggetOfTheDayLambdaVersionPpB7S8aqR5AtsxLaP4fKo4Cmc6Ofuys7aoUdMbw5wg
-CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - SyncSubscriberTblAndSESLambdaVersionJDV90UJmFScaD1vwG4tT5gjqK1mmwIJM0tWviDYyxQ
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - DeleteSubscriberLambdaVersionDQcoWUO54OdwRFvDsRxmoj2pEnJUPgoavwFXTUYJwwo
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - SendNuggetsDailyLambdaVersion9RNDAFYRhpAZiLir5jYS2PKQKJPRi7Tre3HgPxavDk
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GetNuggeteerLambdaVersion5DUCfc96d1n2Df6FsX9Je71IYsA50rhcm3fJFx5Wzk
-CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - EmailNuggetOfTheDayLambdaVersionhEe5R5LrW0xsdOTWDDjw3ZalMrsUIqbwf0hejzM
-CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - GetNuggeteerDelivPrefsLambdaVersiondRxDJd374OfBJpohSig01EhrJBycFRKRWLTIvvsfUw
-CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - UpdateNuggeteerPhoneLambdaVersionPv8sbcKJh7IeEC1rnuxug2vsJFUtVhw0Zkb526A
-CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - DeleteSubscriberLambdaVersionDQcoWUO54OdwRFvDsRxmoj2pEnJUPgoavwFXTUYJwwo
-CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - RecordNuggetOfTheDayLambdaVersionPpB7S8aqR5AtsxLaP4fKo4Cmc6Ofuys7aoUdMbw5wg
-CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - GetNuggeteerLambdaVersion5DUCfc96d1n2Df6FsX9Je71IYsA50rhcm3fJFx5Wzk
-CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Deployment - ApiGatewayDeployment1593925123450
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - CreateNuggeteerLambdaVersion48cF4F2vx33bRq7GHnPpA09oN7demrIi9qHtavfLx0
-CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Deployment - ApiGatewayDeployment1593925123450
-CloudFormation - CREATE_COMPLETE - AWS::ApiGateway::Deployment - ApiGatewayDeployment1593925123450
-Serverless: [AWS cloudformation 200 0.222s 0 retries] describeStackEvents({ StackName:
-   'arn:aws:cloudformation:us-east-1:550659257614:stack/the-daly-nugget-dev/6279c3f0-be5b-11ea-9891-1225390e8313' })
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - CreateNuggeteerLambdaVersion48cF4F2vx33bRq7GHnPpA09oN7demrIi9qHtavfLx0
-CloudFormation - UPDATE_IN_PROGRESS - AWS::CloudFormation::Stack - StepStoneCfnSesVerTmpltResourceStack
-CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - SendNuggetsDailyLambdaVersion9RNDAFYRhpAZiLir5jYS2PKQKJPRi7Tre3HgPxavDk
-CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - CreateNuggeteerLambdaVersion48cF4F2vx33bRq7GHnPpA09oN7demrIi9qHtavfLx0
-CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - SendNuggetsDailyLambdaVersion9RNDAFYRhpAZiLir5jYS2PKQKJPRi7Tre3HgPxavDk
-CloudFormation - UPDATE_COMPLETE - AWS::CloudFormation::Stack - StepStoneCfnSesVerTmpltResourceStack
 Serverless: [AWS cloudformation 200 0.241s 0 retries] describeStackEvents({ StackName:
    'arn:aws:cloudformation:us-east-1:550659257614:stack/the-daly-nugget-dev/6279c3f0-be5b-11ea-9891-1225390e8313' })
-Serverless: [AWS cloudformation 200 0.553s 0 retries] describeStackEvents({ StackName:
+Serverless: [AWS cloudformation 200 0.227s 0 retries] describeStackEvents({ StackName:
    'arn:aws:cloudformation:us-east-1:550659257614:stack/the-daly-nugget-dev/6279c3f0-be5b-11ea-9891-1225390e8313' })
-CloudFormation - UPDATE_COMPLETE_CLEANUP_IN_PROGRESS - AWS::CloudFormation::Stack - the-daly-nugget-dev
-CloudFormation - UPDATE_COMPLETE - AWS::CloudFormation::Stack - StepStoneSvCognitoIdCustomResourceStack
-CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - SyncSubscriberVerificationsLambdaVersionGL7cKobVPVGzOFp49hJwN2VrZ3ep2emsxDkDIrqZC0
-CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - SendNuggetsWeeklyLambdaVersionj7CgiX3SDUiphsGo3WGnVvHt7ZUmKdeJkUhj4tWlGXk
+Serverless: [AWS cloudformation 200 0.709s 0 retries] describeStackEvents({ StackName:
+   'arn:aws:cloudformation:us-east-1:550659257614:stack/the-daly-nugget-dev/6279c3f0-be5b-11ea-9891-1225390e8313' })
+Serverless: [AWS cloudformation 200 0.323s 0 retries] describeStackEvents({ StackName:
+   'arn:aws:cloudformation:us-east-1:550659257614:stack/the-daly-nugget-dev/6279c3f0-be5b-11ea-9891-1225390e8313' })
+CloudFormation - UPDATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodDeleteDashcognitoDashuserOptions
+CloudFormation - UPDATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodDeleteDashsubscriberOptions
+CloudFormation - UPDATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodNuggetDashofDashdayOptions
+CloudFormation - UPDATE_IN_PROGRESS - AWS::CloudFormation::Stack - BinxioCertCustomResourceStack
+CloudFormation - UPDATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodRandomDashnuggetOptions
+CloudFormation - UPDATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodRegisterDashnuggeteerOptions
 CloudFormation - UPDATE_COMPLETE - AWS::CloudFormation::Stack - BinxioCertCustomResourceStack
-CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - SendNuggetsTwiceWeeklyLambdaVersion1tMRaV4Y60RsAkkDc3mLSmWQRzJwOv5laobf2GTcbc
-CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - RecordNuggetOfTheDayLambdaVersionFlTvz2BVfZnVhPXwB0O2ctFNUkHu6JfhtJY7GyE
-CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - DeleteSubscriberLambdaVersionQwLwoRZYV9ltkEUaLmGEERvXaOagYRK56PeiFvRbs
-CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - CreateSubscriberLambdaVersion5HuQ2vy4ZO8N6R2qe75lyhZS9h2Fpxamsb9ifUPWJX4
-CloudFormation - UPDATE_COMPLETE - AWS::CloudFormation::Stack - BinxioSesCustomResourceStack
+CloudFormation - UPDATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodDeleteDashcognitoDashuserOptions
+CloudFormation - UPDATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodGetDashnuggeteerDashdeliveryDashpreferencesOptions
+CloudFormation - UPDATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodAddDashsubscriberOptions
+CloudFormation - UPDATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodDeleteDashnuggeteerOptions
+CloudFormation - UPDATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodSetDashnuggeteerDashdeliveryDashpreferencesOptions
+CloudFormation - UPDATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodDeleteDashsubscriberOptions
+CloudFormation - UPDATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodChangeDashnuggeteerDashphoneOptions
+CloudFormation - UPDATE_IN_PROGRESS - AWS::CloudFormation::Stack - StepStoneCpNsCustomResourceStack
+CloudFormation - UPDATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodGetDashserverlessDashoutputsOptions
+CloudFormation - UPDATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodNuggetDashofDashdayOptions
+Serverless: [AWS cloudformation 200 0.238s 0 retries] describeStackEvents({ StackName:
+   'arn:aws:cloudformation:us-east-1:550659257614:stack/the-daly-nugget-dev/6279c3f0-be5b-11ea-9891-1225390e8313' })
+CloudFormation - UPDATE_IN_PROGRESS - AWS::CloudFormation::Stack - BinxioSesCustomResourceStack
+CloudFormation - UPDATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodRandomDashnuggetOptions
+CloudFormation - UPDATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodRegisterDashnuggeteerOptions
+CloudFormation - UPDATE_IN_PROGRESS - AWS::IAM::Role - IamRoleLambdaExecution
 CloudFormation - UPDATE_COMPLETE - AWS::CloudFormation::Stack - StepStoneCpNsCustomResourceStack
-CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - DeleteCognitoUserLambdaVersionJipHLLA65joxXO6C1aqOwyCqNF9trSdqZqGSboqjM94
-CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - CreateNuggeteerLambdaVersionGcUg1HoP6XUyP5NCc4E7sE5YteFAhqlJtej9gG5Vo
-CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - GetServerlessOutputsLambdaVersionTb1H3bi6PYlnkFbJn3GYXiGzWZULSFzDKGfPdhoIfQ
+CloudFormation - UPDATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodGetDashnuggeteerDashdeliveryDashpreferencesOptions
+CloudFormation - UPDATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodDeleteDashnuggeteerOptions
+CloudFormation - UPDATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodAddDashsubscriberOptions
+CloudFormation - UPDATE_COMPLETE - AWS::CloudFormation::Stack - BinxioSesCustomResourceStack
+CloudFormation - UPDATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodSetDashnuggeteerDashdeliveryDashpreferencesOptions
+CloudFormation - UPDATE_IN_PROGRESS - AWS::CloudFormation::Stack - StepStoneSvCognitoIdCustomResourceStack
+CloudFormation - UPDATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodGetDashserverlessDashoutputsOptions
+CloudFormation - UPDATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodChangeDashnuggeteerDashphoneOptions
+CloudFormation - UPDATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodGetDashnuggeteerOptions
+CloudFormation - UPDATE_COMPLETE - AWS::CloudFormation::Stack - StepStoneSvCognitoIdCustomResourceStack
+CloudFormation - UPDATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodGetDashnuggeteerOptions
+Serverless: [AWS cloudformation 200 0.266s 0 retries] describeStackEvents({ StackName:
+   'arn:aws:cloudformation:us-east-1:550659257614:stack/the-daly-nugget-dev/6279c3f0-be5b-11ea-9891-1225390e8313' })
+Serverless: [AWS cloudformation 200 0.229s 0 retries] describeStackEvents({ StackName:
+   'arn:aws:cloudformation:us-east-1:550659257614:stack/the-daly-nugget-dev/6279c3f0-be5b-11ea-9891-1225390e8313' })
+CloudFormation - UPDATE_IN_PROGRESS - AWS::CloudFormation::Stack - StepStoneCfnSesVerTmpltResourceStack
 CloudFormation - UPDATE_COMPLETE - AWS::CloudFormation::Stack - StepStoneCfnSesVerTmpltResourceStack
-CloudFormation - DELETE_IN_PROGRESS - AWS::ApiGateway::Deployment - ApiGatewayDeployment1593922742985
-CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - SendNuggetsTwiceDailyLambdaVersionpysUZRLSrZ8k04uOIWcUXUFkc9zdUb8xwtL893cE
-CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - UpdateNuggeteerPhoneLambdaVersionW4EuNhgOXK512mUcBOlvn3vsbt0o8WVxfRDWHdCPjs
-CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - SyncSubscriberTblAndSESLambdaVersion8qmgMdKuJuaLbPMnJ6w0m9k1TbyeQdIyFB7ZZTt5Os
-CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - GetNuggeteerLambdaVersionWeUieDPtEWwHiT0coonVCY4mz7y0gfdT8BTCr8g
-CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - UpdateNuggeteerDelivPrefsLambdaVersion3v4Fw6Dmdkj7n0BKPQn6XZKbRbDaWzN6yorhOWJ3w
-CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - DeleteNuggeteerLambdaVersionXxbDieqfX4iNDObvbvVnMpwezAvtWoXgCVNGrMWQ9zg
-CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - GetNuggeteerDelivPrefsLambdaVersion8VhlRXD8hR64GKC3XmFyoMNkr641AxzVfvUrSE4
-CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - SendNuggetsDailyLambdaVersionP38yf6k8GPEbzSHbl8f82g6kcXKO58CAt8G6RFwPQ0
-CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - GetRandomNuggetLambdaVersion1J7LtHAJJOLuwTbJycrjHt4debWPS2wBrFgH994Rvs
-CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - EmailNuggetOfTheDayLambdaVersion1P92J3jJN4YF00lSl2eocQXgTX7IFfqgXJECaYbNvQ
-CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - GetNuggetOfTheDayLambdaVersionKr7GSw7Jy9IQlbWZiwG66cflciFS1SLPWleeKx3WyU
-CloudFormation - DELETE_COMPLETE - AWS::ApiGateway::Deployment - ApiGatewayDeployment1593922742985
-CloudFormation - UPDATE_COMPLETE - AWS::CloudFormation::Stack - the-daly-nugget-dev
-Serverless: Stack update finished...
-Serverless: Invoke aws:info
-Serverless: [AWS cloudformation 200 0.12s 0 retries] describeStacks({ StackName: 'the-daly-nugget-dev' })
-Serverless: [AWS cloudformation 200 0.199s 0 retries] listStackResources({ StackName: 'the-daly-nugget-dev', NextToken: undefined })
-Serverless: [AWS cloudformation 200 0.17s 0 retries] listStackResources({ StackName: 'the-daly-nugget-dev',
-  NextToken:
-   'mN9a49qhcpBiIcxLwJtTLh3GPrz2zpi0O2vtxFvAyR/HSvcx8jnmJZ/F+ANRX+VN299unHsemOGLWZkuLDgpYSuAqdFAoRHcem0mmTrvoqPSLTUW9GhWRXUHQjBc5Nef///Z2YiY8VRxVSjdbaU8f07GtmqHPB3mnY0b8MqPX5CPe3xwq74lL+SCK10ARJE8G5xYGynAf2qZ6iqvzS4gcOnyLccNGnTpzCfji9BuQ8w0JhwHFwfaD881gX9w48+4f9nmd+EOkD62TeyEpm4RqTRhZ+DsFNjUR0lDbpM9GeNpDKVRi7vjw2czdUNzVpidjjlKAj90U6utoKyJmT3ykguEoZxSc1dwppSXU/qq6BLX+XI5o0HQsscPclEJPR8VCoESNlgwLwZ7qAkBug2R3Le6PscHDu+Qo/GwCoI0nInYef6T0GqVRhzkc2m+de8wCfVipUsmfn+Q7D4tA8Xq2UN051FBy75UzAFND0EvTRp0GyXkeEwdm/np9zzf73ywxe/c/wvq2MNXswbWdro1eFeXavCY6Z1MM6W3YGkY9JnSbUT3fSi1LSmJY8ymEobj2WOHWax5csZmRnPdG4rz3YyBVNXk71Mr4MxwgS3ke9HGMnVtvsTwnraXaVVm1s6AAd+QPuaBFRpB5o0TfOPyuvI9KnVeic+zYkZ0reBIDQEF6O/nV7GlofMz4wolHFw+FTWBKhrAH5Uvc4fbjqrG4TJVT2QSAbYiDxLDg2xZZWlC1UG6vO2+fMKdKbCnv86YUOqzFJCZkPLSweVx7VX5lpLUFTOH7uumdjpfW6rqnf68QQcNoOLIyEsC/887gvN92lKWCIhlygP7OQ4rjIy0VzB+yGnQbc8ne/dNbBbr3fzK/I09vx3tm9yrWOWkUiCVd6nTgSS9y2OJ6bn2ZELTBq7x5hPB5QCGE8pERSTyZEftCrTXLYg5P/Xj/ho8Tj8pGiieCKDUdn/nq4MmGwDKag==|5hWsJ166NzpnD8bM6EO10g==|1|ccf0ef845f53cdddc581597767c4244a6ab37e3a0d75e816c02c97a11d0b2620' })
-Service Information
-service: the-daly-nugget
-stage: dev
-region: us-east-1
-stack: the-daly-nugget-dev
-resources: 168
-WARNING:
-  You have 168 resources in your service.
-  CloudFormation has a hard limit of 200 resources in a service.
-  For advice on avoiding this limit, check out this link: http://bit.ly/2IiYB38.
-api keys:
-  None
-endpoints:
-  GET - https://jyorwlpzs9.execute-api.us-east-1.amazonaws.com/dev/nugget-of-day
-  POST - https://jyorwlpzs9.execute-api.us-east-1.amazonaws.com/dev/random-nugget
-  POST - https://jyorwlpzs9.execute-api.us-east-1.amazonaws.com/dev/add-subscriber
-  POST - https://jyorwlpzs9.execute-api.us-east-1.amazonaws.com/dev/register-nuggeteer
-  POST - https://jyorwlpzs9.execute-api.us-east-1.amazonaws.com/dev/delete-subscriber
-  POST - https://jyorwlpzs9.execute-api.us-east-1.amazonaws.com/dev/delete-nuggeteer
-  POST - https://jyorwlpzs9.execute-api.us-east-1.amazonaws.com/dev/set-nuggeteer-delivery-preferences
-  POST - https://jyorwlpzs9.execute-api.us-east-1.amazonaws.com/dev/get-nuggeteer-delivery-preferences
-  POST - https://jyorwlpzs9.execute-api.us-east-1.amazonaws.com/dev/change-nuggeteer-phone
-  POST - https://jyorwlpzs9.execute-api.us-east-1.amazonaws.com/dev/get-nuggeteer
-  GET - https://jyorwlpzs9.execute-api.us-east-1.amazonaws.com/dev/get-serverless-outputs
-  POST - https://jyorwlpzs9.execute-api.us-east-1.amazonaws.com/dev/delete-cognito-user
-functions:
-  getNuggetOfTheDay: the-daly-nugget-dev-getNuggetOfTheDay
-  getRandomNugget: the-daly-nugget-dev-getRandomNugget
-  createSubscriber: the-daly-nugget-dev-createSubscriber
-  createNuggeteer: the-daly-nugget-dev-createNuggeteer
-  deleteSubscriber: the-daly-nugget-dev-deleteSubscriber
-  deleteNuggeteer: the-daly-nugget-dev-deleteNuggeteer
-  updateNuggeteerDelivPrefs: the-daly-nugget-dev-updateNuggeteerDelivPrefs
-  getNuggeteerDelivPrefs: the-daly-nugget-dev-getNuggeteerDelivPrefs
-  updateNuggeteerPhone: the-daly-nugget-dev-updateNuggeteerPhone
-  getNuggeteer: the-daly-nugget-dev-getNuggeteer
-  getServerlessOutputs: the-daly-nugget-dev-getServerlessOutputs
-  deleteCognitoUser: the-daly-nugget-dev-deleteCognitoUser
-  syncSubscriberTblAndSES: the-daly-nugget-dev-syncSubscriberTblAndSES
-  emailNuggetOfTheDay: the-daly-nugget-dev-emailNuggetOfTheDay
-  recordNuggetOfTheDay: the-daly-nugget-dev-recordNuggetOfTheDay
-  syncSubscriberVerifications: the-daly-nugget-dev-syncSubscriberVerifications
-  sendNuggetsWeekly: the-daly-nugget-dev-sendNuggetsWeekly
-  sendNuggetsTwiceWeekly: the-daly-nugget-dev-sendNuggetsTwiceWeekly
-  sendNuggetsDaily: the-daly-nugget-dev-sendNuggetsDaily
-  sendNuggetsTwiceDaily: the-daly-nugget-dev-sendNuggetsTwiceDaily
-layers:
-  None
-
-Stack Outputs
-SyncSubscriberTblAndSESLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:550659257614:function:the-daly-nugget-dev-syncSubscriberTblAndSES:9
-GetNuggetOfTheDayLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:550659257614:function:the-daly-nugget-dev-getNuggetOfTheDay:9
-DeleteNuggeteerLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:550659257614:function:the-daly-nugget-dev-deleteNuggeteer:9
-SendNuggetsDailyLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:550659257614:function:the-daly-nugget-dev-sendNuggetsDaily:9
-CreateNuggeteerLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:550659257614:function:the-daly-nugget-dev-createNuggeteer:9
-RecordNuggetOfTheDayLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:550659257614:function:the-daly-nugget-dev-recordNuggetOfTheDay:9
-SendNuggetsTwiceDailyLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:550659257614:function:the-daly-nugget-dev-sendNuggetsTwiceDaily:9
-UpdateNuggeteerPhoneLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:550659257614:function:the-daly-nugget-dev-updateNuggeteerPhone:9
-ServerlessDeploymentBucketName: the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6
-GetRandomNuggetLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:550659257614:function:the-daly-nugget-dev-getRandomNugget:9
-SendNuggetsWeeklyLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:550659257614:function:the-daly-nugget-dev-sendNuggetsWeekly:9
-EmailNuggetOfTheDayLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:550659257614:function:the-daly-nugget-dev-emailNuggetOfTheDay:9
-CreateSubscriberLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:550659257614:function:the-daly-nugget-dev-createSubscriber:9
-GetNuggeteerDelivPrefsLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:550659257614:function:the-daly-nugget-dev-getNuggeteerDelivPrefs:9
-DeleteCognitoUserLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:550659257614:function:the-daly-nugget-dev-deleteCognitoUser:9
-UpdateNuggeteerDelivPrefsLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:550659257614:function:the-daly-nugget-dev-updateNuggeteerDelivPrefs:9
-GetServerlessOutputsLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:550659257614:function:the-daly-nugget-dev-getServerlessOutputs:9
-SendNuggetsTwiceWeeklyLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:550659257614:function:the-daly-nugget-dev-sendNuggetsTwiceWeekly:9
-GetNuggeteerLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:550659257614:function:the-daly-nugget-dev-getNuggeteer:9
-DeleteSubscriberLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:550659257614:function:the-daly-nugget-dev-deleteSubscriber:9
-ServiceEndpoint: https://jyorwlpzs9.execute-api.us-east-1.amazonaws.com/dev
-SyncSubscriberVerificationsLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:550659257614:function:the-daly-nugget-dev-syncSubscriberVerifications:9
-
-Serverless: Invoke aws:deploy:finalize
-Serverless: [AWS s3 200 0.17s 0 retries] listObjectsV2({ Bucket:
-   'the-daly-nugget-dev-serverlessdeploymentbucket-27vw0nx99if6',
-  Prefix: 'serverless/the-daly-nugget/dev' })
+CloudFormation - UPDATE_COMPLETE - AWS::IAM::Role - IamRoleLambdaExecution
+Serverless: [AWS cloudformation 200 0.786s 0 retries] describeStackEvents({ StackName:
+   'arn:aws:cloudformation:us-east-1:550659257614:stack/the-daly-nugget-dev/6279c3f0-be5b-11ea-9891-1225390e8313' })
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - GetRandomNuggetLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - DeleteNuggeteerLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - DeleteSubscriberLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - GetNuggetOfTheDayLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - UpdateNuggeteerDelivPrefsLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - SendNuggetsTwiceDailyLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - SendNuggetsWeeklyLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - UpdateNuggeteerPhoneLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - SyncSubscriberTblAndSESLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - RecordNuggetOfTheDayLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - Custom::CfnSesVerificationTemplate - StepStoneCfnSesVerTmplt
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - EmailNuggetOfTheDayLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - CreateSubscriberLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - CreateNuggeteerLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - SyncSubscriberVerificationsLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - SendNuggetsDailyLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - DeleteCognitoUserLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - GetNuggeteerLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - SendNuggetsTwiceWeeklyLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - GetRandomNuggetLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - DeleteNuggeteerLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - GetServerlessOutputsLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - GetNuggeteerDelivPrefsLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - SendNuggetsTwiceDailyLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - DeleteSubscriberLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - UpdateNuggeteerPhoneLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - SendNuggetsWeeklyLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - UpdateNuggeteerDelivPrefsLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - RecordNuggetOfTheDayLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - GetNuggetOfTheDayLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - SyncSubscriberTblAndSESLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - CreateSubscriberLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - DeleteCognitoUserLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - EmailNuggetOfTheDayLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - SyncSubscriberVerificationsLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - SendNuggetsDailyLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - GetNuggeteerLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - CreateNuggeteerLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - SendNuggetsTwiceWeeklyLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - GetServerlessOutputsLambdaFunction
+Serverless: [AWS cloudformation 200 0.248s 0 retries] describeStackEvents({ StackName:
+   'arn:aws:cloudformation:us-east-1:550659257614:stack/the-daly-nugget-dev/6279c3f0-be5b-11ea-9891-1225390e8313' })
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - GetNuggeteerDelivPrefsLambdaFunction
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GetRandomNuggetLambdaVersionPfCUocdT5g6IMWbHq2uyIY1JKaFe3mWjHl09xENQJw
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - SendNuggetsTwiceDailyLambdaVersionkQTekuDrWZJZQOXnU7tOo7z8KxDCV8LQ4H7ryuPzk
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - SyncSubscriberTblAndSESLambdaVersion8NlONVT32Vpd9FhG8Vt1qlPv6pDlxxqYWxN4CZsh734
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - DeleteNuggeteerLambdaVersionbuKXn8gAW8hU65nGlfSKNmONeWMr9PZXBjvFH5SeutI
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - DeleteSubscriberLambdaVersionfdZl4LGtp1M04rKmiZjjvejYPWisih791FuoCtj9Ls
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - CreateNuggeteerLambdaVersionlyl6p2acTtCGCNEZnpm2vkFDP0PVhF2NnQeP2MWUA
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - UpdateNuggeteerPhoneLambdaVersionMIM2PRwAv22IYw7wF8kGnHplFbwxgjdgGwy9DTY5M
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GetNuggeteerLambdaVersionTNFXz67XlypAw66oQ0aKkwIVqlVE6wLLnZNPJp3ZKk
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - UpdateNuggeteerDelivPrefsLambdaVersionFe71fLtoXVBzEpXXwF6r9EwtCceJT39aYcEfm6XiT0
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - RecordNuggetOfTheDayLambdaVersiontn9ycC374Ntm8Qa1YMvhXSPXK4fRks4WWTVYelMSkuk
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GetRandomNuggetLambdaVersionPfCUocdT5g6IMWbHq2uyIY1JKaFe3mWjHl09xENQJw
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - SendNuggetsDailyLambdaVersionY1IYSbWmHHD4WtCuPIHXMKpckX6WdU4c7zuXQgIoc4
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - CreateSubscriberLambdaVersionPjQYEIqXUQxCDbpQCQBiXoSiD0HahAEpehvphc
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - SendNuggetsTwiceDailyLambdaVersionkQTekuDrWZJZQOXnU7tOo7z8KxDCV8LQ4H7ryuPzk
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - SyncSubscriberTblAndSESLambdaVersion8NlONVT32Vpd9FhG8Vt1qlPv6pDlxxqYWxN4CZsh734
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - DeleteNuggeteerLambdaVersionbuKXn8gAW8hU65nGlfSKNmONeWMr9PZXBjvFH5SeutI
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - DeleteCognitoUserLambdaVersioncG8AZohm8UJFs6fWhJX64NEEyLJTWkAr1EDy0fwk
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GetServerlessOutputsLambdaVersionZUqTNCbHPoyqpkqLOumQfTP2cDy4Vfq0s7PcBzwY
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - DeleteSubscriberLambdaVersionfdZl4LGtp1M04rKmiZjjvejYPWisih791FuoCtj9Ls
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - GetRandomNuggetLambdaVersionPfCUocdT5g6IMWbHq2uyIY1JKaFe3mWjHl09xENQJw
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GetNuggetOfTheDayLambdaVersiond1ftJmBrK9OiU9eNGL1emKWdNCM58jEDHzQYEO1wzo
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - CreateNuggeteerLambdaVersionlyl6p2acTtCGCNEZnpm2vkFDP0PVhF2NnQeP2MWUA
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - DeleteNuggeteerLambdaVersionbuKXn8gAW8hU65nGlfSKNmONeWMr9PZXBjvFH5SeutI
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - SendNuggetsTwiceWeeklyLambdaVersion5VN20FsuV3PohOVvHgOA4hCNJSNXz7aVWnnahZm5Kk
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - UpdateNuggeteerPhoneLambdaVersionMIM2PRwAv22IYw7wF8kGnHplFbwxgjdgGwy9DTY5M
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - SyncSubscriberTblAndSESLambdaVersion8NlONVT32Vpd9FhG8Vt1qlPv6pDlxxqYWxN4CZsh734
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GetNuggeteerLambdaVersionTNFXz67XlypAw66oQ0aKkwIVqlVE6wLLnZNPJp3ZKk
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - SyncSubscriberVerificationsLambdaVersionPr1ks9q3fathM1WPvpPp9gjegaXK6sRBXk9pV4pZY44
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - UpdateNuggeteerDelivPrefsLambdaVersionFe71fLtoXVBzEpXXwF6r9EwtCceJT39aYcEfm6XiT0
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - EmailNuggetOfTheDayLambdaVersion0MGBjnIkvbXNNt02GMJmCixVxAxZwIw5dZ0T87EZac
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - SendNuggetsTwiceDailyLambdaVersionkQTekuDrWZJZQOXnU7tOo7z8KxDCV8LQ4H7ryuPzk
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - DeleteSubscriberLambdaVersionfdZl4LGtp1M04rKmiZjjvejYPWisih791FuoCtj9Ls
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - SendNuggetsWeeklyLambdaVersionKa2wLtxJQC4NtltemxZch5kiJEUvDF3hskO8XsjFaw
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - CreateNuggeteerLambdaVersionlyl6p2acTtCGCNEZnpm2vkFDP0PVhF2NnQeP2MWUA
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - CreateSubscriberLambdaVersionPjQYEIqXUQxCDbpQCQBiXoSiD0HahAEpehvphc
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - UpdateNuggeteerPhoneLambdaVersionMIM2PRwAv22IYw7wF8kGnHplFbwxgjdgGwy9DTY5M
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - RecordNuggetOfTheDayLambdaVersiontn9ycC374Ntm8Qa1YMvhXSPXK4fRks4WWTVYelMSkuk
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - DeleteCognitoUserLambdaVersioncG8AZohm8UJFs6fWhJX64NEEyLJTWkAr1EDy0fwk
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - GetNuggeteerLambdaVersionTNFXz67XlypAw66oQ0aKkwIVqlVE6wLLnZNPJp3ZKk
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GetServerlessOutputsLambdaVersionZUqTNCbHPoyqpkqLOumQfTP2cDy4Vfq0s7PcBzwY
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - UpdateNuggeteerDelivPrefsLambdaVersionFe71fLtoXVBzEpXXwF6r9EwtCceJT39aYcEfm6XiT0
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GetNuggetOfTheDayLambdaVersiond1ftJmBrK9OiU9eNGL1emKWdNCM58jEDHzQYEO1wzo
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - SendNuggetsTwiceWeeklyLambdaVersion5VN20FsuV3PohOVvHgOA4hCNJSNXz7aVWnnahZm5Kk
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - DeleteCognitoUserLambdaVersioncG8AZohm8UJFs6fWhJX64NEEyLJTWkAr1EDy0fwk
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - CreateSubscriberLambdaVersionPjQYEIqXUQxCDbpQCQBiXoSiD0HahAEpehvphc
+CloudFormation - UPDATE_FAILED - Custom::CfnSesVerificationTemplate - StepStoneCfnSesVerTmplt
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - GetServerlessOutputsLambdaVersionZUqTNCbHPoyqpkqLOumQfTP2cDy4Vfq0s7PcBzwY
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - EmailNuggetOfTheDayLambdaVersion0MGBjnIkvbXNNt02GMJmCixVxAxZwIw5dZ0T87EZac
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - RecordNuggetOfTheDayLambdaVersiontn9ycC374Ntm8Qa1YMvhXSPXK4fRks4WWTVYelMSkuk
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - SyncSubscriberVerificationsLambdaVersionPr1ks9q3fathM1WPvpPp9gjegaXK6sRBXk9pV4pZY44
+Serverless: [AWS cloudformation 200 0.23s 0 retries] describeStackEvents({ StackName:
+   'arn:aws:cloudformation:us-east-1:550659257614:stack/the-daly-nugget-dev/6279c3f0-be5b-11ea-9891-1225390e8313' })
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - GetNuggetOfTheDayLambdaVersiond1ftJmBrK9OiU9eNGL1emKWdNCM58jEDHzQYEO1wzo
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - SendNuggetsTwiceWeeklyLambdaVersion5VN20FsuV3PohOVvHgOA4hCNJSNXz7aVWnnahZm5Kk
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - EmailNuggetOfTheDayLambdaVersion0MGBjnIkvbXNNt02GMJmCixVxAxZwIw5dZ0T87EZac
+CloudFormation - CREATE_COMPLETE - AWS::Lambda::Version - SyncSubscriberVerificationsLambdaVersionPr1ks9q3fathM1WPvpPp9gjegaXK6sRBXk9pV4pZY44
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - SendNuggetsWeeklyLambdaVersionKa2wLtxJQC4NtltemxZch5kiJEUvDF3hskO8XsjFaw
+CloudFormation - CREATE_IN_PROGRESS - AWS::Lambda::Version - GetNuggeteerDelivPrefsLambdaVersionBiqDYOGMzQyRftoJEUVZS84M3VR3a9v8gK3WhSYfv8
+CloudFormation - CREATE_IN_PROGRESS - AWS::ApiGateway::Deployment - ApiGatewayDeployment1593946538128
+CloudFormation - CREATE_FAILED - AWS::ApiGateway::Deployment - ApiGatewayDeployment1593946538128
+CloudFormation - CREATE_FAILED - AWS::Lambda::Version - GetNuggeteerDelivPrefsLambdaVersionBiqDYOGMzQyRftoJEUVZS84M3VR3a9v8gK3WhSYfv8
+CloudFormation - CREATE_FAILED - AWS::Lambda::Version - SendNuggetsWeeklyLambdaVersionKa2wLtxJQC4NtltemxZch5kiJEUvDF3hskO8XsjFaw
+Serverless: [AWS cloudformation 200 0.514s 0 retries] describeStackEvents({ StackName:
+   'arn:aws:cloudformation:us-east-1:550659257614:stack/the-daly-nugget-dev/6279c3f0-be5b-11ea-9891-1225390e8313' })
+CloudFormation - CREATE_FAILED - AWS::Lambda::Version - SendNuggetsDailyLambdaVersionY1IYSbWmHHD4WtCuPIHXMKpckX6WdU4c7zuXQgIoc4
+CloudFormation - UPDATE_ROLLBACK_IN_PROGRESS - AWS::CloudFormation::Stack - the-daly-nugget-dev
+Serverless: [AWS cloudformation 200 0.231s 0 retries] describeStackEvents({ StackName:
+   'arn:aws:cloudformation:us-east-1:550659257614:stack/the-daly-nugget-dev/6279c3f0-be5b-11ea-9891-1225390e8313' })
+Serverless: [AWS cloudformation 200 0.52s 0 retries] describeStackEvents({ StackName:
+   'arn:aws:cloudformation:us-east-1:550659257614:stack/the-daly-nugget-dev/6279c3f0-be5b-11ea-9891-1225390e8313' })
+Serverless: [AWS cloudformation 200 0.211s 0 retries] describeStackEvents({ StackName:
+   'arn:aws:cloudformation:us-east-1:550659257614:stack/the-daly-nugget-dev/6279c3f0-be5b-11ea-9891-1225390e8313' })
+CloudFormation - UPDATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodAddDashsubscriberOptions
+CloudFormation - UPDATE_IN_PROGRESS - AWS::CloudFormation::Stack - BinxioCertCustomResourceStack
+CloudFormation - UPDATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodRandomDashnuggetOptions
+CloudFormation - UPDATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodRegisterDashnuggeteerOptions
+CloudFormation - UPDATE_IN_PROGRESS - AWS::CloudFormation::Stack - BinxioSesCustomResourceStack
+CloudFormation - UPDATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodDeleteDashsubscriberOptions
+CloudFormation - UPDATE_IN_PROGRESS - AWS::CloudFormation::Stack - StepStoneCpNsCustomResourceStack
+CloudFormation - UPDATE_IN_PROGRESS - AWS::CloudFormation::Stack - StepStoneSvCognitoIdCustomResourceStack
+CloudFormation - UPDATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodDeleteDashcognitoDashuserOptions
+CloudFormation - UPDATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodGetDashnuggeteerOptions
+CloudFormation - UPDATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodGetDashnuggeteerDashdeliveryDashpreferencesOptions
+CloudFormation - UPDATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodGetDashserverlessDashoutputsOptions
+CloudFormation - UPDATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodSetDashnuggeteerDashdeliveryDashpreferencesOptions
+CloudFormation - UPDATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodChangeDashnuggeteerDashphoneOptions
+CloudFormation - UPDATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodNuggetDashofDashdayOptions
+CloudFormation - UPDATE_IN_PROGRESS - AWS::IAM::Role - IamRoleLambdaExecution
+CloudFormation - UPDATE_IN_PROGRESS - AWS::ApiGateway::Method - ApiGatewayMethodDeleteDashnuggeteerOptions
+CloudFormation - UPDATE_COMPLETE - AWS::CloudFormation::Stack - BinxioCertCustomResourceStack
+CloudFormation - UPDATE_COMPLETE - AWS::CloudFormation::Stack - StepStoneCpNsCustomResourceStack
+CloudFormation - UPDATE_COMPLETE - AWS::CloudFormation::Stack - StepStoneSvCognitoIdCustomResourceStack
+CloudFormation - UPDATE_COMPLETE - AWS::CloudFormation::Stack - BinxioSesCustomResourceStack
+CloudFormation - UPDATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodRandomDashnuggetOptions
+CloudFormation - UPDATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodGetDashnuggeteerOptions
+CloudFormation - UPDATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodAddDashsubscriberOptions
+CloudFormation - UPDATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodDeleteDashsubscriberOptions
+CloudFormation - UPDATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodSetDashnuggeteerDashdeliveryDashpreferencesOptions
+CloudFormation - UPDATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodDeleteDashcognitoDashuserOptions
+CloudFormation - UPDATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodRegisterDashnuggeteerOptions
+CloudFormation - UPDATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodNuggetDashofDashdayOptions
+CloudFormation - UPDATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodDeleteDashnuggeteerOptions
+CloudFormation - UPDATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodChangeDashnuggeteerDashphoneOptions
+CloudFormation - UPDATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodGetDashserverlessDashoutputsOptions
+CloudFormation - UPDATE_COMPLETE - AWS::ApiGateway::Method - ApiGatewayMethodGetDashnuggeteerDashdeliveryDashpreferencesOptions
+Serverless: [AWS cloudformation 200 0.224s 0 retries] describeStackEvents({ StackName:
+   'arn:aws:cloudformation:us-east-1:550659257614:stack/the-daly-nugget-dev/6279c3f0-be5b-11ea-9891-1225390e8313' })
+CloudFormation - UPDATE_IN_PROGRESS - AWS::CloudFormation::Stack - StepStoneCfnSesVerTmpltResourceStack
+CloudFormation - UPDATE_COMPLETE - AWS::CloudFormation::Stack - StepStoneCfnSesVerTmpltResourceStack
+CloudFormation - UPDATE_IN_PROGRESS - Custom::CfnSesVerificationTemplate - StepStoneCfnSesVerTmplt
+CloudFormation - UPDATE_COMPLETE - Custom::CfnSesVerificationTemplate - StepStoneCfnSesVerTmplt
+Serverless: [AWS cloudformation 200 0.68s 0 retries] describeStackEvents({ StackName:
+   'arn:aws:cloudformation:us-east-1:550659257614:stack/the-daly-nugget-dev/6279c3f0-be5b-11ea-9891-1225390e8313' })
+CloudFormation - UPDATE_COMPLETE - AWS::IAM::Role - IamRoleLambdaExecution
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - SendNuggetsTwiceWeeklyLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - SyncSubscriberTblAndSESLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - GetNuggeteerDelivPrefsLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - GetNuggeteerLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - UpdateNuggeteerPhoneLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - SendNuggetsWeeklyLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - DeleteSubscriberLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - DeleteNuggeteerLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - CreateNuggeteerLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - SendNuggetsTwiceDailyLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - GetNuggetOfTheDayLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - DeleteCognitoUserLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - CreateSubscriberLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - GetRandomNuggetLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - GetServerlessOutputsLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - RecordNuggetOfTheDayLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - SendNuggetsDailyLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - SyncSubscriberVerificationsLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - EmailNuggetOfTheDayLambdaFunction
+CloudFormation - UPDATE_IN_PROGRESS - AWS::Lambda::Function - UpdateNuggeteerDelivPrefsLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - GetNuggeteerDelivPrefsLambdaFunction
+Serverless: [AWS cloudformation 200 0.271s 0 retries] describeStackEvents({ StackName:
+   'arn:aws:cloudformation:us-east-1:550659257614:stack/the-daly-nugget-dev/6279c3f0-be5b-11ea-9891-1225390e8313' })
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - UpdateNuggeteerPhoneLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - SendNuggetsWeeklyLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - GetNuggeteerLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - GetServerlessOutputsLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - DeleteSubscriberLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - CreateNuggeteerLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - SyncSubscriberTblAndSESLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - SyncSubscriberVerificationsLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - GetRandomNuggetLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - SendNuggetsTwiceWeeklyLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - RecordNuggetOfTheDayLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - GetNuggetOfTheDayLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - EmailNuggetOfTheDayLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - DeleteNuggeteerLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - SendNuggetsTwiceDailyLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - SendNuggetsDailyLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - UpdateNuggeteerDelivPrefsLambdaFunction
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - DeleteCognitoUserLambdaFunction
+Serverless: [AWS cloudformation 200 0.276s 0 retries] describeStackEvents({ StackName:
+   'arn:aws:cloudformation:us-east-1:550659257614:stack/the-daly-nugget-dev/6279c3f0-be5b-11ea-9891-1225390e8313' })
+Serverless: [AWS cloudformation 200 0.256s 0 retries] describeStackEvents({ StackName:
+   'arn:aws:cloudformation:us-east-1:550659257614:stack/the-daly-nugget-dev/6279c3f0-be5b-11ea-9891-1225390e8313' })
+CloudFormation - UPDATE_COMPLETE - AWS::Lambda::Function - CreateSubscriberLambdaFunction
+Serverless: [AWS cloudformation 200 0.241s 0 retries] describeStackEvents({ StackName:
+   'arn:aws:cloudformation:us-east-1:550659257614:stack/the-daly-nugget-dev/6279c3f0-be5b-11ea-9891-1225390e8313' })
+CloudFormation - UPDATE_ROLLBACK_COMPLETE_CLEANUP_IN_PROGRESS - AWS::CloudFormation::Stack - the-daly-nugget-dev
+CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - GetNuggeteerDelivPrefsLambdaVersionBiqDYOGMzQyRftoJEUVZS84M3VR3a9v8gK3WhSYfv8
+CloudFormation - DELETE_COMPLETE - AWS::ApiGateway::Deployment - ApiGatewayDeployment1593946538128
+CloudFormation - UPDATE_COMPLETE - AWS::CloudFormation::Stack - BinxioCertCustomResourceStack
+CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - SendNuggetsWeeklyLambdaVersionKa2wLtxJQC4NtltemxZch5kiJEUvDF3hskO8XsjFaw
+CloudFormation - UPDATE_COMPLETE - AWS::CloudFormation::Stack - StepStoneCpNsCustomResourceStack
+CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - SyncSubscriberTblAndSESLambdaVersion8NlONVT32Vpd9FhG8Vt1qlPv6pDlxxqYWxN4CZsh734
+CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - RecordNuggetOfTheDayLambdaVersiontn9ycC374Ntm8Qa1YMvhXSPXK4fRks4WWTVYelMSkuk
+CloudFormation - UPDATE_COMPLETE - AWS::CloudFormation::Stack - BinxioSesCustomResourceStack
+CloudFormation - UPDATE_COMPLETE - AWS::CloudFormation::Stack - StepStoneCfnSesVerTmpltResourceStack
+CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - SendNuggetsDailyLambdaVersionY1IYSbWmHHD4WtCuPIHXMKpckX6WdU4c7zuXQgIoc4
+CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - SendNuggetsTwiceWeeklyLambdaVersion5VN20FsuV3PohOVvHgOA4hCNJSNXz7aVWnnahZm5Kk
+CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - SyncSubscriberVerificationsLambdaVersionPr1ks9q3fathM1WPvpPp9gjegaXK6sRBXk9pV4pZY44
+CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - CreateSubscriberLambdaVersionPjQYEIqXUQxCDbpQCQBiXoSiD0HahAEpehvphc
+CloudFormation - UPDATE_COMPLETE - AWS::CloudFormation::Stack - StepStoneSvCognitoIdCustomResourceStack
+CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - EmailNuggetOfTheDayLambdaVersion0MGBjnIkvbXNNt02GMJmCixVxAxZwIw5dZ0T87EZac
+CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - SendNuggetsTwiceDailyLambdaVersionkQTekuDrWZJZQOXnU7tOo7z8KxDCV8LQ4H7ryuPzk
+CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - DeleteSubscriberLambdaVersionfdZl4LGtp1M04rKmiZjjvejYPWisih791FuoCtj9Ls
+CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - GetServerlessOutputsLambdaVersionZUqTNCbHPoyqpkqLOumQfTP2cDy4Vfq0s7PcBzwY
+CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - DeleteNuggeteerLambdaVersionbuKXn8gAW8hU65nGlfSKNmONeWMr9PZXBjvFH5SeutI
+CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - DeleteCognitoUserLambdaVersioncG8AZohm8UJFs6fWhJX64NEEyLJTWkAr1EDy0fwk
+CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - GetRandomNuggetLambdaVersionPfCUocdT5g6IMWbHq2uyIY1JKaFe3mWjHl09xENQJw
+CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - CreateNuggeteerLambdaVersionlyl6p2acTtCGCNEZnpm2vkFDP0PVhF2NnQeP2MWUA
+CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - GetNuggeteerLambdaVersionTNFXz67XlypAw66oQ0aKkwIVqlVE6wLLnZNPJp3ZKk
+CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - GetNuggetOfTheDayLambdaVersiond1ftJmBrK9OiU9eNGL1emKWdNCM58jEDHzQYEO1wzo
+CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - UpdateNuggeteerPhoneLambdaVersionMIM2PRwAv22IYw7wF8kGnHplFbwxgjdgGwy9DTY5M
+CloudFormation - DELETE_SKIPPED - AWS::Lambda::Version - UpdateNuggeteerDelivPrefsLambdaVersionFe71fLtoXVBzEpXXwF6r9EwtCceJT39aYcEfm6XiT0
+Serverless: [AWS cloudformation 200 0.884s 0 retries] describeStackEvents({ StackName:
+   'arn:aws:cloudformation:us-east-1:550659257614:stack/the-daly-nugget-dev/6279c3f0-be5b-11ea-9891-1225390e8313' })
+CloudFormation - UPDATE_ROLLBACK_COMPLETE - AWS::CloudFormation::Stack - the-daly-nugget-dev
+Serverless: Operation failed!
+Serverless: View the full error output: https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stack/detail?stackId=arn%3Aaws%3Acloudformation%3Aus-east-1%3A550659257614%3Astack%2Fthe-daly-nugget-dev%2F6279c3f0-be5b-11ea-9891-1225390e8313
+ 
+  Serverless Error ---------------------------------------
+ 
+  ServerlessError: An error occurred: StepStoneCfnSesVerTmplt - Failed to update resource. See the details in CloudWatch Log Stream: 2020/07/05/[$LATEST]f9254f38376c4b0f8ccd82b99bfbe936.
+      at provider.request.then.data (/usr/local/lib/node_modules/serverless/lib/plugins/aws/lib/monitorStack.js:125:33)
+  From previous event:
+      at AwsDeploy.monitorStack (/usr/local/lib/node_modules/serverless/lib/plugins/aws/lib/monitorStack.js:28:12)
+      at provider.request.then.cfData (/usr/local/lib/node_modules/serverless/lib/plugins/aws/lib/updateStack.js:134:28)
+  From previous event:
+      at AwsDeploy.update (/usr/local/lib/node_modules/serverless/lib/plugins/aws/lib/updateStack.js:134:8)
+  From previous event:
+      at AwsDeploy.BbPromise.bind.then (/usr/local/lib/node_modules/serverless/lib/plugins/aws/lib/updateStack.js:148:35)
+  From previous event:
+      at AwsDeploy.updateStack (/usr/local/lib/node_modules/serverless/lib/plugins/aws/lib/updateStack.js:144:33)
+  From previous event:
+      at AwsDeploy.BbPromise.bind.then (/usr/local/lib/node_modules/serverless/lib/plugins/aws/deploy/index.js:127:39)
+  From previous event:
+      at Object.aws:deploy:deploy:updateStack [as hook] (/usr/local/lib/node_modules/serverless/lib/plugins/aws/deploy/index.js:123:30)
+      at BbPromise.reduce (/usr/local/lib/node_modules/serverless/lib/classes/PluginManager.js:476:55)
+  From previous event:
+      at PluginManager.invoke (/usr/local/lib/node_modules/serverless/lib/classes/PluginManager.js:476:22)
+      at PluginManager.spawn (/usr/local/lib/node_modules/serverless/lib/classes/PluginManager.js:496:17)
+      at AwsDeploy.BbPromise.bind.then (/usr/local/lib/node_modules/serverless/lib/plugins/aws/deploy/index.js:93:48)
+  From previous event:
+      at Object.deploy:deploy [as hook] (/usr/local/lib/node_modules/serverless/lib/plugins/aws/deploy/index.js:89:30)
+      at BbPromise.reduce (/usr/local/lib/node_modules/serverless/lib/classes/PluginManager.js:476:55)
+  From previous event:
+      at PluginManager.invoke (/usr/local/lib/node_modules/serverless/lib/classes/PluginManager.js:476:22)
+      at getHooks.reduce.then (/usr/local/lib/node_modules/serverless/lib/classes/PluginManager.js:511:24)
+  From previous event:
+      at PluginManager.run (/usr/local/lib/node_modules/serverless/lib/classes/PluginManager.js:511:8)
+      at variables.populateService.then (/usr/local/lib/node_modules/serverless/lib/Serverless.js:131:33)
+  From previous event:
+      at Serverless.run (/usr/local/lib/node_modules/serverless/lib/Serverless.js:118:74)
+      at serverless.init.then (/usr/local/lib/node_modules/serverless/bin/serverless.js:80:26)
+      at runCallback (timers.js:705:18)
+      at tryOnImmediate (timers.js:676:5)
+      at processImmediate (timers.js:658:5)
+      at process.topLevelDomainCallback (domain.js:120:23)
+  From previous event:
+      at Object.<anonymous> (/usr/local/lib/node_modules/serverless/bin/serverless.js:80:4)
+      at Module._compile (internal/modules/cjs/loader.js:701:30)
+      at Object.Module._extensions..js (internal/modules/cjs/loader.js:712:10)
+      at Module.load (internal/modules/cjs/loader.js:600:32)
+      at tryModuleLoad (internal/modules/cjs/loader.js:539:12)
+      at Function.Module._load (internal/modules/cjs/loader.js:531:3)
+      at Function.Module.runMain (internal/modules/cjs/loader.js:754:12)
+      at startup (internal/bootstrap/node.js:283:19)
+      at bootstrapNodeJSCore (internal/bootstrap/node.js:622:3)
+ 
+  Get Support --------------------------------------------
+     Docs:          docs.serverless.com
+     Bugs:          github.com/serverless/serverless/issues
+     Issues:        forum.serverless.com
+ 
+  Your Environment Information ---------------------------
+     Operating System:          darwin
+     Node Version:              10.15.3
+     Framework Version:         1.74.1
+     Plugin Version:            3.6.14
+     SDK Version:               2.3.1
+     Components Version:        2.31.7
+ 

@@ -19,8 +19,7 @@ exports.handler = async (event, context) =>
     return(RESPONSE.ERROR_SUBSCRIPTION_EMAIL_MISSING);
   }
 
-  // If we get an err, we'll assume it's a duplicate email and send an
-  // appropriate message return callback(null, RESPONSE.DUPLICATE);
+  // If we get an err, we'll assume it's a duplicate email
 
   let error = await createSubscriber(db, event.body.email);
   if (error)
