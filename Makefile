@@ -3,6 +3,7 @@
 #    from the develooment machine - using the deploy: target.
 # 3) It does a deployment to the target machine from the
 #    CircleCi CI server.
+#    CircleCi CI server.
 
 .EXPORT_ALL_VARIABLES:
 
